@@ -2685,12 +2685,6 @@
           .sum-table thead th:last-child {
             border-radius: 0 var(--r-sm) 0 0;
           }
-          .sum-table tbody tr {
-            transition: background 0.15s;
-          }
-          .sum-table tbody tr:hover {
-            background: rgba(200, 245, 66, 0.03);
-          }
           .sum-table tbody td {
             padding: 11px 12px;
             vertical-align: middle;
