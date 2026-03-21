@@ -3113,7 +3113,7 @@
             </thead>
             <tbody>
               <!-- Brighton vs Liverpool -->
-              <tr class="data-row">
+              <tr class="data-row" style="background: rgb(16, 17, 22)">
                 <td>
                   <div class="td-fix">Brighton vs Liverpool</div>
                   <div class="td-fix-sub">Sat · Amex Stadium</div>
@@ -3153,7 +3153,7 @@
                 </td>
                 <td><span class="td-btts btts-y">YES</span></td>
               </tr>
-              <tr class="conf-row">
+              <tr class="conf-row" style="background: rgb(16, 17, 22)">
                 <td colspan="11">
                   <div class="conf-row-inner">
                     <span class="conf-badge conf-med"
@@ -3168,7 +3168,7 @@
               </tr>
 
               <!-- Fulham vs Burnley -->
-              <tr class="data-row">
+              <tr class="data-row" style="background: rgb(16, 17, 22)">
                 <td>
                   <div class="td-fix">Fulham vs Burnley</div>
                   <div class="td-fix-sub">Sat · Craven Cottage</div>
@@ -3208,7 +3208,7 @@
                 </td>
                 <td><span class="td-btts btts-n">NO</span></td>
               </tr>
-              <tr class="conf-row">
+              <tr class="conf-row" style="background: rgb(16, 17, 22)">
                 <td colspan="11">
                   <div class="conf-row-inner">
                     <span class="conf-badge conf-high"
@@ -3224,7 +3224,7 @@
               </tr>
 
               <!-- Everton vs Chelsea -->
-              <tr class="data-row">
+              <tr class="data-row" style="background: rgb(16, 17, 22)">
                 <td>
                   <div class="td-fix">Everton vs Chelsea</div>
                   <div class="td-fix-sub">Sat · Hill Dickinson Stadium</div>
@@ -3264,7 +3264,7 @@
                 </td>
                 <td><span class="td-btts btts-m">MAYBE</span></td>
               </tr>
-              <tr class="conf-row">
+              <tr class="conf-row" style="background: rgb(16, 17, 22)">
                 <td colspan="11">
                   <div class="conf-row-inner">
                     <span class="conf-badge conf-med"
@@ -3280,7 +3280,7 @@
               </tr>
 
               <!-- Leeds vs Brentford -->
-              <tr class="data-row">
+              <tr class="data-row" style="background: rgb(16, 17, 22)">
                 <td>
                   <div class="td-fix">Leeds vs Brentford</div>
                   <div class="td-fix-sub">Sat · Elland Road</div>
@@ -3320,7 +3320,7 @@
                 </td>
                 <td><span class="td-btts btts-m">MAYBE</span></td>
               </tr>
-              <tr class="conf-row">
+              <tr class="conf-row" style="background: rgb(16, 17, 22)">
                 <td colspan="11">
                   <div class="conf-row-inner">
                     <span class="conf-badge conf-low"
@@ -3336,7 +3336,7 @@
               </tr>
 
               <!-- Newcastle vs Sunderland -->
-              <tr class="data-row" style="background: rgba(255, 122, 40, 0.04)">
+              <tr class="data-row" style="background: rgb(16, 17, 22)">
                 <td>
                   <div class="td-fix">Newcastle vs Sunderland</div>
                   <div class="td-fix-sub">Sun · St. James' Park 🔥 Derby</div>
@@ -3376,7 +3376,7 @@
                 </td>
                 <td><span class="td-btts btts-n">NO</span></td>
               </tr>
-              <tr class="conf-row" style="background: rgba(255, 122, 40, 0.04)">
+              <tr class="conf-row" style="background: rgb(16, 17, 22)">
                 <td colspan="11">
                   <div class="conf-row-inner">
                     <span class="conf-badge conf-low"
@@ -3392,7 +3392,7 @@
               </tr>
 
               <!-- Aston Villa vs West Ham -->
-              <tr class="data-row">
+              <tr class="data-row" style="background: rgb(16, 17, 22)">
                 <td>
                   <div class="td-fix">Aston Villa vs West Ham</div>
                   <div class="td-fix-sub">Sun · Villa Park</div>
@@ -3432,7 +3432,7 @@
                 </td>
                 <td><span class="td-btts btts-n">NO</span></td>
               </tr>
-              <tr class="conf-row">
+              <tr class="conf-row" style="background: rgb(16, 17, 22)">
                 <td colspan="11">
                   <div class="conf-row-inner">
                     <span class="conf-badge conf-high"
@@ -3449,7 +3449,7 @@
               </tr>
 
               <!-- Tottenham vs Nottm Forest -->
-              <tr class="data-row">
+              <tr class="data-row" style="background: rgb(16, 17, 22)">
                 <td>
                   <div class="td-fix">Tottenham vs Nottm Forest</div>
                   <div class="td-fix-sub">Sun · Tottenham Hotspur Stadium</div>
@@ -3489,7 +3489,7 @@
                 </td>
                 <td><span class="td-btts btts-m">MAYBE</span></td>
               </tr>
-              <tr class="conf-row">
+              <tr class="conf-row" style="background: rgb(16, 17, 22)">
                 <td colspan="11">
                   <div class="conf-row-inner">
                     <span class="conf-badge conf-low"
