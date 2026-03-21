@@ -1004,6 +1004,7 @@
                   src="https://crests.football-data.org/397.png"
                   alt="Brighton"
                   loading="lazy"
+                  style="background-color: #13151f;"
                 />
               </div>
               <div class="fc-team-info">
@@ -1030,6 +1031,7 @@
                   src="https://crests.football-data.org/64.png"
                   alt="Liverpool"
                   loading="lazy"
+                  style="background-color: #13151f;"
                 />
               </div>
               <div class="fc-team-info">
@@ -1235,6 +1237,7 @@
                   src="https://crests.football-data.org/63.png"
                   alt="Fulham"
                   loading="lazy"
+                  style="background-color: #13151f;"
                 />
               </div>
               <div class="fc-team-info">
@@ -1260,6 +1263,7 @@
                   src="https://crests.football-data.org/328.png"
                   alt="Burnley"
                   loading="lazy"
+                  style="background-color: #13151f;"
                 />
               </div>
               <div class="fc-team-info">
@@ -1462,6 +1466,7 @@
                   src="https://crests.football-data.org/62.png"
                   alt="Everton"
                   loading="lazy"
+                  style="background-color: #13151f;"
                 />
               </div>
               <div class="fc-team-info">
@@ -1487,6 +1492,7 @@
                   src="https://crests.football-data.org/61.png"
                   alt="Chelsea"
                   loading="lazy"
+                  style="background-color: #13151f;"
                 />
               </div>
               <div class="fc-team-info">
@@ -1693,6 +1699,7 @@
                   src="https://crests.football-data.org/341.png"
                   alt="Leeds United"
                   loading="lazy"
+                  style="background-color: #13151f;"
                 />
               </div>
               <div class="fc-team-info">
@@ -1718,6 +1725,7 @@
                   src="https://crests.football-data.org/402.png"
                   alt="Brentford"
                   loading="lazy"
+                  style="background-color: #13151f;"
                 />
               </div>
               <div class="fc-team-info">
@@ -1927,6 +1935,7 @@
                   src="https://crests.football-data.org/67.png"
                   alt="Newcastle"
                   loading="lazy"
+                  style="background-color: #13151f;"
                 />
               </div>
               <div class="fc-team-info">
@@ -1952,6 +1961,7 @@
                   src="https://crests.football-data.org/71.png"
                   alt="Sunderland"
                   loading="lazy"
+                  style="background-color: #13151f;"
                 />
               </div>
               <div class="fc-team-info">
@@ -2165,6 +2175,7 @@
                   src="https://crests.football-data.org/58.png"
                   alt="Aston Villa"
                   loading="lazy"
+                  style="background-color: #13151f;"
                 />
               </div>
               <div class="fc-team-info">
@@ -2190,6 +2201,7 @@
                   src="https://crests.football-data.org/563.png"
                   alt="West Ham"
                   loading="lazy"
+                  style="background-color: #13151f;"
                 />
               </div>
               <div class="fc-team-info">
@@ -2396,6 +2408,7 @@
                   src="https://crests.football-data.org/73.png"
                   alt="Tottenham"
                   loading="lazy"
+                  style="background-color: #13151f;"
                 />
               </div>
               <div class="fc-team-info">
@@ -2421,6 +2434,7 @@
                   src="https://crests.football-data.org/351.png"
                   alt="Nottm Forest"
                   loading="lazy"
+                  style="background-color: #13151f;"
                 />
               </div>
               <div class="fc-team-info">
