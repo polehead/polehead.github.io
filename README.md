@@ -1075,8 +1075,37 @@ footer{
 
 <style>
 /* ── SUMMARY TABLE ── */
-.sum-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin-bottom:14px}
+.sum-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin-bottom:14px;border-radius:var(--r-sm)}
 .sum-table{width:100%;border-collapse:collapse;min-width:680px}
+
+/* ── MOBILE SUMMARY: card layout below 680px ── */
+@media(max-width:679px){
+  .sum-table{min-width:0}
+  .sum-table thead{display:none}
+  .sum-table tbody tr.data-row{
+    display:grid;grid-template-columns:1fr 1fr;
+    gap:6px 12px;padding:14px 12px;
+    border-bottom:1px solid var(--border);
+    background:var(--card) !important;
+  }
+  .sum-table tbody tr.data-row td{padding:0;border:none}
+  .sum-table tbody tr.data-row td:nth-child(1){grid-column:1/-1}
+  .sum-table tbody tr.data-row td:nth-child(3),
+  .sum-table tbody tr.data-row td:nth-child(4){display:inline-flex;align-items:center;gap:8px}
+  .sum-table .td-range{text-align:left}
+  .sum-table .td-range::before{
+    font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.08em;
+    text-transform:uppercase;color:var(--fg3);margin-right:4px;
+  }
+  .sum-table tbody tr.data-row td:nth-child(5) .td-range::before{content:'COR '}
+  .sum-table tbody tr.data-row td:nth-child(6) .td-range::before{content:'SOT '}
+  .sum-table tbody tr.data-row td:nth-child(7) .td-range::before{content:'FLS '}
+  .sum-table tbody tr.data-row td:nth-child(8) .td-range::before{content:'TI '}
+  .sum-table tbody tr.data-row td:nth-child(9) .td-range::before{content:'GK '}
+  .sum-table tbody tr.data-row td:nth-child(10) .td-range::before{content:'TKL '}
+  .sum-table tbody tr.conf-row{display:block}
+  .sum-table tbody tr.conf-row td{padding:0 12px 14px;border-bottom:2px solid var(--border2)}
+}
 .sum-table thead th{
   font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.1em;
   text-transform:uppercase;color:var(--fg3);
@@ -1479,7 +1508,7 @@ footer{
       <div class="wl-note">NEW missing Guimarães, Schar, Krafth — three first-team regulars OUT · Tonali groin doubt · SUN: Xhaka, Reinildo, Brobbey all fit · SUN won 7 of last 8 H2H</div>
     </div>
     <div class="wl-item">
-      <div class="wl-tag" style="color:var(--purple)" style="color:var(--purple)">🎯 Score pred</div>
+      <div class="wl-tag" style="color:var(--purple)">🎯 Score pred</div>
       <div class="wl-fix">Predicted scores at a glance</div>
       <div class="wl-note">BRI 1-2 LFC · FUL 2-0 BUR · EVE 1-2 CFC · LEE 1-1 BRE · NEW 1-1 SUN · AVL 2-0 WHU · TOT 2-1 NFO</div>
     </div>
@@ -1487,8 +1516,6 @@ footer{
 </div>
 
 </div><!-- end summary section -->
-
-</div><!-- end Sunday -->
 
 </div><!-- /wrap -->
 
