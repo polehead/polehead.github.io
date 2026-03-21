@@ -471,6 +471,7 @@ footer{
     <span class="btts-pill bp-yes">O2.5 goals</span>
     <span class="btts-pill bp-info">BRI bogey team for LFC</span>
     <span class="btts-pill bp-info">Salah anytime scorer</span>
+    <span class="btts-pill" style="color:var(--orange);border-color:rgba(255,122,40,.4);background:var(--orange-dim)">⬤ MED confidence</span>
   </div>
   <div class="fc-context">
     <span class="ctx-icon">◆</span>
@@ -564,6 +565,7 @@ footer{
     <span class="btts-pill bp-no">BTTS NO</span>
     <span class="btts-pill bp-no">U2.5 likely</span>
     <span class="btts-pill bp-info">Burnley 4W from 25 away</span>
+    <span class="btts-pill" style="color:var(--win);border-color:rgba(34,211,122,.4);background:var(--win-dim)">⬤ HIGH confidence</span>
   </div>
   <div class="fc-context">
     <span class="ctx-icon">◆</span>
@@ -658,6 +660,7 @@ footer{
     <span class="btts-pill bp-info">UCL race for CFC</span>
     <span class="btts-pill bp-info">Goodison atmosphere</span>
     <span class="btts-pill bp-info">Joao Pedro in form</span>
+    <span class="btts-pill" style="color:var(--orange);border-color:rgba(255,122,40,.4);background:var(--orange-dim)">⬤ MED confidence</span>
   </div>
   <div class="fc-context">
     <span class="ctx-icon">◆</span>
@@ -751,6 +754,7 @@ footer{
     <span class="btts-pill bp-maybe">BTTS MAYBE</span>
     <span class="btts-pill bp-info">LEE 2D-0W-0L home last 3</span>
     <span class="btts-pill bp-info">Thiago vs Piroe key battle</span>
+    <span class="btts-pill" style="color:var(--red);border-color:rgba(255,75,75,.35);background:var(--red-dim)">⬤ LOW confidence</span>
   </div>
   <div class="fc-context">
     <span class="ctx-icon">◆</span>
@@ -852,6 +856,7 @@ footer{
     <span class="btts-pill bp-info">SUN unbeaten vs NEW in 10 PL</span>
     <span class="btts-pill bp-info">NEW 0W in last 5 home derbies</span>
     <span class="btts-pill bp-maybe">Red card risk HIGH</span>
+    <span class="btts-pill" style="color:var(--red);border-color:rgba(255,75,75,.35);background:var(--red-dim)">⬤ LOW confidence</span>
   </div>
   <div class="fc-context">
     <span class="ctx-icon">◆</span>
@@ -947,6 +952,7 @@ footer{
     <span class="btts-pill bp-info">WHU 18th, survival fight</span>
     <span class="btts-pill bp-info">AVL UCL hunt</span>
     <span class="btts-pill bp-info">Watkins leads AVL attack</span>
+    <span class="btts-pill" style="color:var(--win);border-color:rgba(34,211,122,.4);background:var(--win-dim)">⬤ HIGH confidence</span>
   </div>
   <div class="fc-context">
     <span class="ctx-icon">◆</span>
@@ -1041,6 +1047,7 @@ footer{
     <span class="btts-pill bp-info">Both teams in crisis</span>
     <span class="btts-pill bp-info">3pts vital for both</span>
     <span class="btts-pill bp-maybe">Yellow card fest likely</span>
+    <span class="btts-pill" style="color:var(--red);border-color:rgba(255,75,75,.35);background:var(--red-dim)">⬤ LOW confidence</span>
   </div>
   <div class="fc-context">
     <span class="ctx-icon">◆</span>
@@ -1051,6 +1058,389 @@ footer{
 </div>
 
 </div><!-- end Sunday -->
+
+<!-- ══════════════════════════════════════
+     WEEKEND SUMMARY
+══════════════════════════════════════ -->
+<div class="day-section reveal">
+<div class="day-header">Weekend Summary · All 7 Predictions</div>
+
+<style>
+/* ── SUMMARY TABLE ── */
+.sum-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin-bottom:14px}
+.sum-table{width:100%;border-collapse:collapse;min-width:680px}
+.sum-table thead th{
+  font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--fg3);
+  background:var(--bg2);padding:10px 12px;text-align:left;
+  border-bottom:2px solid var(--border2);white-space:nowrap;
+}
+.sum-table thead th:first-child{border-radius:var(--r-sm) 0 0 0}
+.sum-table thead th:last-child{border-radius:0 var(--r-sm) 0 0}
+.sum-table tbody tr{border-bottom:1px solid var(--border);transition:background .15s}
+.sum-table tbody tr:last-child{border-bottom:none}
+.sum-table tbody tr:hover{background:rgba(200,245,66,.03)}
+.sum-table tbody td{padding:11px 12px;vertical-align:middle}
+
+.td-fix{font-size:13px;font-weight:600;color:var(--fg);white-space:nowrap}
+.td-fix-sub{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--fg3);margin-top:2px;white-space:nowrap}
+.td-ko{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--fg2);white-space:nowrap}
+.td-score{font-size:18px;font-weight:800;color:var(--volt);letter-spacing:.02em;white-space:nowrap}
+.td-winner{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:600;padding:3px 9px;border-radius:var(--r-xs);border:1px solid;white-space:nowrap}
+.tw-h{color:var(--volt);border-color:rgba(200,245,66,.35);background:var(--volt-dim)}
+.tw-a{color:var(--teal);border-color:rgba(18,232,200,.35);background:var(--teal-dim)}
+.tw-d{color:var(--fg3);border-color:var(--border2);background:rgba(255,255,255,.03)}
+
+/* confidence badges */
+.td-conf{text-align:center;white-space:nowrap}
+.conf-badge{
+  display:inline-flex;align-items:center;gap:5px;
+  font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;
+  padding:4px 10px;border-radius:var(--r-xs);border:1px solid;white-space:nowrap;
+}
+.conf-high{color:var(--win);border-color:rgba(34,211,122,.4);background:var(--win-dim)}
+.conf-med {color:var(--orange);border-color:rgba(255,122,40,.4);background:var(--orange-dim)}
+.conf-low {color:var(--red);border-color:rgba(255,75,75,.35);background:var(--red-dim)}
+.conf-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0}
+.cd-high{background:var(--win)}.cd-med{background:var(--orange)}.cd-low{background:var(--red)}
+.conf-reason{
+  font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--fg3);
+  line-height:1.4;margin-top:4px;max-width:120px;
+}
+
+/* stat range cells */
+.td-range{white-space:nowrap;text-align:center}
+.tr-lo{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--teal);font-weight:600}
+.tr-sep{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--fg3)}
+.tr-med{font-size:14px;font-weight:800;color:var(--volt);letter-spacing:-.01em}
+.tr-hi{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--orange);font-weight:600}
+
+.td-btts{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;padding:3px 8px;border-radius:var(--r-xs);border:1px solid;white-space:nowrap;text-align:center}
+.btts-y{color:var(--win);border-color:rgba(34,211,122,.35);background:var(--win-dim)}
+.btts-n{color:var(--red);border-color:rgba(255,75,75,.35);background:var(--red-dim)}
+.btts-m{color:var(--orange);border-color:rgba(255,122,40,.35);background:var(--orange-dim)}
+
+/* ── CARDS ROW ── */
+.sum-cards{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px}
+@media(min-width:560px){.sum-cards{grid-template-columns:repeat(3,1fr)}}
+@media(min-width:840px){.sum-cards{grid-template-columns:repeat(4,1fr)}}
+
+.sum-card{
+  background:var(--card);border:1px solid var(--border);border-radius:var(--r-sm);
+  padding:12px 14px;display:flex;flex-direction:column;gap:4px;
+}
+.scard-label{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--fg3)}
+.scard-val{font-size:22px;font-weight:800;color:var(--volt);letter-spacing:-.02em;line-height:1}
+.scard-sub{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--fg2);line-height:1.4;margin-top:2px}
+.scard-val.c-teal{color:var(--teal)}
+.scard-val.c-orange{color:var(--orange)}
+.scard-val.c-sky{color:var(--sky)}
+.scard-val.c-red{color:var(--red)}
+.scard-val.c-win{color:var(--win)}
+
+/* ── WATCHLIST ── */
+.watchlist{
+  background:var(--card);border:1px solid var(--border2);border-radius:var(--r);
+  overflow:hidden;
+}
+.wl-head{
+  padding:12px 14px;border-bottom:1px solid var(--border);
+  background:rgba(200,245,66,.04);
+  font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--volt);
+  display:flex;align-items:center;gap:8px;
+}
+.wl-head::before{content:'◆';font-size:8px}
+.wl-items{display:grid;grid-template-columns:1fr;gap:0}
+@media(min-width:640px){.wl-items{grid-template-columns:1fr 1fr}}
+.wl-item{
+  padding:12px 14px;border-bottom:1px solid var(--border);
+  display:flex;flex-direction:column;gap:3px;
+}
+@media(min-width:640px){
+  .wl-item{border-right:1px solid var(--border)}
+  .wl-item:nth-child(2n){border-right:none}
+}
+.wl-item:last-child,.wl-item:nth-last-child(2):nth-child(2n-1){border-bottom:none}
+.wl-tag{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:2px}
+.wl-fix{font-size:13px;font-weight:700;color:var(--fg)}
+.wl-note{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--fg2);line-height:1.5}
+</style>
+
+<!-- AGGREGATE STAT CARDS -->
+<div class="sum-cards">
+  <div class="sum-card">
+    <div class="scard-label">Highest corner game</div>
+    <div class="scard-val">BRI–LFC</div>
+    <div class="scard-sub">Median 10 · max 13<br>Both attack wide</div>
+  </div>
+  <div class="sum-card">
+    <div class="scard-label">Lowest corner game</div>
+    <div class="scard-val c-teal">NEW–SUN</div>
+    <div class="scard-sub">Median 7 · min 4<br>Derby defensive</div>
+  </div>
+  <div class="sum-card">
+    <div class="scard-label">Highest foul game</div>
+    <div class="scard-val c-orange">TOT–NFO</div>
+    <div class="scard-sub">Median 24 · max 30<br>Relegation six-pointer</div>
+  </div>
+  <div class="sum-card">
+    <div class="scard-label">Most tackles</div>
+    <div class="scard-val c-red">NEW–SUN</div>
+    <div class="scard-sub">Median 38 · max 48<br>Derby = max effort</div>
+  </div>
+  <div class="sum-card">
+    <div class="scard-label">Most throw-ins</div>
+    <div class="scard-val c-sky">FUL–BUR</div>
+    <div class="scard-sub">Median 36 · max 44<br>Burnley generate lots</div>
+  </div>
+  <div class="sum-card">
+    <div class="scard-label">Most goal kicks</div>
+    <div class="scard-val c-orange">FUL–BUR</div>
+    <div class="scard-sub">Median 17 · max 22<br>Burnley long-ball style</div>
+  </div>
+  <div class="sum-card">
+    <div class="scard-label">Highest xGoals game</div>
+    <div class="scard-val c-win">BRI–LFC</div>
+    <div class="scard-sub">H2H avg 3.41 goals<br>BTTS 64% historical</div>
+  </div>
+  <div class="sum-card">
+    <div class="scard-label">Match of weekend</div>
+    <div class="scard-val c-red">NEW–SUN</div>
+    <div class="scard-sub">Tyne-Wear Derby<br>First at SJP in 10 yrs</div>
+  </div>
+</div>
+
+<!-- FULL PREDICTIONS TABLE -->
+<div class="sum-wrap">
+  <table class="sum-table">
+    <thead>
+      <tr>
+        <th>Fixture</th>
+        <th>KO</th>
+        <th>Predicted</th>
+        <th>Winner</th>
+        <th>Corners<br><span style="font-size:9px;opacity:.6">lo · med · hi</span></th>
+        <th>SoT<br><span style="font-size:9px;opacity:.6">lo · med · hi</span></th>
+        <th>Fouls<br><span style="font-size:9px;opacity:.6">lo · med · hi</span></th>
+        <th>Throw-ins<br><span style="font-size:9px;opacity:.6">lo · med · hi</span></th>
+        <th>Goal Kicks<br><span style="font-size:9px;opacity:.6">lo · med · hi</span></th>
+        <th>Tackles<br><span style="font-size:9px;opacity:.6">lo · med · hi</span></th>
+        <th>BTTS</th>
+        <th>Confidence</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <!-- Brighton vs Liverpool -->
+      <tr>
+        <td>
+          <div class="td-fix">Brighton vs Liverpool</div>
+          <div class="td-fix-sub">Sat · Amex Stadium</div>
+        </td>
+        <td class="td-ko">12:30</td>
+        <td><div class="td-score">1–2</div></td>
+        <td><span class="td-winner tw-a">LFC</span></td>
+        <td class="td-range"><span class="tr-lo">7</span><span class="tr-sep"> · </span><span class="tr-med">10</span><span class="tr-sep"> · </span><span class="tr-hi">13</span></td>
+        <td class="td-range"><span class="tr-lo">5</span><span class="tr-sep"> · </span><span class="tr-med">8</span><span class="tr-sep"> · </span><span class="tr-hi">12</span></td>
+        <td class="td-range"><span class="tr-lo">16</span><span class="tr-sep"> · </span><span class="tr-med">20</span><span class="tr-sep"> · </span><span class="tr-hi">26</span></td>
+        <td class="td-range"><span class="tr-lo">28</span><span class="tr-sep"> · </span><span class="tr-med">34</span><span class="tr-sep"> · </span><span class="tr-hi">42</span></td>
+        <td class="td-range"><span class="tr-lo">10</span><span class="tr-sep"> · </span><span class="tr-med">15</span><span class="tr-sep"> · </span><span class="tr-hi">20</span></td>
+        <td class="td-range"><span class="tr-lo">22</span><span class="tr-sep"> · </span><span class="tr-med">27</span><span class="tr-sep"> · </span><span class="tr-hi">34</span></td>
+        <td><span class="td-btts btts-y">YES</span></td>
+        <td class="td-conf">
+          <span class="conf-badge conf-med"><span class="conf-dot cd-med"></span>MED</span>
+          <div class="conf-reason">LFC 43.8% · BRI bogey team (6/13 LFC wins) · Wirtz fit but LFC misfiring</div>
+        </td>
+      </tr>
+
+      <!-- Fulham vs Burnley -->
+      <tr>
+        <td>
+          <div class="td-fix">Fulham vs Burnley</div>
+          <div class="td-fix-sub">Sat · Craven Cottage</div>
+        </td>
+        <td class="td-ko">15:00</td>
+        <td><div class="td-score">2–0</div></td>
+        <td><span class="td-winner tw-h">FUL</span></td>
+        <td class="td-range"><span class="tr-lo">6</span><span class="tr-sep"> · </span><span class="tr-med">9</span><span class="tr-sep"> · </span><span class="tr-hi">12</span></td>
+        <td class="td-range"><span class="tr-lo">4</span><span class="tr-sep"> · </span><span class="tr-med">6</span><span class="tr-sep"> · </span><span class="tr-hi">10</span></td>
+        <td class="td-range"><span class="tr-lo">16</span><span class="tr-sep"> · </span><span class="tr-med">20</span><span class="tr-sep"> · </span><span class="tr-hi">26</span></td>
+        <td class="td-range"><span class="tr-lo">28</span><span class="tr-sep"> · </span><span class="tr-med">36</span><span class="tr-sep"> · </span><span class="tr-hi">44</span></td>
+        <td class="td-range"><span class="tr-lo">12</span><span class="tr-sep"> · </span><span class="tr-med">17</span><span class="tr-sep"> · </span><span class="tr-hi">22</span></td>
+        <td class="td-range"><span class="tr-lo">20</span><span class="tr-sep"> · </span><span class="tr-med">24</span><span class="tr-sep"> · </span><span class="tr-hi">30</span></td>
+        <td><span class="td-btts btts-n">NO</span></td>
+        <td class="td-conf">
+          <span class="conf-badge conf-high"><span class="conf-dot cd-high"></span>HIGH</span>
+          <div class="conf-reason">63.1% win prob · BUR 0W away in L5 · 1 goal away in L5 · dead rubber</div>
+        </td>
+      </tr>
+
+      <!-- Everton vs Chelsea -->
+      <tr>
+        <td>
+          <div class="td-fix">Everton vs Chelsea</div>
+          <div class="td-fix-sub">Sat · Goodison Park</div>
+        </td>
+        <td class="td-ko">17:30</td>
+        <td><div class="td-score">1–2</div></td>
+        <td><span class="td-winner tw-a">CFC</span></td>
+        <td class="td-range"><span class="tr-lo">6</span><span class="tr-sep"> · </span><span class="tr-med">9</span><span class="tr-sep"> · </span><span class="tr-hi">14</span></td>
+        <td class="td-range"><span class="tr-lo">5</span><span class="tr-sep"> · </span><span class="tr-med">8</span><span class="tr-sep"> · </span><span class="tr-hi">12</span></td>
+        <td class="td-range"><span class="tr-lo">16</span><span class="tr-sep"> · </span><span class="tr-med">20</span><span class="tr-sep"> · </span><span class="tr-hi">26</span></td>
+        <td class="td-range"><span class="tr-lo">28</span><span class="tr-sep"> · </span><span class="tr-med">35</span><span class="tr-sep"> · </span><span class="tr-hi">42</span></td>
+        <td class="td-range"><span class="tr-lo">10</span><span class="tr-sep"> · </span><span class="tr-med">15</span><span class="tr-sep"> · </span><span class="tr-hi">20</span></td>
+        <td class="td-range"><span class="tr-lo">24</span><span class="tr-sep"> · </span><span class="tr-med">28</span><span class="tr-sep"> · </span><span class="tr-hi">36</span></td>
+        <td><span class="td-btts btts-m">MAYBE</span></td>
+        <td class="td-conf">
+          <span class="conf-badge conf-med"><span class="conf-dot cd-med"></span>MED</span>
+          <div class="conf-reason">CFC 43.2% · Goodison hostile · CFC 3 SoT with 67% poss vs NEW — efficiency concern</div>
+        </td>
+      </tr>
+
+      <!-- Leeds vs Brentford -->
+      <tr>
+        <td>
+          <div class="td-fix">Leeds vs Brentford</div>
+          <div class="td-fix-sub">Sat · Elland Road</div>
+        </td>
+        <td class="td-ko">20:00</td>
+        <td><div class="td-score">1–1</div></td>
+        <td><span class="td-winner tw-d">Draw</span></td>
+        <td class="td-range"><span class="tr-lo">7</span><span class="tr-sep"> · </span><span class="tr-med">10</span><span class="tr-sep"> · </span><span class="tr-hi">14</span></td>
+        <td class="td-range"><span class="tr-lo">5</span><span class="tr-sep"> · </span><span class="tr-med">7</span><span class="tr-sep"> · </span><span class="tr-hi">11</span></td>
+        <td class="td-range"><span class="tr-lo">18</span><span class="tr-sep"> · </span><span class="tr-med">22</span><span class="tr-sep"> · </span><span class="tr-hi">28</span></td>
+        <td class="td-range"><span class="tr-lo">30</span><span class="tr-sep"> · </span><span class="tr-med">38</span><span class="tr-sep"> · </span><span class="tr-hi">46</span></td>
+        <td class="td-range"><span class="tr-lo">12</span><span class="tr-sep"> · </span><span class="tr-med">17</span><span class="tr-sep"> · </span><span class="tr-hi">22</span></td>
+        <td class="td-range"><span class="tr-lo">24</span><span class="tr-sep"> · </span><span class="tr-med">28</span><span class="tr-sep"> · </span><span class="tr-hi">36</span></td>
+        <td><span class="td-btts btts-m">MAYBE</span></td>
+        <td class="td-conf">
+          <span class="conf-badge conf-low"><span class="conf-dot cd-low"></span>LOW</span>
+          <div class="conf-reason">Only 5pt gap · LEE drew last 3 home · BRE drew last 2 · odds near-equal (38.5 vs 33.7%)</div>
+        </td>
+      </tr>
+
+      <!-- Newcastle vs Sunderland -->
+      <tr style="background:rgba(255,122,40,.04)">
+        <td>
+          <div class="td-fix">Newcastle vs Sunderland</div>
+          <div class="td-fix-sub">Sun · St. James' Park 🔥 Derby</div>
+        </td>
+        <td class="td-ko">12:00</td>
+        <td><div class="td-score">1–1</div></td>
+        <td><span class="td-winner tw-d">Draw</span></td>
+        <td class="td-range"><span class="tr-lo">4</span><span class="tr-sep"> · </span><span class="tr-med">7</span><span class="tr-sep"> · </span><span class="tr-hi">10</span></td>
+        <td class="td-range"><span class="tr-lo">3</span><span class="tr-sep"> · </span><span class="tr-med">5</span><span class="tr-sep"> · </span><span class="tr-hi">9</span></td>
+        <td class="td-range"><span class="tr-lo">20</span><span class="tr-sep"> · </span><span class="tr-med">26</span><span class="tr-sep"> · </span><span class="tr-hi">34</span></td>
+        <td class="td-range"><span class="tr-lo">30</span><span class="tr-sep"> · </span><span class="tr-med">40</span><span class="tr-sep"> · </span><span class="tr-hi">50</span></td>
+        <td class="td-range"><span class="tr-lo">14</span><span class="tr-sep"> · </span><span class="tr-med">20</span><span class="tr-sep"> · </span><span class="tr-hi">26</span></td>
+        <td class="td-range"><span class="tr-lo">30</span><span class="tr-sep"> · </span><span class="tr-med">38</span><span class="tr-sep"> · </span><span class="tr-hi">48</span></td>
+        <td><span class="td-btts btts-n">NO</span></td>
+        <td class="td-conf">
+          <span class="conf-badge conf-low"><span class="conf-dot cd-low"></span>LOW</span>
+          <div class="conf-reason">Stats vs odds conflict · NEW 57.3% BUT 0W in last 5 home derbies · SUN won 7/8 vs NEW</div>
+        </td>
+      </tr>
+
+      <!-- Aston Villa vs West Ham -->
+      <tr>
+        <td>
+          <div class="td-fix">Aston Villa vs West Ham</div>
+          <div class="td-fix-sub">Sun · Villa Park</div>
+        </td>
+        <td class="td-ko">14:15</td>
+        <td><div class="td-score">2–0</div></td>
+        <td><span class="td-winner tw-h">AVL</span></td>
+        <td class="td-range"><span class="tr-lo">5</span><span class="tr-sep"> · </span><span class="tr-med">8</span><span class="tr-sep"> · </span><span class="tr-hi">12</span></td>
+        <td class="td-range"><span class="tr-lo">4</span><span class="tr-sep"> · </span><span class="tr-med">7</span><span class="tr-sep"> · </span><span class="tr-hi">10</span></td>
+        <td class="td-range"><span class="tr-lo">16</span><span class="tr-sep"> · </span><span class="tr-med">20</span><span class="tr-sep"> · </span><span class="tr-hi">26</span></td>
+        <td class="td-range"><span class="tr-lo">22</span><span class="tr-sep"> · </span><span class="tr-med">30</span><span class="tr-sep"> · </span><span class="tr-hi">38</span></td>
+        <td class="td-range"><span class="tr-lo">10</span><span class="tr-sep"> · </span><span class="tr-med">14</span><span class="tr-sep"> · </span><span class="tr-hi">20</span></td>
+        <td class="td-range"><span class="tr-lo">20</span><span class="tr-sep"> · </span><span class="tr-med">24</span><span class="tr-sep"> · </span><span class="tr-hi">30</span></td>
+        <td><span class="td-btts btts-n">NO</span></td>
+        <td class="td-conf">
+          <span class="conf-badge conf-high"><span class="conf-dot cd-high"></span>HIGH</span>
+          <div class="conf-reason">AVL 49.5% · WHU 1 shot vs City · WHU 18th freefall · UCL vs relegation motivation gap</div>
+        </td>
+      </tr>
+
+      <!-- Tottenham vs Nottm Forest -->
+      <tr>
+        <td>
+          <div class="td-fix">Tottenham vs Nottm Forest</div>
+          <div class="td-fix-sub">Sun · Spurs Stadium</div>
+        </td>
+        <td class="td-ko">14:15</td>
+        <td><div class="td-score">2–1</div></td>
+        <td><span class="td-winner tw-h">TOT</span></td>
+        <td class="td-range"><span class="tr-lo">5</span><span class="tr-sep"> · </span><span class="tr-med">8</span><span class="tr-sep"> · </span><span class="tr-hi">11</span></td>
+        <td class="td-range"><span class="tr-lo">5</span><span class="tr-sep"> · </span><span class="tr-med">8</span><span class="tr-sep"> · </span><span class="tr-hi">12</span></td>
+        <td class="td-range"><span class="tr-lo">18</span><span class="tr-sep"> · </span><span class="tr-med">24</span><span class="tr-sep"> · </span><span class="tr-hi">30</span></td>
+        <td class="td-range"><span class="tr-lo">30</span><span class="tr-sep"> · </span><span class="tr-med">38</span><span class="tr-sep"> · </span><span class="tr-hi">48</span></td>
+        <td class="td-range"><span class="tr-lo">14</span><span class="tr-sep"> · </span><span class="tr-med">20</span><span class="tr-sep"> · </span><span class="tr-hi">26</span></td>
+        <td class="td-range"><span class="tr-lo">26</span><span class="tr-sep"> · </span><span class="tr-med">32</span><span class="tr-sep"> · </span><span class="tr-hi">40</span></td>
+        <td><span class="td-btts btts-m">MAYBE</span></td>
+        <td class="td-conf">
+          <span class="conf-badge conf-low"><span class="conf-dot cd-low"></span>LOW</span>
+          <div class="conf-reason">TOT 0W in last 5 all comps · NFO goalscoring crisis · genuine 3-way toss-up · survival desperation</div>
+        </td>
+      </tr>
+
+    </tbody>
+  </table>
+</div>
+
+<!-- WATCHLIST -->
+<div class="watchlist">
+  <div class="wl-head">Key Watchlist &amp; Betting Angles</div>
+  <div class="wl-items">
+    <div class="wl-item">
+      <div class="wl-tag" style="color:var(--volt)">⚡ Best bet</div>
+      <div class="wl-fix">Brighton vs Liverpool — BTTS YES</div>
+      <div class="wl-note">H2H BTTS 64% · avg 3.41 goals · both teams scoring freely · Salah, Wirtz, Gakpo vs Rutter, Mitoma, Welbeck</div>
+    </div>
+    <div class="wl-item">
+      <div class="wl-tag" style="color:var(--teal)">📐 Stat angle</div>
+      <div class="wl-fix">Newcastle vs Sunderland — U2.5 goals</div>
+      <div class="wl-note">Dec derby: 0.54 xG combined — 2nd lowest PL ever · Derby = defensive · both teams score rarely in these fixtures</div>
+    </div>
+    <div class="wl-item">
+      <div class="wl-tag" style="color:var(--orange)">🟨 Cards</div>
+      <div class="wl-fix">Tottenham vs Forest — 4+ yellows</div>
+      <div class="wl-note">Relegation six-pointer · 1pt separates 16th &amp; 18th · Tudor's Spurs + Pereira's Forest both cynical tactically</div>
+    </div>
+    <div class="wl-item">
+      <div class="wl-tag" style="color:var(--sky)">📐 Corners</div>
+      <div class="wl-fix">Brighton vs Liverpool — O9.5 corners</div>
+      <div class="wl-note">Both sides attack wide · H2H avg ~10 corners · LFC possession → corners · BRI home avg 6+ corners</div>
+    </div>
+    <div class="wl-item">
+      <div class="wl-tag" style="color:var(--win)">✓ Confidence</div>
+      <div class="wl-fix">Fulham vs Burnley — Fulham Win</div>
+      <div class="wl-note">FUL 63.1% win prob · Burnley 0W in last 5 away · 1 goal scored away in last 5 · dead rubber for Burnley</div>
+    </div>
+    <div class="wl-item">
+      <div class="wl-tag" style="color:var(--win)">✓ Confidence</div>
+      <div class="wl-fix">Aston Villa vs West Ham — Villa Win</div>
+      <div class="wl-note">AVL 49.5% win prob · WHU had 1 shot vs Man City · Villa UCL push vs WHU relegation 18th · quality gap clear</div>
+    </div>
+    <div class="wl-item">
+      <div class="wl-tag" style="color:var(--red)">⚠ Danger</div>
+      <div class="wl-fix">Newcastle vs Sunderland — upset risk</div>
+      <div class="wl-note">NEW winless in last 5 home derbies · SUN won 7 of last 8 vs NEW · SJP return after 10 years = tension + errors</div>
+    </div>
+    <div class="wl-item">
+      <div class="wl-tag" style="color:var(--purple)" style="color:var(--purple)">🎯 Score pred</div>
+      <div class="wl-fix">Predicted scores at a glance</div>
+      <div class="wl-note">BRI 1-2 LFC · FUL 2-0 BUR · EVE 1-2 CFC · LEE 1-1 BRE · NEW 1-1 SUN · AVL 2-0 WHU · TOT 2-1 NFO</div>
+    </div>
+  </div>
+</div>
+
+</div><!-- end summary section -->
+
+</div><!-- end Sunday -->
+
 </div><!-- /wrap -->
 
 <footer>
