@@ -398,7 +398,7 @@ footer{
   <div class="fc-top">
     <div class="fc-team">
       <div class="fc-club">Brighton</div>
-      <div class="fc-meta">12th · 40pts · BRI 30.4%</div>
+      <div class="fc-meta">12th · 40pts · Unchanged XI from SUN win · Mitoma fit</div>
       <!-- L5: W(CRY 1-0), W(SUN 1-0), D(BRE), L(MUN), W(LEE) — strong home form -->
       <div class="form-row"><div class="fb fw">W</div><div class="fb fw">W</div><div class="fb fd">D</div><div class="fb fl">L</div><div class="fb fw">W</div></div>
     </div>
@@ -409,7 +409,7 @@ footer{
     </div>
     <div class="fc-team away">
       <div class="fc-club">Liverpool</div>
-      <div class="fc-meta">5th · 49pts · LFC 43.8%</div>
+      <div class="fc-meta">5th · 49pts · Salah OUT · Alisson OUT · Mamardashvili starts</div>
       <!-- L5: D(TOT 1-1), W(NFO 1-0), W(SUN 1-0), L(Wolves 2-1), W(WHU 5-2) -->
       <div class="form-row r"><div class="fb fd">D</div><div class="fb fw">W</div><div class="fb fw">W</div><div class="fb fl">L</div><div class="fb fw">W</div></div>
     </div>
@@ -470,13 +470,14 @@ footer{
     <span class="btts-pill bp-yes">BTTS YES</span>
     <span class="btts-pill bp-yes">O2.5 goals</span>
     <span class="btts-pill bp-info">BRI bogey team for LFC</span>
-    <span class="btts-pill bp-info">Salah anytime scorer</span>
+    <span class="btts-pill bp-maybe">Salah OUT · Alisson OUT</span>
+    <span class="btts-pill bp-info">Minteh scored vs SUN · key threat</span>
     <span class="btts-pill" style="color:var(--orange);border-color:rgba(255,122,40,.4);background:var(--orange-dim)">⬤ MED confidence</span>
   </div>
   <div class="fc-context">
     <span class="ctx-icon">◆</span>
     <p class="ctx-text">
-      <span class="hl">Brighton have won 3 of their last 5 PL home games.</span> Despite Liverpool's superior position (5th vs 12th), Brighton have been a persistent bogey team — Liverpool have won only 6 of their last 13 meetings. <strong>H2H averages 3.41 goals, BTTS 64%.</strong> Liverpool missing Konate (doubt) but Salah, Wirtz and Gakpo provide genuine threat. Stakes: LFC fighting for UCL via league, BRI need European push.
+      <span class="hl">Brighton have won 3 of their last 5 PL home games</span> and name an unchanged XI from last weekend's 1-0 win at Sunderland, with Mitoma fit after ankle concerns. Despite Liverpool's superior league position, Brighton have been a persistent bogey team — LFC have won only 6 of their last 13 meetings here. <strong>H2H averages 3.41 goals, BTTS 64%.</strong> <span class="hr">Liverpool are without Mohamed Salah (muscle — scored and then came off vs Galatasaray) and Alisson (injury — Mamardashvili deputises).</span> Confirmed LFC XI: Mamardashvili; Frimpong, Konate, Van Dijk, Kerkez; Gravenberch, Mac Allister; Szoboszlai, Wirtz, Gakpo; Ekitike. BRI XI: Verbruggen; Wieffer, Van Hecke, Dunk, Kadioglu; Milner, Gross; Gomez, Hinshelwood, Minteh; Welbeck. Stakes: LFC fighting for UCL via league — must win heading into international break.
     </p>
   </div>
 </div>
@@ -493,7 +494,7 @@ footer{
   <div class="fc-top">
     <div class="fc-team">
       <div class="fc-club">Fulham</div>
-      <div class="fc-meta">11th · 41pts · FUL 63.1%</div>
+      <div class="fc-meta">11th · 41pts · Kevin OUT · Smith Rowe doubt</div>
       <!-- L5: D(NFO 0-0), W(TOT 2-1), W(BRI), D(WHU), L(NEW) -->
       <div class="form-row"><div class="fb fd">D</div><div class="fb fw">W</div><div class="fb fw">W</div><div class="fb fd">D</div><div class="fb fl">L</div></div>
     </div>
@@ -504,7 +505,7 @@ footer{
     </div>
     <div class="fc-team away">
       <div class="fc-club">Burnley</div>
-      <div class="fc-meta">19th · 20pts · BUR 16.2%</div>
+      <div class="fc-meta">19th · 20pts · 6 players OUT (Cullen, Amdouni, Roberts, Beyer, Tuanzebe, Tresor)</div>
       <!-- L5: D(BOU 0-0), L(ARS), L(MUN), D(WHU), L(LEE) -->
       <div class="form-row r"><div class="fb fd">D</div><div class="fb fl">L</div><div class="fb fl">L</div><div class="fb fd">D</div><div class="fb fl">L</div></div>
     </div>
@@ -570,7 +571,7 @@ footer{
   <div class="fc-context">
     <span class="ctx-icon">◆</span>
     <p class="ctx-text">
-      <span class="ho">Burnley are 19th and almost certainly relegated</span> — this is a dead rubber for them. Fulham are comfortable mid-table. <strong>Low motivation from both sides, but Fulham's home record (8W 2D 3L) is strong.</strong> Expect a professional, low-intensity Fulham win. Burnley's last 5 away: 0W 1D 4L, 1 goal scored.
+      <span class="ho">Burnley are 19th and eight points from safety</span> — effectively playing for pride. Fulham are comfortable mid-table but fighting for a European Conference spot (4pts off 7th). <strong>Confirmed FUL XI: Leno; Tete, Andersen, Bassey, Robinson; Berge, Iwobi; Wilson, King, Bobb; Jimenez.</strong> <span class="hr">BUR missing 6 players: Cullen, Amdouni, Roberts, Beyer, Tuanzebe (all confirmed OUT), Tresor (ankle doubt).</span> Confirmed BUR XI: Dubravka; Humphreys, Laurent, Esteve; Walker, Ugochukwu, Hannibal, Hartman; Anthony, Foster; Flemming. Harry Wilson contributed a goal and 2 assists in the 3-2 win at Turf Moor in December — the danger man to watch. <span class="hl">Walker has a 90% win rate against Fulham in his career</span> — one stat worth noting for Burnley backers.
     </p>
   </div>
 </div>
@@ -580,14 +581,14 @@ footer{
   <div class="fc-ko">
     <div>
       <span class="ko-time c-volt">17:30 GMT</span>
-      <span class="ko-comp"> · Goodison Park · Liverpool</span>
+      <span class="ko-comp"> · Hill Dickinson Stadium · Liverpool</span>
     </div>
     <span class="ko-badge stake-high">⚡ High stakes</span>
   </div>
   <div class="fc-top">
     <div class="fc-team">
       <div class="fc-club">Everton</div>
-      <div class="fc-meta">8th · 43pts · EVE 28.9%</div>
+      <div class="fc-meta">8th · 43pts · Grealish OUT · George ineligible · Tarkowski/Branthwaite doubt</div>
       <!-- L5: L(ARS 0-2), D(NEW), W(CRY), D(FUL), L(WHU) -->
       <div class="form-row"><div class="fb fl">L</div><div class="fb fd">D</div><div class="fb fw">W</div><div class="fb fd">D</div><div class="fb fl">L</div></div>
     </div>
@@ -598,7 +599,7 @@ footer{
     </div>
     <div class="fc-team away">
       <div class="fc-club">Chelsea</div>
-      <div class="fc-meta">6th · 48pts · CFC 43.2%</div>
+      <div class="fc-meta">6th · 48pts · Chalobah OUT · James OUT · Jørgensen OUT · Colwill OUT · Mudryk banned</div>
       <!-- L5: L(NEW 0-1), W(AVL 4-1), D(BUR 1-1), L(ARS 2-1), W(Wolves 3-1) -->
       <div class="form-row r"><div class="fb fl">L</div><div class="fb fw">W</div><div class="fb fd">D</div><div class="fb fl">L</div><div class="fb fw">W</div></div>
     </div>
@@ -665,7 +666,7 @@ footer{
   <div class="fc-context">
     <span class="ctx-icon">◆</span>
     <p class="ctx-text">
-      <strong>Both teams need wins</strong> — Chelsea chasing UCL spot (6th, 48pts), Everton fighting for European football (8th). <span class="hl">Chelsea 67% possession vs Newcastle but only 3 SoT</span> — shot volume is high but efficiency is inconsistent. Joao Pedro, Garnacho and Neto lead CFC's attack. Everton's Goodison Park is notoriously hostile for away sides. <span class="ht">High foul count and physical battle expected.</span>
+      <strong>Both teams need wins</strong> — Chelsea chasing UCL spot (6th, 48pts), Everton fighting for European football (8th). <span class="hr">Chelsea crashed out of the Champions League 8-2 on aggregate to PSG this week, and Trevoh Chalobah suffered a 6-week ankle injury in that game. Reece James (hamstring), Jørgensen (groin surgery), Colwill (ACL), and Mudryk (doping ban) also absent.</span> <strong>Confirmed CFC XI: Sanchez; Acheampong, Fofana, Hato, Cucurella; Caicedo, Santos; Palmer, Fernandez, Garnacho/Neto; Joao Pedro.</strong> Pedro Neto returns from suspension. <span class="hl">Everton: Pickford; O'Brien, Keane, Tarkowski, Mykolenko; Garner, Gueye; Armstrong, Dewsbury-Hall, Ndiaye; Barry.</span> Tyrique George ineligible (Chelsea loanee). This is Chelsea's <strong>first ever visit to the Hill Dickinson Stadium</strong> — a historic occasion. Caicedo vs Gueye is the midfield battle to watch.
     </p>
   </div>
 </div>
@@ -682,7 +683,7 @@ footer{
   <div class="fc-top">
     <div class="fc-team">
       <div class="fc-club">Leeds</div>
-      <div class="fc-meta">15th · 32pts · LEE 38.5%</div>
+      <div class="fc-meta">15th · 32pts · Gudmundsson SUSPENDED (red vs CRY) · Justin starts</div>
       <!-- L5: D(CRY 0-0), L(SUN 0-1), W(BUR), D(SUN), D(NFO) -->
       <div class="form-row"><div class="fb fd">D</div><div class="fb fl">L</div><div class="fb fw">W</div><div class="fb fd">D</div><div class="fb fd">D</div></div>
     </div>
@@ -693,7 +694,7 @@ footer{
     </div>
     <div class="fc-team away">
       <div class="fc-club">Brentford</div>
-      <div class="fc-meta">7th · 45pts · BRE 33.7%</div>
+      <div class="fc-meta">7th · 45pts · Henry OUT · Hickey OUT · Janelt OUT · Dasilva OUT · Damsgaard doubt</div>
       <!-- L5: D(WOL 2-2), D(BOU 0-0), W(BUR 4-3), W(NEW 3-2), D(ARS 1-1) -->
       <div class="form-row r"><div class="fb fd">D</div><div class="fb fd">D</div><div class="fb fw">W</div><div class="fb fw">W</div><div class="fb fd">D</div></div>
     </div>
@@ -759,7 +760,7 @@ footer{
   <div class="fc-context">
     <span class="ctx-icon">◆</span>
     <p class="ctx-text">
-      <strong>Elland Road will be rocking</strong> — Leeds are fighting for European football and Brentford are 7th looking to consolidate. <span class="ht">Leeds have drawn their last 3 home PL games</span>. Brentford's Igor Thiago leads the league for off-the-ball runs. Expect a competitive, end-to-end game with cards. The 2-2 Brentford-Wolves on Monday shows Brentford can give up goals even against inferior opponents.
+      <strong>Elland Road will be rocking</strong> — Leeds are fighting for European football and Brentford are 7th looking to consolidate. <span class="ht">Leeds have drawn their last 3 home PL games.</span> <span class="hr">Key Leeds news: Gudmundsson SUSPENDED after his red card at Crystal Palace — James Justin deputises at left-back. Okafor returns to training but minutes will be managed.</span> <span class="hr">Brentford injury crisis in defence: Henry (hamstring), Hickey (hamstring), Janelt (metatarsal), Dasilva (knee) all OUT. Damsgaard trained outside on the eve of the game — Andrews giving him every chance to prove fitness.</span> Brentford's Igor Thiago leads the league for off-the-ball runs. The 2-2 Brentford-Wolves on Monday shows Brentford can give up goals even against inferior opponents — their makeshift defence will be tested at Elland Road.
     </p>
   </div>
 </div>
@@ -782,7 +783,7 @@ footer{
   <div class="fc-top">
     <div class="fc-team">
       <div class="fc-club">Newcastle</div>
-      <div class="fc-meta">9th · 42pts · NEW 57.3%</div>
+      <div class="fc-meta">9th · 42pts · OUT: Guimarães · Schar · Krafth</div>
       <!-- L5: W(CFC 1-0), L(BAR 7-2 UCL), W(MUN 2-1), D(MCI), L(ARS) -->
       <div class="form-row"><div class="fb fw">W</div><div class="fb fl">L</div><div class="fb fw">W</div><div class="fb fd">D</div><div class="fb fl">L</div></div>
     </div>
@@ -793,7 +794,7 @@ footer{
     </div>
     <div class="fc-team away">
       <div class="fc-club">Sunderland</div>
-      <div class="fc-meta">13th · 40pts · SUN 18.6%</div>
+      <div class="fc-meta">13th · 40pts · Xhaka available · Reinildo fit</div>
       <!-- L5: L(BRI 0-1), W(LEE 1-0), L(AVL), D(LFC), D(NFO) -->
       <div class="form-row r"><div class="fb fl">L</div><div class="fb fw">W</div><div class="fb fl">L</div><div class="fb fd">D</div><div class="fb fd">D</div></div>
     </div>
@@ -846,22 +847,22 @@ footer{
         <div class="sc-name">Tackles</div>
         <div class="sc-vals"><span class="sc-lo">30</span><span class="sc-sep">—</span><span class="sc-hi">48</span><span class="sc-med">38</span></div>
         <div class="sc-bar"><div class="sc-bar-lo" style="width:54%"></div><div class="sc-bar-hi" style="width:80%"></div></div>
-        <div class="sc-ctx">Derby = maximum tackles · Xhaka vs Joelinton midfield war · St James' Park atmosphere elevates every duel</div>
+        <div class="sc-ctx">Derby = maximum tackles · Xhaka vs depleted NEW midfield (no Guimarães) · St James' Park atmosphere elevates every duel</div>
       </div>
     </div>
   </div>
   <div class="btts-row">
     <span class="btts-pill bp-no">BTTS UNLIKELY</span>
     <span class="btts-pill bp-no">U2.5 goals likely</span>
-    <span class="btts-pill bp-info">SUN unbeaten vs NEW in 10 PL</span>
-    <span class="btts-pill bp-info">NEW 0W in last 5 home derbies</span>
+    <span class="btts-pill bp-info">NEW: Guimarães · Schar · Krafth OUT</span>
+    <span class="btts-pill bp-info">SUN: Xhaka fit · Reinildo fit · Brobbey fit</span>
     <span class="btts-pill bp-maybe">Red card risk HIGH</span>
     <span class="btts-pill" style="color:var(--red);border-color:rgba(255,75,75,.35);background:var(--red-dim)">⬤ LOW confidence</span>
   </div>
   <div class="fc-context">
     <span class="ctx-icon">◆</span>
     <p class="ctx-text">
-      <span class="hr">The match of the weekend.</span> <strong>Newcastle are winless in their last 5 PL home derbies (D2 L3)</strong> and Sunderland have won 7 of the last 8 fixtures between these sides. The December derby produced just 0.54 xG from 11 shots — <span class="hl">the second-lowest combined xG in PL history.</span> Newcastle reeling from a 7-2 hammering at Barcelona in the UCL midweek but beat Chelsea last Saturday. <span class="ht">Sunderland unbeaten in 10 PL derbies against Newcastle since 2011.</span> This is the Tyne-Wear Derby returning to St James' Park for the first time in 10 years. Expect maximum intensity, few clear chances, and lots of physical duels.
+      <span class="hr">The match of the weekend.</span> <strong>Newcastle are winless in their last 5 PL home derbies (D2 L3)</strong> and Sunderland have won 7 of the last 8 fixtures between these sides. The December derby produced just 0.54 xG from 11 shots — <span class="hl">the second-lowest combined xG in PL history.</span> <span class="ht">Key injuries: Bruno Guimarães (hamstring — OUT), Fabian Schar (ankle — OUT), Emil Krafth (OUT). Sandro Tonali is a doubt after limping off vs Barcelona but Howe said "not as bad as first feared".</span> Livramento replaces Trippier at right-back. <span class="ho">For Sunderland: Granit Xhaka AVAILABLE and expected to start. Reinildo available after return from knee injury. Brian Brobbey fit. Doubts: Ballard, Le Fee, Roefs, Mukiele.</span> Newcastle reeling from a 7-2 hammering at Barcelona midweek — Elanga scored twice but defensive confidence shot. Expect maximum intensity, few clear chances, and lots of physical duels.
     </p>
   </div>
 </div>
@@ -878,7 +879,7 @@ footer{
   <div class="fc-top">
     <div class="fc-team">
       <div class="fc-club">Aston Villa</div>
-      <div class="fc-meta">4th · 51pts · AVL 49.5%</div>
+      <div class="fc-meta">4th · 51pts · Tielemans doubt (training) · Kamara OUT</div>
       <!-- L5: L(MUN 3-1), L(Wolves 2-0), D(LEE 1-1), W(BRI 1-0), W(Lille UEL 1-0) -->
       <div class="form-row"><div class="fb fl">L</div><div class="fb fl">L</div><div class="fb fd">D</div><div class="fb fw">W</div><div class="fb fw">W</div></div>
     </div>
@@ -889,7 +890,7 @@ footer{
     </div>
     <div class="fc-team away">
       <div class="fc-club">West Ham</div>
-      <div class="fc-meta">18th · 29pts · WHU 24.4%</div>
+      <div class="fc-meta">18th · 29pts · Summerville OUT (omitted from NED squad) · Bowen leads attack</div>
       <!-- L5: D(MCI 1-1), L(BOU 0-0 — they drew... wait let me check WHU recent form -->
       <!-- WHU L5: D(MCI 1-1), W(EVE), L(NFO), L(AVL), D(BOU) -->
       <div class="form-row r"><div class="fb fd">D</div><div class="fb fw">W</div><div class="fb fl">L</div><div class="fb fl">L</div><div class="fb fd">D</div></div>
@@ -957,7 +958,7 @@ footer{
   <div class="fc-context">
     <span class="ctx-icon">◆</span>
     <p class="ctx-text">
-      <strong>Villa are 4th and chasing Champions League</strong> — full motivation. <span class="hr">West Ham are 18th and in a relegation battle</span> — they'll fight hard but lack the quality. WHU's last game: 1 shot total vs Man City — shocking. <span class="hl">Sancho returns from ineligibility (UEL vs Lille vs parent club Man United)</span> but domestic eligibility is different. Watkins leads AVL's attack with 12 goals. Expect Villa to control and win but not dominate on stats vs a defensive WHU.
+      <strong>Villa are 4th and chasing Champions League</strong> — full motivation. <span class="hr">West Ham are 18th and in a relegation battle</span>, but WhoScored data shows WHU have lost just 2 of their last 9 PL games — more resilient than their position suggests. <span class="hr">Summerville is OUT after being omitted from the Netherlands squad — a big loss for WHU's attack.</span> Bowen leads West Ham's forward line, supported by Wan-Bissaka overlapping. <strong>Confirmed AVL XI: Martinez; Cash, Konsa, Torres, Maatsen; Onana, Luiz; McGinn, Rogers, Sancho; Watkins.</strong> Tielemans has returned to training but is being assessed — Onana-Luiz start. Watkins leads AVL's attack with 12 goals. <span class="hl">Sancho returns from UEL ineligibility and should bring creativity</span>. AVL played Thursday (UEL vs Lille) — fatigue factor versus a WHU side who have had a full week's rest.
     </p>
   </div>
 </div>
@@ -969,13 +970,13 @@ footer{
       <span class="ko-time c-volt">14:15 GMT</span>
       <span class="ko-comp"> · Tottenham Hotspur Stadium · London</span>
     </div>
-    <span class="ko-badge stake-med">Mid stakes</span>
+    <span class="ko-badge stake-high">🔥 Relegation six-pointer</span>
   </div>
   <div class="fc-top">
     <div class="fc-team">
       <div class="fc-club">Tottenham</div>
-      <div class="fc-meta">16th · 30pts · TOT 42.1%</div>
-      <!-- L5: D(LFC 1-1), L(CRY 3-1), L(FUL 2-1), L(ARS 4-1), L(NEW 2-1) — terrible -->
+      <div class="fc-meta">16th · 30pts · Van de Ven SUSP · Odobert · Maddison (ACL) · Bentancur (hamstring)</div>
+      <!-- L5: D(LFC 1-1), L(CRY 3-1), L(FUL 2-1), L(ARS 4-1), L(NEW 2-1) -->
       <div class="form-row"><div class="fb fd">D</div><div class="fb fl">L</div><div class="fb fl">L</div><div class="fb fl">L</div><div class="fb fl">L</div></div>
     </div>
     <div class="fc-mid">
@@ -985,7 +986,7 @@ footer{
     </div>
     <div class="fc-team away">
       <div class="fc-club">Forest</div>
-      <div class="fc-meta">17th · 29pts · NFO 30.0%</div>
+      <div class="fc-meta">17th · 29pts · Wood OUT · Boly OUT · Hudson-Odoi doubt · Gibbs-White key</div>
       <!-- L5: D(FUL 0-0), D(MCI 2-2), W(BRI 1-0), L(LEE 3-1), D(WOL 0-0) -->
       <div class="form-row r"><div class="fb fd">D</div><div class="fb fd">D</div><div class="fb fw">W</div><div class="fb fl">L</div><div class="fb fd">D</div></div>
     </div>
@@ -1044,15 +1045,22 @@ footer{
   </div>
   <div class="btts-row">
     <span class="btts-pill bp-maybe">BTTS MAYBE</span>
-    <span class="btts-pill bp-info">Both teams in crisis</span>
-    <span class="btts-pill bp-info">3pts vital for both</span>
+    <span class="btts-pill bp-maybe">Van de Ven SUSP · TOT defence exposed</span>
+    <span class="btts-pill bp-info">Solanke fit · Palhinha cleared</span>
+    <span class="btts-pill bp-info">Richarlison returns from suspension</span>
     <span class="btts-pill bp-maybe">Yellow card fest likely</span>
     <span class="btts-pill" style="color:var(--red);border-color:rgba(255,75,75,.35);background:var(--red-dim)">⬤ LOW confidence</span>
   </div>
   <div class="fc-context">
     <span class="ctx-icon">◆</span>
     <p class="ctx-text">
-      <span class="hr">This is effectively a relegation six-pointer</span> — Spurs 16th (30pts), Forest 17th (29pts), West Ham 18th (29pts). Only 1 point separates 16th and 18th. <strong>Both teams are desperate, which drives fouls, cards and tackles UP significantly.</strong> Tudor's Spurs are winless in their last 5 in all comps but put in 7 SoT vs Liverpool. Forest's goalscoring crisis continues (22 shots in UEL vs Midtjylland, 0 goals). Expect a tense, cagey, mistake-ridden game with high emotional intensity.
+      <span class="hr">An outright relegation six-pointer</span> — Spurs 16th (30pts), Forest 17th (29pts), West Ham 18th (29pts). Only 1 point separates 16th and 18th. <strong>Both teams are desperate, which drives fouls, cards and tackles UP significantly.</strong>
+      <br><br>
+      <span class="ht">Tottenham confirmed absences:</span> <strong>Micky van de Ven SUSPENDED</strong> (red card vs Crystal Palace) — a massive blow to Spurs' best defender. Odobert (ACL — season), Maddison (ACL — season), Bentancur (hamstring, out to May), Kudus (thigh, out to April), Davies (ankle) all OUT. <span class="hl">Positives: Solanke returns from hip injury and is fit to start. Palhinha has been cleared after concussion protocols. Romero, Bergvall, Gallagher and Udogie all available. Richarlison returns from suspension and will start.</span>
+      <br><br>
+      <span class="ht">Confirmed TOT XI:</span> Kinsky; Porro, Romero, Dragusin, Udogie; Palhinha, Bergvall; Gallagher, Tel, Richarlison; Solanke.
+      <br><br>
+      <span class="ht">Nottingham Forest confirmed absences:</span> Chris Wood (knee — season), Boly (knee), Savona (knee), Cunha (foot). Hudson-Odoi is a doubt after sitting out training Thursday. Netz missed the UEL second leg at Midtjylland (ineligible) but is available domestically. Gibbs-White is the key creative force and starts. <span class="hl">Confirmed NFO XI:</span> Sels; Aina, Murillo, Morato, Williams; Sangare, Anderson; Hutchinson, Gibbs-White, Netz; Awoniyi. Forest lost 2-1 in Denmark on Thursday — morale and fitness both potential issues after European travel. Tudor's Spurs meanwhile had the full week to prepare — home advantage, rested squad (minus the injured), and a raucous Spurs Stadium crowd. Expect a fractious, foul-heavy, high-tackle game decided by one moment of quality.
     </p>
   </div>
 </div>
@@ -1077,10 +1085,23 @@ footer{
 }
 .sum-table thead th:first-child{border-radius:var(--r-sm) 0 0 0}
 .sum-table thead th:last-child{border-radius:0 var(--r-sm) 0 0}
-.sum-table tbody tr{border-bottom:1px solid var(--border);transition:background .15s}
-.sum-table tbody tr:last-child{border-bottom:none}
+.sum-table tbody tr{transition:background .15s}
 .sum-table tbody tr:hover{background:rgba(200,245,66,.03)}
 .sum-table tbody td{padding:11px 12px;vertical-align:middle}
+
+/* data row — no bottom border (conf-row sits below it) */
+.sum-table tbody tr.data-row td{border-bottom:none;padding-bottom:6px}
+
+/* confidence row spanning full width */
+.sum-table tbody tr.conf-row td{
+  padding:0 12px 12px;border-bottom:1px solid var(--border);
+}
+.sum-table tbody tr.conf-row:last-child td{border-bottom:none}
+.conf-row-inner{
+  display:flex;align-items:center;gap:10px;
+  padding:7px 12px;border-radius:var(--r-xs);
+  background:rgba(255,255,255,.025);border:1px solid var(--border);
+}
 
 .td-fix{font-size:13px;font-weight:600;color:var(--fg);white-space:nowrap}
 .td-fix-sub{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--fg3);margin-top:2px;white-space:nowrap}
@@ -1092,11 +1113,12 @@ footer{
 .tw-d{color:var(--fg3);border-color:var(--border2);background:rgba(255,255,255,.03)}
 
 /* confidence badges */
-.td-conf{text-align:center;white-space:nowrap}
+.td-conf{text-align:left}
 .conf-badge{
   display:inline-flex;align-items:center;gap:5px;
   font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;
   padding:4px 10px;border-radius:var(--r-xs);border:1px solid;white-space:nowrap;
+  flex-shrink:0;
 }
 .conf-high{color:var(--win);border-color:rgba(34,211,122,.4);background:var(--win-dim)}
 .conf-med {color:var(--orange);border-color:rgba(255,122,40,.4);background:var(--orange-dim)}
@@ -1104,8 +1126,8 @@ footer{
 .conf-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0}
 .cd-high{background:var(--win)}.cd-med{background:var(--orange)}.cd-low{background:var(--red)}
 .conf-reason{
-  font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--fg3);
-  line-height:1.4;margin-top:4px;max-width:120px;
+  font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--fg2);
+  line-height:1.4;
 }
 
 /* stat range cells */
@@ -1227,13 +1249,12 @@ footer{
         <th>Goal Kicks<br><span style="font-size:9px;opacity:.6">lo · med · hi</span></th>
         <th>Tackles<br><span style="font-size:9px;opacity:.6">lo · med · hi</span></th>
         <th>BTTS</th>
-        <th>Confidence</th>
       </tr>
     </thead>
     <tbody>
 
       <!-- Brighton vs Liverpool -->
-      <tr>
+      <tr class="data-row">
         <td>
           <div class="td-fix">Brighton vs Liverpool</div>
           <div class="td-fix-sub">Sat · Amex Stadium</div>
@@ -1248,14 +1269,18 @@ footer{
         <td class="td-range"><span class="tr-lo">10</span><span class="tr-sep"> · </span><span class="tr-med">15</span><span class="tr-sep"> · </span><span class="tr-hi">20</span></td>
         <td class="td-range"><span class="tr-lo">22</span><span class="tr-sep"> · </span><span class="tr-med">27</span><span class="tr-sep"> · </span><span class="tr-hi">34</span></td>
         <td><span class="td-btts btts-y">YES</span></td>
-        <td class="td-conf">
-          <span class="conf-badge conf-med"><span class="conf-dot cd-med"></span>MED</span>
-          <div class="conf-reason">LFC 43.8% · BRI bogey team (6/13 LFC wins) · Wirtz fit but LFC misfiring</div>
+      </tr>
+      <tr class="conf-row">
+        <td colspan="11">
+          <div class="conf-row-inner">
+            <span class="conf-badge conf-med"><span class="conf-dot cd-med"></span>MED confidence</span>
+            <span class="conf-reason">Salah OUT · Alisson OUT · BRI bogey team (6/13 LFC wins) · Wirtz leads but LFC missing top scorer</span>
+          </div>
         </td>
       </tr>
 
       <!-- Fulham vs Burnley -->
-      <tr>
+      <tr class="data-row">
         <td>
           <div class="td-fix">Fulham vs Burnley</div>
           <div class="td-fix-sub">Sat · Craven Cottage</div>
@@ -1270,17 +1295,21 @@ footer{
         <td class="td-range"><span class="tr-lo">12</span><span class="tr-sep"> · </span><span class="tr-med">17</span><span class="tr-sep"> · </span><span class="tr-hi">22</span></td>
         <td class="td-range"><span class="tr-lo">20</span><span class="tr-sep"> · </span><span class="tr-med">24</span><span class="tr-sep"> · </span><span class="tr-hi">30</span></td>
         <td><span class="td-btts btts-n">NO</span></td>
-        <td class="td-conf">
-          <span class="conf-badge conf-high"><span class="conf-dot cd-high"></span>HIGH</span>
-          <div class="conf-reason">63.1% win prob · BUR 0W away in L5 · 1 goal away in L5 · dead rubber</div>
+      </tr>
+      <tr class="conf-row">
+        <td colspan="11">
+          <div class="conf-row-inner">
+            <span class="conf-badge conf-high"><span class="conf-dot cd-high"></span>HIGH confidence</span>
+            <span class="conf-reason">63.1% win prob · BUR 0W away in L5 · 1 goal away in L5 · BUR missing 6 players · dead rubber for Burnley</span>
+          </div>
         </td>
       </tr>
 
       <!-- Everton vs Chelsea -->
-      <tr>
+      <tr class="data-row">
         <td>
           <div class="td-fix">Everton vs Chelsea</div>
-          <div class="td-fix-sub">Sat · Goodison Park</div>
+          <div class="td-fix-sub">Sat · Hill Dickinson Stadium</div>
         </td>
         <td class="td-ko">17:30</td>
         <td><div class="td-score">1–2</div></td>
@@ -1292,14 +1321,18 @@ footer{
         <td class="td-range"><span class="tr-lo">10</span><span class="tr-sep"> · </span><span class="tr-med">15</span><span class="tr-sep"> · </span><span class="tr-hi">20</span></td>
         <td class="td-range"><span class="tr-lo">24</span><span class="tr-sep"> · </span><span class="tr-med">28</span><span class="tr-sep"> · </span><span class="tr-hi">36</span></td>
         <td><span class="td-btts btts-m">MAYBE</span></td>
-        <td class="td-conf">
-          <span class="conf-badge conf-med"><span class="conf-dot cd-med"></span>MED</span>
-          <div class="conf-reason">CFC 43.2% · Goodison hostile · CFC 3 SoT with 67% poss vs NEW — efficiency concern</div>
+      </tr>
+      <tr class="conf-row">
+        <td colspan="11">
+          <div class="conf-row-inner">
+            <span class="conf-badge conf-med"><span class="conf-dot cd-med"></span>MED confidence</span>
+            <span class="conf-reason">CFC 43.2% · Hill Dickinson atmosphere · CFC missing James, Chalobah, Jørgensen · first ever CFC visit to new ground</span>
+          </div>
         </td>
       </tr>
 
       <!-- Leeds vs Brentford -->
-      <tr>
+      <tr class="data-row">
         <td>
           <div class="td-fix">Leeds vs Brentford</div>
           <div class="td-fix-sub">Sat · Elland Road</div>
@@ -1314,14 +1347,18 @@ footer{
         <td class="td-range"><span class="tr-lo">12</span><span class="tr-sep"> · </span><span class="tr-med">17</span><span class="tr-sep"> · </span><span class="tr-hi">22</span></td>
         <td class="td-range"><span class="tr-lo">24</span><span class="tr-sep"> · </span><span class="tr-med">28</span><span class="tr-sep"> · </span><span class="tr-hi">36</span></td>
         <td><span class="td-btts btts-m">MAYBE</span></td>
-        <td class="td-conf">
-          <span class="conf-badge conf-low"><span class="conf-dot cd-low"></span>LOW</span>
-          <div class="conf-reason">Only 5pt gap · LEE drew last 3 home · BRE drew last 2 · odds near-equal (38.5 vs 33.7%)</div>
+      </tr>
+      <tr class="conf-row">
+        <td colspan="11">
+          <div class="conf-row-inner">
+            <span class="conf-badge conf-low"><span class="conf-dot cd-low"></span>LOW confidence</span>
+            <span class="conf-reason">LEE drew last 3 home · Gudmundsson SUSP · BRE missing Henry, Hickey, Janelt, Dasilva, Damsgaard doubt · both depleted</span>
+          </div>
         </td>
       </tr>
 
       <!-- Newcastle vs Sunderland -->
-      <tr style="background:rgba(255,122,40,.04)">
+      <tr class="data-row" style="background:rgba(255,122,40,.04)">
         <td>
           <div class="td-fix">Newcastle vs Sunderland</div>
           <div class="td-fix-sub">Sun · St. James' Park 🔥 Derby</div>
@@ -1336,14 +1373,18 @@ footer{
         <td class="td-range"><span class="tr-lo">14</span><span class="tr-sep"> · </span><span class="tr-med">20</span><span class="tr-sep"> · </span><span class="tr-hi">26</span></td>
         <td class="td-range"><span class="tr-lo">30</span><span class="tr-sep"> · </span><span class="tr-med">38</span><span class="tr-sep"> · </span><span class="tr-hi">48</span></td>
         <td><span class="td-btts btts-n">NO</span></td>
-        <td class="td-conf">
-          <span class="conf-badge conf-low"><span class="conf-dot cd-low"></span>LOW</span>
-          <div class="conf-reason">Stats vs odds conflict · NEW 57.3% BUT 0W in last 5 home derbies · SUN won 7/8 vs NEW</div>
+      </tr>
+      <tr class="conf-row" style="background:rgba(255,122,40,.04)">
+        <td colspan="11">
+          <div class="conf-row-inner">
+            <span class="conf-badge conf-low"><span class="conf-dot cd-low"></span>LOW confidence</span>
+            <span class="conf-reason">NEW missing Guimarães, Schar, Krafth · Tonali doubt · SUN have Xhaka + Reinildo fit · SUN won 7/8 H2H — odds contradict history</span>
+          </div>
         </td>
       </tr>
 
       <!-- Aston Villa vs West Ham -->
-      <tr>
+      <tr class="data-row">
         <td>
           <div class="td-fix">Aston Villa vs West Ham</div>
           <div class="td-fix-sub">Sun · Villa Park</div>
@@ -1358,17 +1399,21 @@ footer{
         <td class="td-range"><span class="tr-lo">10</span><span class="tr-sep"> · </span><span class="tr-med">14</span><span class="tr-sep"> · </span><span class="tr-hi">20</span></td>
         <td class="td-range"><span class="tr-lo">20</span><span class="tr-sep"> · </span><span class="tr-med">24</span><span class="tr-sep"> · </span><span class="tr-hi">30</span></td>
         <td><span class="td-btts btts-n">NO</span></td>
-        <td class="td-conf">
-          <span class="conf-badge conf-high"><span class="conf-dot cd-high"></span>HIGH</span>
-          <div class="conf-reason">AVL 49.5% · WHU 1 shot vs City · WHU 18th freefall · UCL vs relegation motivation gap</div>
+      </tr>
+      <tr class="conf-row">
+        <td colspan="11">
+          <div class="conf-row-inner">
+            <span class="conf-badge conf-high"><span class="conf-dot cd-high"></span>HIGH confidence</span>
+            <span class="conf-reason">AVL 49.5% · WHU 1 shot vs City · Summerville OUT · WHU 18th freefall · AVL played Thu (UEL) — fatigue caveat but quality gap decisive</span>
+          </div>
         </td>
       </tr>
 
       <!-- Tottenham vs Nottm Forest -->
-      <tr>
+      <tr class="data-row">
         <td>
           <div class="td-fix">Tottenham vs Nottm Forest</div>
-          <div class="td-fix-sub">Sun · Spurs Stadium</div>
+          <div class="td-fix-sub">Sun · Tottenham Hotspur Stadium</div>
         </td>
         <td class="td-ko">14:15</td>
         <td><div class="td-score">2–1</div></td>
@@ -1380,9 +1425,13 @@ footer{
         <td class="td-range"><span class="tr-lo">14</span><span class="tr-sep"> · </span><span class="tr-med">20</span><span class="tr-sep"> · </span><span class="tr-hi">26</span></td>
         <td class="td-range"><span class="tr-lo">26</span><span class="tr-sep"> · </span><span class="tr-med">32</span><span class="tr-sep"> · </span><span class="tr-hi">40</span></td>
         <td><span class="td-btts btts-m">MAYBE</span></td>
-        <td class="td-conf">
-          <span class="conf-badge conf-low"><span class="conf-dot cd-low"></span>LOW</span>
-          <div class="conf-reason">TOT 0W in last 5 all comps · NFO goalscoring crisis · genuine 3-way toss-up · survival desperation</div>
+      </tr>
+      <tr class="conf-row">
+        <td colspan="11">
+          <div class="conf-row-inner">
+            <span class="conf-badge conf-low"><span class="conf-dot cd-low"></span>LOW confidence</span>
+            <span class="conf-reason">Van de Ven SUSP · TOT 0W in L5 · NFO lost Thu in Denmark (EUL) · Wood/Boly OUT · genuine 3-way toss-up</span>
+          </div>
         </td>
       </tr>
 
@@ -1397,7 +1446,7 @@ footer{
     <div class="wl-item">
       <div class="wl-tag" style="color:var(--volt)">⚡ Best bet</div>
       <div class="wl-fix">Brighton vs Liverpool — BTTS YES</div>
-      <div class="wl-note">H2H BTTS 64% · avg 3.41 goals · both teams scoring freely · Salah, Wirtz, Gakpo vs Rutter, Mitoma, Welbeck</div>
+      <div class="wl-note">H2H BTTS 64% · avg 3.41 goals · Salah OUT but Wirtz, Gakpo, Ekitike carry threat · BRI: Minteh, Rutter, Mitoma fit vs Mamardashvili in goal</div>
     </div>
     <div class="wl-item">
       <div class="wl-tag" style="color:var(--teal)">📐 Stat angle</div>
@@ -1407,7 +1456,7 @@ footer{
     <div class="wl-item">
       <div class="wl-tag" style="color:var(--orange)">🟨 Cards</div>
       <div class="wl-fix">Tottenham vs Forest — 4+ yellows</div>
-      <div class="wl-note">Relegation six-pointer · 1pt separates 16th &amp; 18th · Tudor's Spurs + Pereira's Forest both cynical tactically</div>
+      <div class="wl-note">Relegation six-pointer · 1pt separates 16th &amp; 18th · Van de Ven SUSPENDED · Tudor + Pereira both tactically cynical · NFO fatigued after EUL travel</div>
     </div>
     <div class="wl-item">
       <div class="wl-tag" style="color:var(--sky)">📐 Corners</div>
@@ -1422,12 +1471,12 @@ footer{
     <div class="wl-item">
       <div class="wl-tag" style="color:var(--win)">✓ Confidence</div>
       <div class="wl-fix">Aston Villa vs West Ham — Villa Win</div>
-      <div class="wl-note">AVL 49.5% win prob · WHU had 1 shot vs Man City · Villa UCL push vs WHU relegation 18th · quality gap clear</div>
+      <div class="wl-note">AVL 49.5% win prob · WHU had 1 shot vs City · Summerville OUT · WHU 18th in freefall · AVL fatigue caveat (played Thu vs Lille) but quality gap decisive</div>
     </div>
     <div class="wl-item">
       <div class="wl-tag" style="color:var(--red)">⚠ Danger</div>
       <div class="wl-fix">Newcastle vs Sunderland — upset risk</div>
-      <div class="wl-note">NEW winless in last 5 home derbies · SUN won 7 of last 8 vs NEW · SJP return after 10 years = tension + errors</div>
+      <div class="wl-note">NEW missing Guimarães, Schar, Krafth — three first-team regulars OUT · Tonali groin doubt · SUN: Xhaka, Reinildo, Brobbey all fit · SUN won 7 of last 8 H2H</div>
     </div>
     <div class="wl-item">
       <div class="wl-tag" style="color:var(--purple)" style="color:var(--purple)">🎯 Score pred</div>
@@ -1446,7 +1495,8 @@ footer{
 <footer>
   <div class="ft-l">
     MATCH INTEL · PREMIER LEAGUE MD31 · 21–22 MARCH 2026<br>
-    <strong>Team Bilbo Statistical Analysis</strong>  Sources: Actual L5 game stats · Last 5 H2H · Season averages · Confirmed team news.
+    <strong>Team Bilbo Statistical Analysis</strong><br>
+    Sources: Actual L5 game stats · Last 5 H2H · Season averages · Confirmed team news.
   </div>
   <div class="ft-r">MD31 ·⚡</div>
 </footer>
