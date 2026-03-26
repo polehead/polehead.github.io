@@ -18,7 +18,7 @@
         --border2: #262c44;
         --fg: #eef0f8;
         --fg2: #7c84a8;
-        --fg3: #333a55;
+        --fg3: #5e6069;
         --gold: #f0c040;
         --gold-d: rgba(240, 192, 64, 0.12);
         --cyan: #22d3ee;
@@ -46,7 +46,7 @@
         padding: 0;
       }
       html {
-        font-size: 15px;
+        font-size: 18px;
         scroll-behavior: smooth;
         -webkit-text-size-adjust: 100%;
       }
@@ -100,7 +100,7 @@
         height: 48px;
       }
       .hdr-brand {
-        font-size: 13px;
+        font-size: 14px;
         font-weight: 800;
         letter-spacing: 0.06em;
         text-transform: uppercase;
@@ -232,7 +232,7 @@
       }
       .fgi-ko {
         font-family: "JetBrains Mono", monospace;
-        font-size: 8px;
+        font-size: 10px;
         letter-spacing: 0.1em;
         text-transform: uppercase;
         color: var(--fg3);
@@ -374,14 +374,14 @@
       }
       .ko-t {
         font-family: "JetBrains Mono", monospace;
-        font-size: 10px;
+        font-size: 12px;
         letter-spacing: 0.1em;
         text-transform: uppercase;
         font-weight: 600;
       }
       .ko-venue {
         font-family: "JetBrains Mono", monospace;
-        font-size: 8px;
+        font-size: 12px;
         color: var(--fg3);
         text-overflow: ellipsis;
         overflow: hidden;
@@ -389,7 +389,7 @@
       }
       .ko-badge {
         font-family: "JetBrains Mono", monospace;
-        font-size: 8px;
+        font-size: 12px;
         font-weight: 700;
         padding: 3px 8px;
         border-radius: var(--rxs);
@@ -399,7 +399,7 @@
       }
       .kb-hi {
         color: var(--orange);
-        border-color: rgba(251, 146, 60, 0.35);
+        border-color: rgba(233, 121, 30, 0.5);
         background: var(--orange-d);
       }
       .kb-med {
@@ -422,19 +422,22 @@
       .fc-top {
         display: grid;
         grid-template-columns: 1fr auto 1fr;
-        align-items: center;
+        padding: 14px 10px 12px;
         gap: 8px;
         padding: 14px var(--px) 12px;
-      }
-      .fc-team {
-        display: flex;
-        flex-direction: row;
-        align-items: flex-start;
-        gap: 8px;
+        }
+        /* both home and away: flag above name, centered */
+        .fc-team {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+          gap: 8px;
+
       }
       .fc-team.away {
-        flex-direction: row-reverse;
-        text-align: right;
+        flex-direction: column;
+        text-align: center;
       }
       .fc-badge {
         width: 36px;
@@ -452,7 +455,7 @@
         flex-direction: column;
       }
       .fc-team.away .fc-info {
-        align-items: flex-end;
+        align-items: center;
       }
       .fc-club {
         font-size: clamp(14px, 3.5vw, 19px);
@@ -463,7 +466,7 @@
       }
       .fc-meta {
         font-family: "JetBrains Mono", monospace;
-        font-size: 8px;
+        font-size: 10px;
         letter-spacing: 0.05em;
         text-transform: uppercase;
         color: var(--fg3);
@@ -514,10 +517,12 @@
       }
       .fc-pred-lbl {
         font-family: "JetBrains Mono", monospace;
-        font-size: 7px;
+        font-size: 12px;
         letter-spacing: 0.16em;
         text-transform: uppercase;
-        color: rgba(255, 255, 255, 0.18);
+        text-decoration: overline;
+        
+        color: var(--fg3);
       }
       .fc-pred {
         font-size: clamp(26px, 6.5vw, 38px);
@@ -529,9 +534,10 @@
       }
       .fc-odds {
         font-family: "JetBrains Mono", monospace;
-        font-size: 8px;
-        color: rgba(255, 255, 255, 0.18);
+        font-size: 10px;
+        color: var(--fg3);
         text-align: center;
+        text-decoration: underline;
       }
       @media (min-width: 480px) {
         .fc-top {
@@ -550,10 +556,11 @@
         }
         .fc-club {
           font-size: 18px;
+          text-transform: uppercase;
         }
         .fc-badge {
-          width: 44px;
-          height: 44px;
+          width: 48px;
+          height: 48px;
         }
       }
 
@@ -697,6 +704,7 @@
       }
       .sc-bar {
         height: 3px;
+        
         border-radius: 2px;
         background: rgba(255, 255, 255, 0.05);
         overflow: hidden;
@@ -728,13 +736,14 @@
       }
       .sc-conf {
         font-family: "JetBrains Mono", monospace;
-        font-size: 7px;
+        font-size: 11px;
         font-weight: 700;
         padding: 1px 5px;
         border-radius: var(--rxs);
         border: 1px solid;
         display: inline-block;
         margin-top: 1px;
+        width: fit-content;
       }
       .conf-hi {
         color: var(--green);
@@ -886,7 +895,7 @@
       }
       .ft-l {
         font-family: "JetBrains Mono", monospace;
-        font-size: 8px;
+        font-size: 12px;
         color: var(--fg3);
         letter-spacing: 0.05em;
         line-height: 2;
@@ -912,7 +921,7 @@
       @media (max-width: 479px) {
         /* bump base size for the whole page */
         html {
-          font-size: 16px;
+          font-size: 14px;
         }
 
         /* stack the team grid so each team gets more room */
@@ -948,7 +957,7 @@
           font-size: 16px;
         }
         .fc-meta {
-          font-size: 14px;
+          font-size: 10px;
           letter-spacing: 0.03em;
         }
         .fc-pred-lbl {
@@ -963,7 +972,7 @@
 
         /* KO row */
         .ko-t {
-          font-size: 12px;
+          font-size: 11px;
         }
         .ko-venue {
           font-size: 11px;
@@ -1189,7 +1198,7 @@
           <div>
             <span class="ko-t" style="color: var(--cyan)">19:45 GMT</span>
             <span class="ko-venue"
-              >· New Balance Arena, Bergamo · Danny Makkelie (NED)</span
+              >New Balance Arena</span
             >
           </div>
           <span class="ko-badge kb-hi">⚡ High stakes</span>
@@ -1421,7 +1430,7 @@
         <div class="fc-ko">
           <div>
             <span class="ko-t" style="color: var(--cyan)">19:45 GMT</span>
-            <span class="ko-venue">· Cardiff City Stadium · Kovács (ROM)</span>
+            <span class="ko-venue">Cardiff City Stadium</span>
           </div>
           <span class="ko-badge kb-hi">⚡ High stakes</span>
         </div>
@@ -1662,7 +1671,7 @@
           <div>
             <span class="ko-t" style="color: var(--green)">19:45 GMT</span>
             <span class="ko-venue"
-              >· Estadi Ciutat de València, Spain · Neutral venue</span
+              >Estadi Ciutat de València · Neutral venue</span
             >
           </div>
           <span class="ko-badge kb-hi">⚡ Neutral venue</span>
@@ -1899,7 +1908,7 @@
           <div>
             <span class="ko-t" style="color: var(--green)">19:45 GMT</span>
             <span class="ko-venue"
-              >· PGE Narodowy, Warsaw · Capacity 58,000</span
+              >PGE Narodowy</span
             >
           </div>
           <span class="ko-badge kb-hi">⚡ High stakes</span>
@@ -2132,7 +2141,7 @@
         <div class="fc-ko">
           <div>
             <span class="ko-t" style="color: var(--orange)">17:00 GMT</span>
-            <span class="ko-venue">· Vodafone Park, Istanbul · Early KO</span>
+            <span class="ko-venue">Vodafone Park · Early KO</span>
           </div>
           <span class="ko-badge kb-hi">⚡ High stakes</span>
         </div>
@@ -2366,7 +2375,7 @@
           <div>
             <span class="ko-t" style="color: var(--orange)">19:45 GMT</span>
             <span class="ko-venue"
-              >· Národný futbalový štadión, Bratislava</span
+              >Národný futbalový štadión</span
             >
           </div>
           <span class="ko-badge kb-hi">⚡ High stakes</span>
@@ -2608,7 +2617,7 @@
           <div>
             <span class="ko-t" style="color: var(--purple)">19:45 GMT</span>
             <span class="ko-venue"
-              >· Parken Stadium, Copenhagen · 38,065 cap</span
+              >Parken Stadium</span
             >
           </div>
           <span class="ko-badge kb-hi">⚡ High stakes</span>
@@ -2845,7 +2854,7 @@
         <div class="fc-ko">
           <div>
             <span class="ko-t" style="color: var(--purple)">19:45 GMT</span>
-            <span class="ko-venue">· Fortuna Arena, Prague · 19,370 cap</span>
+            <span class="ko-venue">Fortuna Arena</span>
           </div>
           <span class="ko-badge kb-hi">⚡ Both 20yr WC absence</span>
         </div>
@@ -3087,7 +3096,7 @@
           <div>
             <span class="ko-t" style="color: var(--pink)">03:00 GMT Fri</span>
             <span class="ko-venue"
-              >· Estadio Jalisco, Guadalajara · OFC vs CONCACAF</span
+              >Estadio Jalisco</span
             >
           </div>
           <span class="ko-badge kb-ic">FIFA IC playoff</span>
@@ -3323,7 +3332,7 @@
           <div>
             <span class="ko-t" style="color: var(--gold)">23:00 GMT</span>
             <span class="ko-venue"
-              >· Estadio BBVA, Monterrey · CONMEBOL vs CONCACAF</span
+              >Estadio BBVA</span
             >
           </div>
           <span class="ko-badge kb-ic">FIFA IC playoff</span>
@@ -3553,11 +3562,10 @@
 
     <footer>
       <div class="ft-l">
-        <strong>Team Bilbo Statistical Analysis</strong> WORLD CUP 2026
-        QUALIFIER PLAYOFFS · THURSDAY 26 MARCH 2026.<br />
-        8 UEFA semi-finals · 2 FIFA intercontinental semi-finals.<br />
-        · Predictions based on Qualifying campaign data, Best/Median/Worst stat
-        ranges ·
+        <strong>· Team Bilbo Statistical Analysis</strong> WORLD CUP 2026
+        QUALIFIER PLAYOFFS · THURSDAY 26 MARCH 2026 ·<br />
+        · 8 UEFA semi-finals · 2 FIFA intercontinental semi-finals ·<br />
+        · Predictions based on Qualifying campaign data, with · <span class="sc-lo">Worst</span> · <span class="sc-med">Median</span> · <span class="sc-hi">Best</span> ranges ·
       </div>
       <div class="ft-r">WC2026 · 10 fixtures</div>
     </footer>
