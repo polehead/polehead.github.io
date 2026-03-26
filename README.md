@@ -1198,9 +1198,10 @@
           <div class="fc-team">
             <div class="fc-badge">
               <img
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Flag_of_Italy.svg/1200px-Flag_of_Italy.svg.png"
+                src="https://flagcdn.com/w160/it.png"
                 alt="Italy"
                 loading="lazy"
+                style="background-color: #111320"
               />
             </div>
             <div class="fc-info">
@@ -1225,9 +1226,10 @@
           <div class="fc-team away">
             <div class="fc-badge">
               <img
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Flag_of_Northern_Ireland_%281953%E2%80%931972%29.svg/1200px-Flag_of_Northern_Ireland_%281953%E2%80%931972%29.svg.png"
+                src="https://flagcdn.com/w160/gb-nir.png"
                 alt="Northern Ireland"
                 loading="lazy"
+                style="background-color: #111320"
               />
             </div>
             <div class="fc-info">
@@ -1427,9 +1429,10 @@
           <div class="fc-team">
             <div class="fc-badge">
               <img
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Flag_of_Wales.svg/1200px-Flag_of_Wales.svg.png"
+                src="https://flagcdn.com/w160/gb-wls.png"
                 alt="Wales"
                 loading="lazy"
+                style="background-color: #111320"
               />
             </div>
             <div class="fc-info">
@@ -1454,9 +1457,10 @@
           <div class="fc-team away">
             <div class="fc-badge">
               <img
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Flag_of_Bosnia_and_Herzegovina.svg/1200px-Flag_of_Bosnia_and_Herzegovina.svg.png"
+                src="https://flagcdn.com/w160/ba.png"
                 alt="Bosnia"
                 loading="lazy"
+                style="background-color: #111320"
               />
             </div>
             <div class="fc-info">
@@ -1667,9 +1671,10 @@
           <div class="fc-team">
             <div class="fc-badge">
               <img
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Flag_of_Ukraine.svg/1200px-Flag_of_Ukraine.svg.png"
+                src="https://flagcdn.com/w160/ua.png"
                 alt="Ukraine"
                 loading="lazy"
+                style="background-color: #111320"
               />
             </div>
             <div class="fc-info">
@@ -1694,9 +1699,10 @@
           <div class="fc-team away">
             <div class="fc-badge">
               <img
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Flag_of_Sweden.svg/1200px-Flag_of_Sweden.svg.png"
+                src="https://flagcdn.com/w160/se.png"
                 alt="Sweden"
                 loading="lazy"
+                style="background-color: #111320"
               />
             </div>
             <div class="fc-info">
@@ -1902,9 +1908,10 @@
           <div class="fc-team">
             <div class="fc-badge">
               <img
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Flag_of_Poland.svg/1200px-Flag_of_Poland.svg.png"
+                src="https://flagcdn.com/w160/pl.png"
                 alt="Poland"
                 loading="lazy"
+                style="background-color: #111320"
               />
             </div>
             <div class="fc-info">
@@ -1929,9 +1936,10 @@
           <div class="fc-team away">
             <div class="fc-badge">
               <img
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Flag_of_Albania.svg/1200px-Flag_of_Albania.svg.png"
+                src="https://flagcdn.com/w160/al.png"
                 alt="Albania"
                 loading="lazy"
+                style="background-color: #111320"
               />
             </div>
             <div class="fc-info">
@@ -2132,9 +2140,10 @@
           <div class="fc-team">
             <div class="fc-badge">
               <img
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Flag_of_Turkey.svg/1200px-Flag_of_Turkey.svg.png"
+                src="https://flagcdn.com/w160/tr.png"
                 alt="Turkey"
                 loading="lazy"
+                style="background-color: #111320"
               />
             </div>
             <div class="fc-info">
@@ -2160,9 +2169,10 @@
           <div class="fc-team away">
             <div class="fc-badge">
               <img
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Flag_of_Romania.svg/1200px-Flag_of_Romania.svg.png"
+                src="https://flagcdn.com/w160/ro.png"
                 alt="Romania"
                 loading="lazy"
+                style="background-color: #111320"
               />
             </div>
             <div class="fc-info">
@@ -2365,9 +2375,10 @@
           <div class="fc-team">
             <div class="fc-badge">
               <img
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Flag_of_Slovakia.svg/1200px-Flag_of_Slovakia.svg.png"
+                src="https://flagcdn.com/w160/sk.png"
                 alt="Slovakia"
                 loading="lazy"
+                style="background-color: #111320"
               />
             </div>
             <div class="fc-info">
@@ -2392,9 +2403,10 @@
           <div class="fc-team away">
             <div class="fc-badge">
               <img
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Flag_of_Kosovo.svg/1200px-Flag_of_Kosovo.svg.png"
+                src="https://flagcdn.com/w160/xk.png"
                 alt="Kosovo"
                 loading="lazy"
+                style="background-color: #111320"
               />
             </div>
             <div class="fc-info">
@@ -2605,9 +2617,10 @@
           <div class="fc-team">
             <div class="fc-badge">
               <img
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Flag_of_Denmark.svg/1200px-Flag_of_Denmark.svg.png"
+                src="https://flagcdn.com/w160/dk.png"
                 alt="Denmark"
                 loading="lazy"
+                style="background-color: #111320"
               />
             </div>
             <div class="fc-info">
@@ -2632,7 +2645,7 @@
           <div class="fc-team away">
             <div class="fc-badge">
               <img
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Flag_of_North_Macedonia.svg/1200px-Flag_of_North_Macedonia.svg.png"
+                src="https://flagcdn.com/w160/mk.png"
                 alt="N. Macedonia"
                 loading="lazy"
                 style="background-color: #111320"
@@ -2840,9 +2853,10 @@
           <div class="fc-team">
             <div class="fc-badge">
               <img
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Flag_of_the_Czech_Republic.svg/1200px-Flag_of_the_Czech_Republic.svg.png"
+                src="https://flagcdn.com/w160/cz.png"
                 alt="Czechia"
                 loading="lazy"
+                style="background-color: #111320"
               />
             </div>
             <div class="fc-info">
@@ -2867,7 +2881,7 @@
           <div class="fc-team away">
             <div class="fc-badge">
               <img
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Flag_of_Ireland.svg/1200px-Flag_of_Ireland.svg.png"
+                src="https://flagcdn.com/w160/ie.png"
                 alt="Republic of Ireland"
                 loading="lazy"
                 style="background-color: #111320"
@@ -3082,7 +3096,7 @@
           <div class="fc-team">
             <div class="fc-badge">
               <img
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Flag_of_New_Caledonia_%28WFB_2000%29.svg/1200px-Flag_of_New_Caledonia_%28WFB_2000%29.svg.png"
+                src="https://flagcdn.com/w160/nc.png"
                 alt="New Caledonia"
                 loading="lazy"
                 style="background-color: #111320"
@@ -3110,7 +3124,7 @@
           <div class="fc-team away">
             <div class="fc-badge">
               <img
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Flag_of_Jamaica.svg/1200px-Flag_of_Jamaica.svg.png"
+                src="https://flagcdn.com/w160/jm.png"
                 alt="Jamaica"
                 loading="lazy"
                 style="background-color: #111320"
@@ -3318,7 +3332,7 @@
           <div class="fc-team">
             <div class="fc-badge">
               <img
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Flag_of_Bolivia_%28state%29.svg/1200px-Flag_of_Bolivia_%28state%29.svg.png"
+                src="https://flagcdn.com/w160/bo.png"
                 alt="Bolivia"
                 loading="lazy"
                 style="background-color: #111320"
@@ -3346,7 +3360,7 @@
           <div class="fc-team away">
             <div class="fc-badge">
               <img
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Flag_of_Suriname.svg/1200px-Flag_of_Suriname.svg.png"
+                src="https://flagcdn.com/w160/sr.png"
                 alt="Suriname"
                 loading="lazy"
                 style="background-color: #111320"
