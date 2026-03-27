@@ -263,7 +263,7 @@
       .mu-name {
         font-size: clamp(30px, 8vw, 72px);
         font-weight: 900;
-        letter-spacing: -0.03em;
+        letter-spacing: -0.05em;
         line-height: 0.88;
         text-transform: uppercase;
       }
