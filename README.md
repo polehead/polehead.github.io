@@ -2699,7 +2699,6 @@
       <div class="ft-l">
         <strong>Team Bilbo Statistical Analysis</strong>
     </div>
-      </div>
       <div class="ft-r">Wembley · 19:45 GMT ⚽</div>
     </footer>
 
