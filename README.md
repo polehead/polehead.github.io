@@ -2457,8 +2457,8 @@
     <footer>
       <div class="ft-l">
         <strong>Team Bilbo Statistical Analysis</strong> WORLD CUP 2026
-        QUALIFIER PLAYOFFS · THURSDAY 26 MARCH 2026<br />
-        8 UEFA semi-finals · 2 FIFA intercontinental semi-finals<br />
+        QUALIFIER PLAYOFFS · TUESDAY 31 MARCH 2026<br />
+        England v Japan Friendly<br />
         · Predictions based on Qualifying campaign data, with ·
         <span class="sc-lo">Worst</span> · <span class="sc-med">Median</span> ·
         <span class="sc-hi">Best</span> ranges ·
