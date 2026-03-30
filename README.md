@@ -516,6 +516,7 @@
         font-size: 16px;
         font-weight: 700;
         letter-spacing: -0.01em;
+        text-transform: uppercase;
         color: var(--fg);
         line-height: 1.1;
       }
@@ -1076,6 +1077,7 @@
         }
         .fc-club {
           font-size: clamp(14px, 3.5vw, 19px);
+          text-transform: uppercase;
         }
         .fc-meta {
           font-size: 10px;
