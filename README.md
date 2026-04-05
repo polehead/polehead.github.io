@@ -284,29 +284,71 @@ body {
 /* ═══════════════════════════════════
    PREDICTION TABLE
 ═══════════════════════════════════ */
-.pred-legend { display:flex; gap:16px; flex-wrap:wrap; margin-bottom:12px; }
+.pred-legend { display:flex; gap:16px; flex-wrap:wrap; margin-bottom:14px; }
 .pl-item { display:flex; align-items:center; gap:5px; font-size:11px; color:var(--muted); }
 .pl-dot { width:8px; height:8px; border-radius:50%; }
 
-.pred-table { width:100%; border-collapse:collapse; }
+/* Scroll guard — prevents overflow on narrow viewports */
+.pred-table-wrap { overflow-x:auto; -webkit-overflow-scrolling:touch; }
+
+.pred-table {
+  width:100%; border-collapse:collapse;
+  table-layout:fixed;   /* critical: enforces our column widths */
+  min-width:300px;      /* minimum before scroll kicks in */
+}
+/* Column widths — 4 columns: label | low–high | median | bar */
+.pred-table col.c-metric { width:34%; }
+.pred-table col.c-range  { width:28%; }
+.pred-table col.c-median { width:18%; }
+.pred-table col.c-bar    { width:20%; }
+
 .pred-table thead th {
   font-family:'Oswald',sans-serif; font-size:10px; font-weight:600;
   letter-spacing:1.3px; text-transform:uppercase; color:var(--muted);
-  padding:0 5px 10px 0; text-align:left; white-space:nowrap;
+  padding:0 0 10px 0; text-align:left; white-space:nowrap; overflow:hidden;
 }
-.pred-table thead th:not(:first-child) { text-align:center; }
+.pred-table thead th.c-range-h  { text-align:center; }
+.pred-table thead th.c-median-h { text-align:center; }
+.pred-table thead th.c-bar-h    { text-align:center; }
+
 .pred-table tbody td {
-  padding:8px 5px 8px 0; border-bottom:1px solid rgba(255,255,255,0.04);
-  font-size:13px; vertical-align:middle;
+  padding:9px 4px; border-bottom:1px solid rgba(255,255,255,0.04);
+  font-size:13px; vertical-align:middle; overflow:hidden;
 }
 .pred-table tbody tr:last-child td { border-bottom:none; }
-.pred-table tbody td:first-child { color:var(--muted-hi); font-size:12.5px; }
-.pred-table tbody td:not(:first-child) { text-align:center; }
-.lv { font-family:'Oswald',sans-serif; font-size:20px; font-weight:700; color:var(--low); line-height:1; }
-.hv { font-family:'Oswald',sans-serif; font-size:20px; font-weight:700; color:var(--high); line-height:1; }
-.ds { color:rgba(255,255,255,0.15); font-size:12px; }
-.bar-w { width:100%; max-width:80px; height:5px; background:rgba(255,255,255,0.06); border-radius:3px; overflow:hidden; margin:0 auto; }
-.bar-f { height:100%; background:linear-gradient(90deg,var(--low),var(--high)); border-radius:3px; }
+
+/* Metric label */
+.pred-table tbody td.c-metric { color:var(--muted-hi); font-size:12.5px; padding-left:0; }
+
+/* Range cell — flex row with low/dash/high */
+.pred-table tbody td.c-range { text-align:center; }
+.range-inner {
+  display:flex; align-items:center; justify-content:center; gap:5px;
+}
+.lv { font-family:'Oswald',sans-serif; font-size:18px; font-weight:700; color:var(--low); line-height:1; }
+.hv { font-family:'Oswald',sans-serif; font-size:18px; font-weight:700; color:var(--high); line-height:1; }
+.ds { color:rgba(255,255,255,0.18); font-size:11px; line-height:1; }
+
+/* Median cell */
+.pred-table tbody td.c-median { text-align:center; }
+.med-wrap {
+  display:inline-flex; flex-direction:column; align-items:center;
+  gap:2px;
+}
+.mv {
+  font-family:'Oswald',sans-serif; font-size:18px; font-weight:700;
+  color:#fff; line-height:1;
+}
+.med-pip {
+  display:block; width:18px; height:3px; border-radius:2px;
+  background: linear-gradient(90deg, var(--low), var(--high));
+  opacity:0.6;
+}
+
+/* Bar cell */
+.pred-table tbody td.c-bar { text-align:center; }
+.bar-w { width:80%; max-width:90px; height:5px; background:rgba(255,255,255,0.07); border-radius:3px; overflow:hidden; margin:0 auto; display:block; }
+.bar-f { display:block; height:100%; background:linear-gradient(90deg,var(--low),var(--high)); border-radius:3px; }
 
 /* ═══════════════════════════════════
    FOOTER
@@ -351,9 +393,9 @@ footer {
   .avg-cell .val { font-size:24px; }
 
   .h2h-num { font-size:34px; }
-  .lv,.hv { font-size:22px; }
-  .pred-table tbody td { font-size:14px; padding:9px 7px 9px 0; }
-  .bar-w { max-width:100px; height:6px; }
+  .lv,.hv,.mv { font-size:21px; }
+  .pred-table tbody td { font-size:14px; padding:10px 6px; }
+  .bar-w { max-width:110px; height:6px; }
 
   .callout { font-size:14px; }
 }
@@ -731,61 +773,77 @@ footer {
     <div class="card-body">
       <div class="pred-legend">
         <div class="pl-item"><div class="pl-dot" style="background:var(--low)"></div><span style="color:var(--low);font-weight:700">Low</span>&nbsp;= minimum expected</div>
+        <div class="pl-item"><div class="pl-dot" style="background:#fff;opacity:0.8"></div><span style="color:#fff;font-weight:700">Median</span>&nbsp;= average-based expected</div>
         <div class="pl-item"><div class="pl-dot" style="background:var(--high)"></div><span style="color:var(--high);font-weight:700">High</span>&nbsp;= maximum expected</div>
       </div>
+      <div class="pred-table-wrap">
       <table class="pred-table">
+        <colgroup>
+          <col class="c-metric">
+          <col class="c-range">
+          <col class="c-median">
+          <col class="c-bar">
+        </colgroup>
         <thead>
           <tr>
             <th>Metric</th>
-            <th>Low</th>
-            <th></th>
-            <th>High</th>
-            <th style="text-align:center">Range</th>
+            <th class="c-range-h">Low &nbsp;—&nbsp; High</th>
+            <th class="c-median-h">Median</th>
+            <th class="c-bar-h">Intensity</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>Corners</td>
-            <td><span class="lv">8</span></td><td><span class="ds">—</span></td><td><span class="hv">13</span></td>
-            <td><div class="bar-w"><div class="bar-f" style="width:60%"></div></div></td>
+            <td class="c-metric">Corners</td>
+            <td class="c-range"><div class="range-inner"><span class="lv">8</span><span class="ds">—</span><span class="hv">13</span></div></td>
+            <td class="c-median"><div class="med-wrap"><span class="mv">10</span><span class="med-pip"></span></div></td>
+            <td class="c-bar"><div class="bar-w"><div class="bar-f" style="width:60%"></div></div></td>
           </tr>
           <tr>
-            <td>Total Shots</td>
-            <td><span class="lv">18</span></td><td><span class="ds">—</span></td><td><span class="hv">30</span></td>
-            <td><div class="bar-w"><div class="bar-f" style="width:68%"></div></div></td>
+            <td class="c-metric">Total Shots</td>
+            <td class="c-range"><div class="range-inner"><span class="lv">18</span><span class="ds">—</span><span class="hv">30</span></div></td>
+            <td class="c-median"><div class="med-wrap"><span class="mv">23</span><span class="med-pip"></span></div></td>
+            <td class="c-bar"><div class="bar-w"><div class="bar-f" style="width:68%"></div></div></td>
           </tr>
           <tr>
-            <td>Shots on Target</td>
-            <td><span class="lv">5</span></td><td><span class="ds">—</span></td><td><span class="hv">11</span></td>
-            <td><div class="bar-w"><div class="bar-f" style="width:52%"></div></div></td>
+            <td class="c-metric">Shots on Target</td>
+            <td class="c-range"><div class="range-inner"><span class="lv">5</span><span class="ds">—</span><span class="hv">11</span></div></td>
+            <td class="c-median"><div class="med-wrap"><span class="mv">7</span><span class="med-pip"></span></div></td>
+            <td class="c-bar"><div class="bar-w"><div class="bar-f" style="width:52%"></div></div></td>
           </tr>
           <tr>
-            <td>Fouls</td>
-            <td><span class="lv">19</span></td><td><span class="ds">—</span></td><td><span class="hv">30</span></td>
-            <td><div class="bar-w"><div class="bar-f" style="width:62%"></div></div></td>
+            <td class="c-metric">Fouls</td>
+            <td class="c-range"><div class="range-inner"><span class="lv">19</span><span class="ds">—</span><span class="hv">30</span></div></td>
+            <td class="c-median"><div class="med-wrap"><span class="mv">22</span><span class="med-pip"></span></div></td>
+            <td class="c-bar"><div class="bar-w"><div class="bar-f" style="width:62%"></div></div></td>
           </tr>
           <tr>
-            <td>Throw-ins</td>
-            <td><span class="lv">36</span></td><td><span class="ds">—</span></td><td><span class="hv">52</span></td>
-            <td><div class="bar-w"><div class="bar-f" style="width:66%"></div></div></td>
+            <td class="c-metric">Throw-ins</td>
+            <td class="c-range"><div class="range-inner"><span class="lv">36</span><span class="ds">—</span><span class="hv">52</span></div></td>
+            <td class="c-median"><div class="med-wrap"><span class="mv">44</span><span class="med-pip"></span></div></td>
+            <td class="c-bar"><div class="bar-w"><div class="bar-f" style="width:66%"></div></div></td>
           </tr>
           <tr>
-            <td>Goal Kicks</td>
-            <td><span class="lv">14</span></td><td><span class="ds">—</span></td><td><span class="hv">24</span></td>
-            <td><div class="bar-w"><div class="bar-f" style="width:58%"></div></div></td>
+            <td class="c-metric">Goal Kicks</td>
+            <td class="c-range"><div class="range-inner"><span class="lv">14</span><span class="ds">—</span><span class="hv">24</span></div></td>
+            <td class="c-median"><div class="med-wrap"><span class="mv">19</span><span class="med-pip"></span></div></td>
+            <td class="c-bar"><div class="bar-w"><div class="bar-f" style="width:58%"></div></div></td>
           </tr>
           <tr>
-            <td>Tackles</td>
-            <td><span class="lv">28</span></td><td><span class="ds">—</span></td><td><span class="hv">46</span></td>
-            <td><div class="bar-w"><div class="bar-f" style="width:70%"></div></div></td>
+            <td class="c-metric">Tackles</td>
+            <td class="c-range"><div class="range-inner"><span class="lv">28</span><span class="ds">—</span><span class="hv">46</span></div></td>
+            <td class="c-median"><div class="med-wrap"><span class="mv">31</span><span class="med-pip"></span></div></td>
+            <td class="c-bar"><div class="bar-w"><div class="bar-f" style="width:70%"></div></div></td>
           </tr>
           <tr>
-            <td>Offsides</td>
-            <td><span class="lv">2</span></td><td><span class="ds">—</span></td><td><span class="hv">7</span></td>
-            <td><div class="bar-w"><div class="bar-f" style="width:44%"></div></div></td>
+            <td class="c-metric">Offsides</td>
+            <td class="c-range"><div class="range-inner"><span class="lv">2</span><span class="ds">—</span><span class="hv">7</span></div></td>
+            <td class="c-median"><div class="med-wrap"><span class="mv">4</span><span class="med-pip"></span></div></td>
+            <td class="c-bar"><div class="bar-w"><div class="bar-f" style="width:44%"></div></div></td>
           </tr>
         </tbody>
       </table>
+      </div>
     </div>
   </div>
 
