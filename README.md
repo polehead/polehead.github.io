@@ -16,7 +16,7 @@
   --bg-4:      #1e2533;
   --border:    rgba(255,255,255,0.07);
   --border-md: rgba(255,255,255,0.11);
-  --text:      #7b91d1;
+  --text:      #dce0ec;
   --muted:     #6e788f;
   --muted-hi:  #9ca5bc;
   /* West Ham: claret + sky blue */
