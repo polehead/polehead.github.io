@@ -2,52 +2,52 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>UCL QF Stats Predictor | Sporting v Arsenal · Real Madrid v Bayern</title>
+<title>UCL QF Stats Predictor | PSG v Liverpool · Barcelona v Atlético</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Mulish:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Source+Sans+3:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
 <style>
-/* ═══════════════════════════════════════════════
-   DESIGN TOKENS
-═══════════════════════════════════════════════ */
+/* ═══════════════════════════════════════
+   TOKENS
+═══════════════════════════════════════ */
 :root {
-  /* base */
-  --bg:       #07080d;
-  --bg-2:     #0d0f18;
-  --bg-3:     #131620;
-  --bg-4:     #191d2c;
-  --bg-5:     #1f2438;
-  --border:   rgba(255,255,255,0.06);
+  --bg:       #06070c;
+  --bg-2:     #0c0e18;
+  --bg-3:     #121525;
+  --bg-4:     #181c2e;
+  --bg-5:     #1e2238;
+  --border:   rgba(255,255,255,0.065);
   --border-m: rgba(255,255,255,0.11);
-  --text:     #d8dced;
-  --muted:    #636b84;
-  --hi:       #9daac4;
-  /* UCL accent */
-  --ucl:      #1a48b8;
-  --ucl-b:    #0f2d7a;
-  --ucl-star: #c8a84b;
-  /* Sporting */
-  --scp-g:    #006630;
-  --scp-l:    #ffcc00;
-  /* Arsenal */
-  --ars-r:    #db0007;
-  --ars-g:    #ffffff;
-  /* Real Madrid */
-  --rma-w:    #fafafa;
-  --rma-g:    #c4a84f;
-  /* Bayern */
-  --bay-r:    #dc052d;
-  --bay-b:    #0066b2;
-  /* stat colours */
-  --low:      #34d399;
-  --med:      #f9c74f;
-  --high:     #ff6b35;
-  --radius:   12px;
+  --text:     #cdd5e8;
+  --muted:    #5e688a;
+  --hi:       #97a3c0;
+  /* UCL */
+  --ucl:      #1840b8;
+  --ucl-gold: #c9a840;
+  /* PSG */
+  --psg-b:    #003087;
+  --psg-r:    #da291c;
+  --psg-g:    #ffffff;
+  /* Liverpool */
+  --lfc-r:    #c8102e;
+  --lfc-g:    #f6eb61;
+  /* Barcelona */
+  --barca-b:  #004d98;
+  --barca-r:  #a50044;
+  /* Atletico */
+  --atm-r:    #ce3524;
+  --atm-b:    #272e61;
+  /* stat palette */
+  --low:      #22d3a0;
+  --med:      #f7c948;
+  --high:     #f26430;
+  --r12:      12px;
 }
 
 *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
 html { scroll-behavior:smooth; }
+
 body {
-  font-family:'Mulish',sans-serif;
+  font-family:'Source Sans 3',sans-serif;
   background:var(--bg);
   color:var(--text);
   min-height:100vh;
@@ -56,156 +56,138 @@ body {
   -webkit-font-smoothing:antialiased;
 }
 
-/* ═══════════════════════════════════════════════
+/* ═══════════════════════════════════════
    SITE HEADER
-═══════════════════════════════════════════════ */
+═══════════════════════════════════════ */
 .site-header {
-  background: linear-gradient(160deg, var(--ucl-b) 0%, var(--bg-2) 60%);
-  border-bottom:1px solid rgba(200,168,75,0.2);
-  padding:22px 16px 20px;
-  text-align:center;
-  position:relative;
-  overflow:hidden;
+  background: linear-gradient(170deg, #050814 0%, #0c1430 55%, #050814 100%);
+  border-bottom: 1px solid rgba(201,168,64,0.22);
+  padding: 24px 16px 20px;
+  text-align: center;
+  position: relative; overflow: hidden;
 }
 .site-header::before {
-  content:'';
-  position:absolute; inset:0;
-  background: radial-gradient(ellipse 70% 200% at 50% -30%, rgba(200,168,75,0.1), transparent 65%);
+  content:''; position:absolute; inset:0;
+  background: radial-gradient(ellipse 80% 220% at 50% -20%, rgba(201,168,64,0.09), transparent 65%);
   pointer-events:none;
 }
-/* UCL star strip */
-.star-strip {
-  display:flex; justify-content:center; align-items:center; gap:6px;
-  margin-bottom:10px; position:relative;
-}
-.star-strip::before, .star-strip::after {
-  content:''; flex:1; max-width:60px; height:1px;
-  background:linear-gradient(90deg, transparent, var(--ucl-star));
-}
-.star-strip::after {
-  background:linear-gradient(90deg, var(--ucl-star), transparent);
-}
-.ucl-tag {
-  font-family:'Bebas Neue',sans-serif;
-  font-size:11px; letter-spacing:3px; text-transform:uppercase;
-  color:var(--ucl-star); padding:2px 10px;
-  border:1px solid rgba(200,168,75,0.35); border-radius:3px;
+.ucl-badge {
+  display:inline-flex; align-items:center; gap:8px;
+  font-family:'Rajdhani',sans-serif; font-size:11px; font-weight:700;
+  letter-spacing:2.5px; text-transform:uppercase; color:var(--ucl-gold);
+  border: 1px solid rgba(201,168,64,0.3); background:rgba(201,168,64,0.06);
+  padding:4px 14px; border-radius:3px; margin-bottom:12px;
 }
 .site-header h1 {
-  font-family:'Bebas Neue',sans-serif;
-  font-size:28px; letter-spacing:2px; color:#fff;
-  text-transform:uppercase; line-height:1.1;
+  font-family:'Rajdhani',sans-serif;
+  font-size:28px; font-weight:700; letter-spacing:1.5px;
+  color:#fff; text-transform:uppercase; line-height:1.1;
 }
-.site-header .tagline {
-  font-size:11.5px; color:var(--muted); margin-top:5px;
+.site-header .sub {
+  font-size:12px; color:var(--muted); margin-top:6px; letter-spacing:0.3px;
 }
+.match-nav {
+  display:flex; justify-content:center; gap:10px; flex-wrap:wrap; margin-top:14px;
+}
+.mnav-pill {
+  font-family:'Rajdhani',sans-serif; font-size:11px; font-weight:600;
+  letter-spacing:0.8px; text-transform:uppercase;
+  padding:5px 14px; border-radius:20px; border:1px solid;
+  text-decoration:none; transition:background .2s;
+}
+.mnav-psg  { color:#6b9fff; border-color:rgba(107,159,255,0.28); background:rgba(107,159,255,0.06); }
+.mnav-barca{ color:#f47ca0; border-color:rgba(244,124,160,0.28); background:rgba(244,124,160,0.06); }
 
-/* ═══════════════════════════════════════════════
-   MATCH HERO BANNERS
-═══════════════════════════════════════════════ */
+/* ═══════════════════════════════════════
+   MATCH HERO
+═══════════════════════════════════════ */
 .match-hero {
-  padding:22px 16px 18px;
+  padding: 24px 16px 20px;
   position:relative; overflow:hidden;
-  border-bottom:1px solid var(--border-m);
+  border-bottom: 1px solid var(--border-m);
 }
-.match-hero.scp-ars {
-  background: linear-gradient(135deg, rgba(0,102,48,0.18) 0%, var(--bg-2) 40%, rgba(219,0,7,0.12) 100%);
-}
-.match-hero.rma-bay {
-  background: linear-gradient(135deg, rgba(196,168,79,0.12) 0%, var(--bg-2) 40%, rgba(220,5,45,0.12) 100%);
-}
-.match-hero::before {
-  content:''; position:absolute; inset:0;
-  background: radial-gradient(ellipse 60% 100% at 50% 50%, rgba(26,72,184,0.05), transparent 70%);
-  pointer-events:none;
-}
+.mh-psg  { background: linear-gradient(135deg, rgba(0,48,135,0.22) 0%, var(--bg-2) 40%, rgba(218,41,28,0.12) 100%); }
+.mh-barca{ background: linear-gradient(135deg, rgba(0,77,152,0.2) 0%, var(--bg-2) 40%, rgba(165,0,68,0.18) 100%); }
+.mh-glow { position:absolute; inset:0; background:radial-gradient(ellipse 60% 80% at 50% 50%, rgba(24,64,184,0.05), transparent 70%); pointer-events:none; }
 
-.hero-inner {
-  max-width:560px; margin:0 auto;
-  display:flex; align-items:center; justify-content:space-between; gap:10px;
+.hero-row {
+  max-width:580px; margin:0 auto;
+  display:flex; align-items:center; justify-content:space-between; gap:12px;
 }
 .hero-team {
-  display:flex; flex-direction:column; align-items:center; gap:7px; flex:1;
+  display:flex; flex-direction:column; align-items:center; gap:8px; flex:1;
 }
-.badge-ring {
+.club-badge {
   width:72px; height:72px;
+  border-radius:50%; border:1px solid var(--border-m);
+  background:rgba(255,255,255,0.03);
   display:flex; align-items:center; justify-content:center;
-  border-radius:50%;
-  border:1px solid var(--border-m);
-  background:rgba(255,255,255,0.04);
-  filter:drop-shadow(0 4px 16px rgba(0,0,0,0.6));
-  transition:transform .3s ease;
-  flex-shrink:0;
+  filter:drop-shadow(0 4px 18px rgba(0,0,0,0.65));
+  transition:transform .3s; flex-shrink:0;
 }
-.badge-ring:hover { transform:scale(1.07); }
-.badge-ring svg { width:52px; height:52px; }
-.hero-name {
-  font-family:'Bebas Neue',sans-serif; font-size:14px; letter-spacing:1px;
-  text-transform:uppercase; text-align:center; color:#fff; line-height:1.2;
+.club-badge:hover { transform:scale(1.07); }
+.club-badge svg { width:50px; height:50px; }
+.h-name {
+  font-family:'Rajdhani',sans-serif; font-size:14px; font-weight:700;
+  letter-spacing:1px; text-transform:uppercase; text-align:center; color:#fff; line-height:1.2;
 }
-.hero-pos { font-size:9.5px; color:var(--muted); text-transform:uppercase; letter-spacing:0.6px; }
+.h-pos { font-size:9.5px; color:var(--muted); text-transform:uppercase; letter-spacing:0.5px; }
+.vs-col { display:flex; flex-direction:column; align-items:center; gap:5px; flex-shrink:0; }
+.vs-big { font-family:'Rajdhani',sans-serif; font-size:26px; font-weight:700; color:rgba(255,255,255,0.1); letter-spacing:3px; }
+.leg-tag { font-family:'Rajdhani',sans-serif; font-size:10px; font-weight:700; letter-spacing:2px; color:var(--ucl-gold); background:rgba(201,168,64,0.1); border:1px solid rgba(201,168,64,0.25); padding:2px 8px; border-radius:3px; }
+.venue-txt { font-size:9.5px; color:var(--muted); text-align:center; line-height:1.5; }
 
-.vs-block { display:flex; flex-direction:column; align-items:center; gap:4px; flex-shrink:0; }
-.vs-text {
-  font-family:'Bebas Neue',sans-serif; font-size:26px;
-  color:rgba(255,255,255,0.12); letter-spacing:2px;
-}
-.vs-meta { font-size:9.5px; color:var(--muted); text-align:center; line-height:1.5; }
-.vs-leg {
-  font-family:'Bebas Neue',sans-serif; font-size:10px; letter-spacing:1.5px;
-  color:var(--ucl-star); background:rgba(200,168,75,0.1);
-  border:1px solid rgba(200,168,75,0.25); padding:1px 7px; border-radius:3px;
-}
-
-/* ═══════════════════════════════════════════════
-   PAGE + LAYOUT
-═══════════════════════════════════════════════ */
+/* ═══════════════════════════════════════
+   PAGE & GRID
+═══════════════════════════════════════ */
 .page { max-width:700px; margin:0 auto; padding:20px 14px 56px; }
 
-/* ─── SECTION CARD ─── */
+.m-grid { display:flex; flex-direction:column; gap:0; }
+
+/* card */
 .card {
   background:var(--bg-2); border:1px solid var(--border);
-  border-radius:var(--radius); overflow:hidden; margin-bottom:16px;
+  border-radius:var(--r12); overflow:hidden; margin-bottom:14px;
 }
 .card-hd {
   padding:13px 18px 11px; border-bottom:1px solid var(--border);
   display:flex; align-items:center; gap:8px;
 }
-.card-hd-dot { width:5px; height:5px; border-radius:50%; flex-shrink:0; }
-.card-hd-title {
-  font-family:'Bebas Neue',sans-serif; font-size:11px; letter-spacing:2px;
-  text-transform:uppercase; color:var(--muted); flex:1;
+.hd-dot { width:5px; height:5px; border-radius:50%; flex-shrink:0; }
+.hd-title {
+  font-family:'Rajdhani',sans-serif; font-size:11px; font-weight:700;
+  letter-spacing:2px; text-transform:uppercase; color:var(--muted); flex:1;
 }
-.card-hd-badge {
-  font-size:9px; letter-spacing:0.8px; text-transform:uppercase;
-  padding:2px 7px; border-radius:3px; border:1px solid;
+.hd-tag {
+  font-family:'Rajdhani',sans-serif; font-size:9px; font-weight:700;
+  letter-spacing:1px; text-transform:uppercase;
+  padding:2px 8px; border-radius:3px; border:1px solid;
 }
 .card-body { padding:16px 18px; }
 
-/* ─── CALLOUT ─── */
+/* callout */
 .callout {
-  background:rgba(255,255,255,0.025);
-  border:1px solid var(--border-m);
-  border-radius:8px; padding:13px 15px;
-  font-size:13px; line-height:1.7; color:var(--hi);
+  background:rgba(255,255,255,0.022);
+  border:1px solid var(--border-m); border-radius:8px;
+  padding:13px 15px; font-size:13px; line-height:1.7; color:var(--hi);
 }
-.callout strong { color:var(--ucl-star); font-weight:700; }
+.callout strong { color:var(--ucl-gold); font-weight:700; }
+.callout em { color:var(--text); font-style:normal; font-weight:600; }
 
-/* ─── FORM GRID ─── */
-.form-grid { display:flex; flex-direction:column; gap:14px; }
-.form-col { }
-
-.team-pill {
+/* form */
+.form-cols { display:flex; flex-direction:column; gap:14px; }
+.fcol {}
+.team-lab {
   display:inline-flex; align-items:center; gap:6px;
-  font-size:9.5px; font-family:'Bebas Neue',sans-serif;
+  font-family:'Rajdhani',sans-serif; font-size:10px; font-weight:700;
   letter-spacing:1.2px; text-transform:uppercase;
   padding:3px 8px 3px 5px; border-radius:4px; margin-bottom:8px; border:1px solid;
 }
-.pill-scp { background:rgba(0,102,48,0.13); color:#4dbb7a; border-color:rgba(0,102,48,0.3); }
-.pill-ars { background:rgba(219,0,7,0.12); color:#f47070; border-color:rgba(219,0,7,0.28); }
-.pill-rma { background:rgba(196,168,79,0.12); color:#e0c97a; border-color:rgba(196,168,79,0.28); }
-.pill-bay { background:rgba(220,5,45,0.12); color:#f4606a; border-color:rgba(220,5,45,0.28); }
-.tp-badge { width:14px; height:14px; flex-shrink:0; }
+.lab-s  { background:rgba(0,48,135,0.14); color:#7aafff; border-color:rgba(107,159,255,0.26); }
+.lab-l  { background:rgba(200,16,46,0.13); color:#f07070; border-color:rgba(200,16,46,0.28); }
+.lab-b  { background:rgba(0,77,152,0.14); color:#7ab0ff; border-color:rgba(0,77,152,0.3); }
+.lab-a  { background:rgba(206,53,36,0.13); color:#f07060; border-color:rgba(206,53,36,0.28); }
+.tl-badge { width:14px; height:14px; flex-shrink:0; }
 
 .match-list { display:flex; flex-direction:column; gap:4px; }
 .mr {
@@ -215,281 +197,263 @@ body {
   border-radius:6px; padding:7px 10px;
 }
 .rd { width:7px; height:7px; border-radius:50%; }
-.rd.W { background:var(--low); box-shadow:0 0 5px rgba(52,211,153,0.45); }
+.rd.W { background:var(--low);  box-shadow:0 0 5px rgba(34,211,160,0.4); }
 .rd.D { background:var(--med); }
-.rd.L { background:var(--high); box-shadow:0 0 5px rgba(255,107,53,0.4); }
-.ms { font-family:'Bebas Neue',sans-serif; font-size:15px; font-weight:400; color:#fff; text-align:center; }
+.rd.L { background:var(--high); box-shadow:0 0 5px rgba(242,100,48,0.4); }
+.ms { font-family:'Rajdhani',sans-serif; font-size:15px; font-weight:700; color:#fff; text-align:center; }
 .mo { font-size:12px; color:var(--text); font-weight:600; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
 .mc { font-size:9.5px; color:var(--muted); text-transform:uppercase; letter-spacing:0.4px; text-align:right; white-space:nowrap; }
+.leg-note { font-size:9.5px; color:var(--ucl-gold); font-style:italic; }
 
-.f-legend { display:flex; gap:12px; flex-wrap:wrap; margin-top:10px; }
-.fl { display:flex; align-items:center; gap:4px; font-size:10.5px; color:var(--muted); }
-.fl-dot { width:7px; height:7px; border-radius:50%; }
+.f-leg { display:flex; gap:12px; flex-wrap:wrap; margin-top:10px; }
+.fl  { display:flex; align-items:center; gap:4px; font-size:10.5px; color:var(--muted); }
+.fld { width:7px; height:7px; border-radius:50%; }
 
-/* ─── SEASON AVERAGES ─── */
+/* avg */
 .avg-pair { display:flex; flex-direction:column; gap:12px; }
-.avg-grp { }
-.avg-grp-lbl {
-  font-family:'Bebas Neue',sans-serif; font-size:10px; letter-spacing:1.2px;
-  text-transform:uppercase; margin-bottom:7px;
-}
-.avg-grid {
-  display:grid; grid-template-columns:repeat(4,1fr); gap:6px;
-}
-.ac {
-  background:var(--bg-3); border:1px solid var(--border); border-radius:8px;
-  padding:10px 6px 8px; text-align:center;
-}
-.ac .v { font-family:'Bebas Neue',sans-serif; font-size:22px; color:#fff; line-height:1; }
-.ac .l { font-size:9px; color:var(--muted); margin-top:3px; text-transform:uppercase; letter-spacing:0.5px; line-height:1.3; }
+.a-grp {}
+.a-grp-lbl { font-family:'Rajdhani',sans-serif; font-size:10px; font-weight:700; letter-spacing:1.2px; text-transform:uppercase; margin-bottom:7px; }
+.avg-g { display:grid; grid-template-columns:repeat(4,1fr); gap:6px; }
+.ac { background:var(--bg-3); border:1px solid var(--border); border-radius:8px; padding:10px 6px 8px; text-align:center; }
+.av { font-family:'Rajdhani',sans-serif; font-size:22px; font-weight:700; color:#fff; line-height:1; }
+.al { font-size:9px; color:var(--muted); margin-top:3px; text-transform:uppercase; letter-spacing:0.5px; line-height:1.3; }
 
-/* ─── H2H STRIP ─── */
-.h2h-strip {
+/* h2h */
+.h2h-bar {
   background:var(--bg-3); border:1px solid var(--border); border-radius:8px;
   padding:13px 10px; display:flex; align-items:center; justify-content:space-between; gap:4px;
 }
 .hs { text-align:center; flex:1; }
-.hn { font-family:'Bebas Neue',sans-serif; font-size:28px; line-height:1; }
-.hl { font-size:9px; color:var(--muted); text-transform:uppercase; letter-spacing:0.6px; margin-top:3px; }
+.hn { font-family:'Rajdhani',sans-serif; font-size:28px; font-weight:700; line-height:1; }
+.hl { font-size:9px; color:var(--muted); text-transform:uppercase; letter-spacing:0.7px; margin-top:3px; }
 .hd { width:1px; height:36px; background:var(--border); flex-shrink:0; }
 
-.h2h-list { display:flex; flex-direction:column; gap:4px; margin-top:12px; }
-.h2h-row {
+.h2h-rows { display:flex; flex-direction:column; gap:4px; margin-top:12px; }
+.h2h-r {
   display:grid; grid-template-columns:1fr auto 1fr;
   align-items:center; gap:8px;
   background:var(--bg-4); border:1px solid var(--border); border-radius:6px;
   padding:7px 10px;
 }
-.h2h-home { font-size:12px; font-weight:600; color:var(--text); text-align:left; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
-.h2h-sc { font-family:'Bebas Neue',sans-serif; font-size:15px; color:#fff; text-align:center; white-space:nowrap; }
-.h2h-away { font-size:12px; font-weight:600; color:var(--text); text-align:right; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
-.h2h-sub { font-size:9px; color:var(--muted); text-transform:uppercase; letter-spacing:0.4px; grid-column:1/-1; text-align:center; margin-top:-2px; }
+.rh { font-size:12px; font-weight:600; color:var(--text); text-align:left; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.rs { font-family:'Rajdhani',sans-serif; font-size:15px; font-weight:700; color:#fff; text-align:center; white-space:nowrap; }
+.ra { font-size:12px; font-weight:600; color:var(--text); text-align:right; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.rsub { font-size:9px; color:var(--muted); text-transform:uppercase; letter-spacing:0.4px; grid-column:1/-1; text-align:center; margin-top:-2px; }
 
-/* ─── PREDICTION TABLE ─── */
-.pred-legend { display:flex; gap:14px; flex-wrap:wrap; margin-bottom:13px; }
+/* pred table */
+.pred-leg { display:flex; gap:14px; flex-wrap:wrap; margin-bottom:13px; }
 .pli { display:flex; align-items:center; gap:5px; font-size:11px; color:var(--muted); }
 .pld { width:8px; height:8px; border-radius:50%; }
 
-.pred-wrap { overflow-x:auto; -webkit-overflow-scrolling:touch; }
-.pred-table {
+.pw { overflow-x:auto; -webkit-overflow-scrolling:touch; }
+.pt {
   width:100%; border-collapse:collapse;
   table-layout:fixed; min-width:320px;
 }
-.pred-table col.cm { width:32%; }
-.pred-table col.cl { width:16%; }
-.pred-table col.cn { width:16%; }
-.pred-table col.ch { width:16%; }
-.pred-table col.cb { width:20%; }
+.pt col.cm { width:32%; }
+.pt col.cl { width:16%; }
+.pt col.cn { width:16%; }
+.pt col.ch { width:16%; }
+.pt col.cb { width:20%; }
 
-.pred-table thead th {
-  font-family:'Bebas Neue',sans-serif; font-size:10px; letter-spacing:1.5px;
-  text-transform:uppercase; color:var(--muted);
+.pt thead th {
+  font-family:'Rajdhani',sans-serif; font-size:10px; font-weight:700;
+  letter-spacing:1.5px; text-transform:uppercase; color:var(--muted);
   padding:0 0 10px; text-align:left; white-space:nowrap; overflow:hidden;
 }
-.pred-table thead th:not(:first-child) { text-align:center; }
-.pred-table thead th.th-med { color:var(--med); }
+.pt thead th:not(:first-child) { text-align:center; }
+.pt thead th.th-m { color:var(--med); }
 
-.pred-table tbody td {
+.pt tbody td {
   padding:8px 3px; border-bottom:1px solid rgba(255,255,255,0.03);
   vertical-align:middle; overflow:hidden;
 }
-.pred-table tbody tr:last-child td { border-bottom:none; }
-.pred-table tbody td.cm-cell { color:var(--hi); font-size:12.5px; padding-left:0; }
-.pred-table tbody td:not(.cm-cell) { text-align:center; }
+.pt tbody tr:last-child td { border-bottom:none; }
+.pt tbody td.cmc { color:var(--hi); font-size:12.5px; padding-left:0; }
+.pt tbody td:not(.cmc) { text-align:center; }
 
-.lv { font-family:'Bebas Neue',sans-serif; font-size:19px; color:var(--low); line-height:1; }
-.mv { font-family:'Bebas Neue',sans-serif; font-size:19px; color:var(--med); line-height:1; }
-.hv { font-family:'Bebas Neue',sans-serif; font-size:19px; color:var(--high); line-height:1; }
+.lv  { font-family:'Rajdhani',sans-serif; font-size:19px; font-weight:700; color:var(--low);  line-height:1; }
+.mv  { font-family:'Rajdhani',sans-serif; font-size:19px; font-weight:700; color:var(--med);  line-height:1; }
+.hv  { font-family:'Rajdhani',sans-serif; font-size:19px; font-weight:700; color:var(--high); line-height:1; }
 
-.bar-w { width:80%; max-width:90px; height:5px; background:rgba(255,255,255,0.06); border-radius:3px; overflow:hidden; margin:0 auto; display:block; }
-.bar-f { display:block; height:100%; border-radius:3px; }
-.bar-scp-ars { background:linear-gradient(90deg,var(--low),var(--high)); }
-.bar-rma-bay { background:linear-gradient(90deg,#f9c74f,var(--high)); }
+.bw  { width:80%; max-width:90px; height:5px; background:rgba(255,255,255,0.06); border-radius:3px; overflow:hidden; margin:0 auto; display:block; }
+.bf  { display:block; height:100%; border-radius:3px; }
+.bf-psg   { background:linear-gradient(90deg, var(--low), var(--high)); }
+.bf-barca { background:linear-gradient(90deg, #22d3a0, #f26430); }
 
-/* ─── MATCH DIVIDER ─── */
-.match-divider {
-  text-align:center; padding:22px 0 10px; position:relative;
+/* section divider */
+.s-div {
+  text-align:center; padding:24px 0 12px; position:relative;
 }
-.match-divider::before {
-  content:''; position:absolute; left:0; right:0; top:50%;
-  height:1px; background:var(--border);
-}
-.match-divider-inner {
+.s-div::before { content:''; position:absolute; left:0; right:0; top:50%; height:1px; background:var(--border); }
+.s-div-in {
   display:inline-flex; align-items:center; gap:10px;
   background:var(--bg); padding:0 14px; position:relative;
-  font-family:'Bebas Neue',sans-serif; font-size:10px; letter-spacing:3px;
-  text-transform:uppercase; color:var(--ucl-star);
+  font-family:'Rajdhani',sans-serif; font-size:10px; font-weight:700;
+  letter-spacing:3px; text-transform:uppercase; color:var(--ucl-gold);
 }
-.ucl-star-icon { font-size:12px; }
 
-/* ─── FOOTER ─── */
+/* notes */
+.note-block { margin-bottom:10px; font-size:13px; line-height:1.65; color:var(--hi); }
+.note-block:last-child { margin-bottom:0; }
+.note-block strong { color:var(--ucl-gold); font-weight:700; }
+
+/* footer */
 footer {
   text-align:center; padding:18px 14px;
-  font-size:10.5px; color:rgba(99,107,132,0.45);
+  font-size:11.5px; color:rgba(94,104,138,0.45);
   border-top:1px solid var(--border);
 }
 
-/* ════════════════════════════════════
+/* ═══════════════════════════════════════
    TABLET 640px+
-═══════════════════════════════════ */
+═══════════════════════════════════════ */
 @media(min-width:640px){
   body { font-size:15px; }
   .page { max-width:920px; padding:26px 24px 64px; }
   .site-header { padding:28px 24px 24px; }
   .site-header h1 { font-size:34px; }
   .match-hero { padding:28px 24px 22px; }
-  .hero-inner { max-width:640px; }
-  .badge-ring { width:84px; height:84px; }
-  .badge-ring svg { width:60px; height:60px; }
-  .hero-name { font-size:16px; }
-  .vs-text { font-size:32px; }
+  .hero-row { max-width:640px; }
+  .club-badge { width:84px; height:84px; }
+  .club-badge svg { width:60px; height:60px; }
+  .h-name { font-size:16px; }
+  .vs-big { font-size:34px; }
   .card-hd { padding:14px 22px 12px; }
   .card-body { padding:18px 22px; }
-  .form-grid { flex-direction:row; gap:16px; }
-  .form-col { flex:1; min-width:0; }
+  .form-cols { flex-direction:row; gap:16px; }
+  .fcol { flex:1; min-width:0; }
   .avg-pair { flex-direction:row; gap:16px; }
-  .avg-grp { flex:1; }
-  .ac .v { font-size:24px; }
+  .a-grp { flex:1; }
+  .av { font-size:24px; }
   .hn { font-size:34px; }
   .lv,.mv,.hv { font-size:22px; }
-  .pred-table tbody td { padding:9px 5px; }
-  .bar-w { max-width:110px; height:6px; }
+  .pt tbody td { padding:9px 5px; }
+  .bw { max-width:110px; height:6px; }
   .callout { font-size:14px; }
+  .note-block { font-size:14px; }
 }
 
-/* ════════════════════════════════════
+/* ═══════════════════════════════════════
    DESKTOP 1060px+
-═══════════════════════════════════ */
+═══════════════════════════════════════ */
 @media(min-width:1060px){
   .page { max-width:1380px; padding:32px 40px 72px; }
   .site-header { padding:30px 40px 26px; }
   .site-header h1 { font-size:40px; }
   .match-hero { padding:30px 40px 24px; }
-  .hero-inner { max-width:700px; }
-  .badge-ring { width:92px; height:92px; }
-  .badge-ring svg { width:66px; height:66px; }
-  .hero-name { font-size:17px; }
-
-  /* two-column content grid */
-  .match-grid {
-    display:grid; grid-template-columns:1fr 1fr; gap:22px; align-items:start;
-  }
-  .match-grid .fw { grid-column:1/-1; }
-
+  .hero-row { max-width:700px; }
+  .club-badge { width:92px; height:92px; }
+  .club-badge svg { width:66px; height:66px; }
+  .h-name { font-size:17px; }
   .card-hd { padding:15px 24px 13px; }
   .card-body { padding:20px 24px; }
-  .ac .v { font-size:26px; }
+  .m-grid { display:grid; grid-template-columns:1fr 1fr; gap:22px; align-items:start; }
+  .m-grid .fw { grid-column:1/-1; }
+  .av { font-size:26px; }
   .lv,.mv,.hv { font-size:23px; }
   .hn { font-size:36px; }
-  .pred-table col.cm { width:30%; }
-  .bar-w { max-width:100px; }
+  .bw { max-width:100px; }
 }
 
-/* ════════════════════════════════════
+/* ═══════════════════════════════════════
    WIDE 1380px+
-═══════════════════════════════════ */
+═══════════════════════════════════════ */
 @media(min-width:1380px){
   .page { max-width:1520px; padding:36px 60px 80px; }
   .site-header { padding:32px 60px 26px; }
   .site-header h1 { font-size:46px; }
   .match-hero { padding:32px 60px 26px; }
-  .hero-inner { max-width:780px; }
-  .match-grid { gap:28px; }
+  .hero-row { max-width:780px; }
+  .m-grid { gap:28px; }
 }
 </style>
 </head>
 <body>
 
-<!-- ══════════════ SITE HEADER ══════════════ -->
+<!-- ══════════ HEADER ══════════ -->
 <header class="site-header">
-  <div class="star-strip">
-    <div class="ucl-tag">★ UEFA Champions League · Quarter-Finals · First Leg · 7 April 2026 ★</div>
+  <div class="ucl-badge">★★★★★ UEFA Champions League ★★★★★<br> Quarter-Finals · First Legs · 8 April 2026 </div>
+  <p class="sub">Last 5 form &nbsp;·&nbsp; Season averages &nbsp;·&nbsp; H2H &nbsp;·&nbsp; Weighted Low / Median / High predictions</p>
+  <div class="match-nav">
+    <a href="#psg" class="mnav-pill mnav-psg">PSG vs Liverpool · Parc des Princes</a>
+    <a href="#barca" class="mnav-pill mnav-barca">Barcelona vs Atlético · Camp Nou</a>
   </div>
-  <h1>Team Bilbo Champions League Stats Predictor</h1>
-  <p class="tagline">Last 5 form &nbsp;·&nbsp; Season averages &nbsp;·&nbsp; Head-to-head &nbsp;·&nbsp; Low / Median / High predictions</p>
 </header>
 
-<!-- ══════════════════════════════════════════════
-     MATCH 1 HERO: SPORTING CP vs ARSENAL
-═══════════════════════════════════════════════ -->
-<div class="match-hero scp-ars">
-  <div class="hero-inner">
-    <!-- SPORTING CP -->
+<!-- ══════════════════════════════
+     MATCH 1 HERO: PSG vs LIVERPOOL
+═══════════════════════════════════ -->
+<div class="match-hero mh-psg" id="psg">
+  <div class="mh-glow"></div>
+  <div class="hero-row">
+
+    <!-- PSG -->
     <div class="hero-team">
-      <div class="badge-ring">
+      <div class="club-badge">
         <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-          <!-- Green main shield -->
-          <circle cx="50" cy="50" r="46" fill="#006630"/>
-          <circle cx="50" cy="50" r="46" fill="none" stroke="#ffcc00" stroke-width="2"/>
-          <!-- Inner white ring -->
-          <circle cx="50" cy="50" r="36" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
-          <!-- Lion silhouette (simplified) -->
-          <!-- Body -->
-          <ellipse cx="50" cy="56" rx="16" ry="12" fill="#ffcc00"/>
-          <!-- Head -->
-          <circle cx="50" cy="38" r="11" fill="#ffcc00"/>
-          <!-- Mane suggestion -->
-          <circle cx="50" cy="38" r="14" fill="none" stroke="#c8960a" stroke-width="3"/>
-          <!-- Eyes -->
-          <circle cx="46" cy="36" r="2" fill="#006630"/>
-          <circle cx="54" cy="36" r="2" fill="#006630"/>
-          <!-- Crown suggestion -->
-          <path d="M40 28 L43 22 L47 27 L50 21 L53 27 L57 22 L60 28 Z" fill="#c8960a"/>
-          <!-- SPORTING text -->
-          <text x="50" y="88" text-anchor="middle" font-family="Arial,sans-serif" font-size="8" font-weight="bold" fill="#ffcc00" letter-spacing="1.5">SPORTING</text>
+          <circle cx="50" cy="50" r="47" fill="#003087"/>
+          <circle cx="50" cy="50" r="47" fill="none" stroke="rgba(255,255,255,0.18)" stroke-width="2"/>
+          <!-- Eiffel Tower silhouette -->
+          <path d="M50 18 L44 38 L37 55 L30 72 L38 72 L41 60 L44 60 L44 72 L56 72 L56 60 L59 60 L62 72 L70 72 L63 55 L56 38 Z" fill="#da291c"/>
+          <!-- Crown -->
+          <path d="M38 18 L42 24 L46 20 L50 26 L54 20 L58 24 L62 18 L59 28 L41 28 Z" fill="#f9d900"/>
+          <!-- PSG text -->
+          <text x="50" y="90" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" font-weight="900" fill="#fff" letter-spacing="2">PSG</text>
         </svg>
       </div>
-      <div class="hero-name">Sporting CP</div>
-      <div class="hero-pos">Liga NOS · 2nd · Home</div>
+      <div class="h-name">PSG</div>
+      <div class="h-pos">Ligue 1 Leaders · Home</div>
     </div>
 
-    <div class="vs-block">
-      <div class="vs-text">VS</div>
-      <div class="vs-leg">1st Leg</div>
-      <div class="vs-meta">Estádio José Alvalade<br>Lisbon · 7 Apr · 8pm CET</div>
+    <div class="vs-col">
+      <div class="vs-big">VS</div>
+      <div class="leg-tag">1st Leg</div>
+      <div class="venue-txt">Parc des Princes<br>Paris · Wed 8 Apr · 9pm CET</div>
     </div>
 
-    <!-- ARSENAL -->
+    <!-- LIVERPOOL -->
     <div class="hero-team">
-      <div class="badge-ring">
+      <div class="club-badge">
         <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="50" cy="50" r="46" fill="#db0007"/>
-          <circle cx="50" cy="50" r="46" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1.5"/>
-          <!-- Cannon barrel (simplified) -->
-          <rect x="22" y="44" width="56" height="12" rx="6" fill="#ffffff"/>
-          <!-- Cannon wheels -->
-          <circle cx="36" cy="62" r="10" fill="none" stroke="#ffffff" stroke-width="3"/>
-          <circle cx="36" cy="62" r="4" fill="#ffffff"/>
-          <circle cx="64" cy="62" r="10" fill="none" stroke="#ffffff" stroke-width="3"/>
-          <circle cx="64" cy="62" r="4" fill="#ffffff"/>
-          <!-- Cannon top rim -->
-          <rect x="20" y="40" width="12" height="8" rx="3" fill="#ffffff"/>
-          <!-- ARSENAL -->
-          <text x="50" y="30" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" font-weight="bold" fill="#ffffff" letter-spacing="2">ARSENAL</text>
+          <circle cx="50" cy="50" r="47" fill="#c8102e"/>
+          <circle cx="50" cy="50" r="47" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1.5"/>
+          <!-- Liver bird (simplified) -->
+          <ellipse cx="50" cy="52" rx="18" ry="14" fill="#fff" opacity="0.9"/>
+          <!-- Bird head -->
+          <circle cx="50" cy="34" r="10" fill="#fff" opacity="0.9"/>
+          <!-- Beak -->
+          <path d="M58 32 L66 30 L62 36 Z" fill="#f6eb61"/>
+          <!-- Eye -->
+          <circle cx="54" cy="32" r="2" fill="#c8102e"/>
+          <!-- Wings -->
+          <path d="M32 44 Q24 36 22 28 Q32 32 36 40 Z" fill="#fff" opacity="0.8"/>
+          <path d="M68 44 Q76 36 78 28 Q68 32 64 40 Z" fill="#fff" opacity="0.8"/>
+          <!-- LFC text -->
+          <text x="50" y="90" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" font-weight="900" fill="#f6eb61" letter-spacing="2">LFC</text>
         </svg>
       </div>
-      <div class="hero-name">Arsenal</div>
-      <div class="hero-pos">PL Leaders · 1st · Away</div>
+      <div class="h-name">LIVERPOOL</div>
+      <div class="h-pos">PL 5th · 49 pts · Away</div>
     </div>
+
   </div>
 </div>
 
-<!-- ══════════════════════════════════════════════
-     MATCH 1 CONTENT
-═══════════════════════════════════════════════ -->
+<!-- ═══════════════════ MATCH 1 CONTENT ═══════════════════ -->
 <div class="page">
-<div class="match-grid">
+<div class="m-grid">
 
   <!-- CONTEXT -->
   <div class="card fw">
     <div class="card-hd">
-      <div class="card-hd-dot" style="background:var(--ucl-star)"></div>
-      <div class="card-hd-title">Match Context — Sporting CP vs Arsenal</div>
-      <div class="card-hd-badge" style="color:var(--ucl-star);border-color:rgba(200,168,75,0.3);background:rgba(200,168,75,0.07)">UCL QF Leg 1</div>
+      <div class="hd-dot" style="background:var(--ucl-gold)"></div>
+      <div class="hd-title">Match Context</div>
+      <div class="hd-tag" style="color:var(--ucl-gold);border-color:rgba(201,168,64,0.28);background:rgba(201,168,64,0.07)">UCL QF · Leg 1</div>
     </div>
     <div class="card-body">
       <div class="callout">
-        Viktor Gyökeres <strong>returns to his former club</strong> as Arsenal travel to Lisbon for the first leg. Sporting are in outstanding home form — <strong>unbeaten in 17 straight home games</strong>, winning all five UCL home fixtures this season (scoring 16 goals in those five). Arsenal are unbeaten in all 10 of their UCL games this season, boasting the lowest xG against (0.75), goals conceded (0.5) and shots on target faced (2.7) in the competition. However, Arsenal have <strong>never won away vs Portuguese opposition in knockout European football</strong>. Sporting captain Hjulmand is <strong>suspended</strong>; Arsenal are without Saka, Timber, Eze and Merino, but Gabriel, Rice and Trossard return from FA Cup rotation. Arsenal suffered back-to-back domestic cup defeats entering this tie — Arteta's side hungry to respond on Europe's biggest stage.
+        <strong>Defending champions PSG vs a struggling Liverpool</strong> — a rematch layered with recent drama. Last season PSG eliminated Liverpool from this very round on penalties despite the Reds winning 1–0 in Paris. Now PSG are a different beast: <em>four consecutive wins, 15 goals scored</em>, and operating with frightening attacking cohesion (Dembélé, Kvaratskhelia, Doué). Liverpool are <em>fifth in the PL</em>, have lost 15 games across all competitions and were <strong>humiliated 4–0 by Manchester City</strong> in the FA Cup QF days earlier. Virgil van Dijk admitted the team "gave up" — a damning verdict. PSG are unbeaten in their last <strong>seven European meetings with English clubs</strong>. Alisson is out for Liverpool; PSG are without Barcola (ankle), Fabian Ruiz and Mayulu. Alexander Isak may return from his broken leg.
       </div>
     </div>
   </div>
@@ -497,44 +461,45 @@ footer {
   <!-- LAST 5 FORM -->
   <div class="card fw">
     <div class="card-hd">
-      <div class="card-hd-dot" style="background:#4dbb7a"></div>
-      <div class="card-hd-title">Last 5 Matches — All Competitions</div>
+      <div class="hd-dot" style="background:#7aafff"></div>
+      <div class="hd-title">Last 5 Matches — All Competitions</div>
     </div>
     <div class="card-body">
-      <div class="form-grid">
-        <!-- SPORTING -->
-        <div class="form-col">
-          <div class="team-pill pill-scp">
-            <svg class="tp-badge" viewBox="0 0 100 100"><circle cx="50" cy="50" r="46" fill="#006630"/><circle cx="50" cy="38" r="11" fill="#ffcc00"/></svg>
-            Sporting CP
+      <div class="form-cols">
+
+        <div class="fcol">
+          <div class="team-lab lab-s">
+            <svg class="tl-badge" viewBox="0 0 100 100"><circle cx="50" cy="50" r="47" fill="#003087"/><path d="M50 18 L44 38 L37 55 L30 72 L38 72 L41 60 L44 60 L44 72 L56 72 L56 60 L59 60 L62 72 L70 72 L63 55 L56 38 Z" fill="#da291c"/></svg>
+            PSG &mdash; Ligue 1 1st
           </div>
           <div class="match-list">
-            <div class="mr"><div class="rd W"></div><div class="ms">4–2</div><div class="mo">Santa Clara</div><div class="mc">Liga · Home</div></div>
-            <div class="mr"><div class="rd W"></div><div class="ms">5–0</div><div class="mo">Bodø/Glimt</div><div class="mc">UCL R16 · Home</div></div>
-            <div class="mr"><div class="rd L"></div><div class="ms">0–3</div><div class="mo">Bodø/Glimt</div><div class="mc">UCL R16 · Away</div></div>
-            <div class="mr"><div class="rd W"></div><div class="ms">4–1</div><div class="mo">Famalicão</div><div class="mc">Liga · Home</div></div>
-            <div class="mr"><div class="rd W"></div><div class="ms">3–0</div><div class="mo">Casa Pia</div><div class="mc">Liga · Away</div></div>
+            <div class="mr"><div class="rd W"></div><div class="ms">3–1</div><div class="mo">Toulouse</div><div class="mc">L1 · Home</div></div>
+            <div class="mr"><div class="rd W"></div><div class="ms">4–2</div><div class="mo">Chelsea</div><div class="mc">UCL R16 · Away</div></div>
+            <div class="mr"><div class="rd W"></div><div class="ms">4–0</div><div class="mo">Chelsea</div><div class="mc">UCL R16 · Home</div></div>
+            <div class="mr"><div class="rd W"></div><div class="ms">2–0</div><div class="mo">Lens</div><div class="mc">Ligue 1 · Away</div></div>
+            <div class="mr"><div class="rd W"></div><div class="ms">2–1</div><div class="mo">Monaco</div><div class="mc">UCL KO · Home</div></div>
           </div>
         </div>
-        <!-- ARSENAL -->
-        <div class="form-col">
-          <div class="team-pill pill-ars">
-            <svg class="tp-badge" viewBox="0 0 100 100"><circle cx="50" cy="50" r="46" fill="#db0007"/><rect x="20" y="44" width="60" height="12" rx="6" fill="#fff"/></svg>
-            Arsenal
+
+        <div class="fcol">
+          <div class="team-lab lab-l">
+            <svg class="tl-badge" viewBox="0 0 100 100"><circle cx="50" cy="50" r="47" fill="#c8102e"/><circle cx="50" cy="36" r="12" fill="#fff" opacity="0.9"/></svg>
+            Liverpool &mdash; PL 5th
           </div>
           <div class="match-list">
-            <div class="mr"><div class="rd L"></div><div class="ms">1–2</div><div class="mo">Southampton</div><div class="mc">FA Cup · Away</div></div>
-            <div class="mr"><div class="rd L"></div><div class="ms">0–2</div><div class="mo">Manchester City</div><div class="mc">EFL Final · Neutral</div></div>
-            <div class="mr"><div class="rd W"></div><div class="ms">2–0</div><div class="mo">Bayer Leverkusen</div><div class="mc">UCL R16 · Home</div></div>
-            <div class="mr"><div class="rd W"></div><div class="ms">4–0</div><div class="mo">Wigan Athletic</div><div class="mc">FA Cup · Home</div></div>
-            <div class="mr"><div class="rd W"></div><div class="ms">2–1</div><div class="mo">Chelsea</div><div class="mc">PL · Home</div></div>
+            <div class="mr"><div class="rd L"></div><div class="ms">0–4</div><div class="mo">Manchester City</div><div class="mc">FA Cup · Away</div></div>
+            <div class="mr"><div class="rd L"></div><div class="ms">1–2</div><div class="mo">Brighton</div><div class="mc">PL · Away</div></div>
+            <div class="mr"><div class="rd W"></div><div class="ms">4–0</div><div class="mo">Galatasaray</div><div class="mc">UCL R16 · Home</div></div>
+            <div class="mr"><div class="rd L"></div><div class="ms">0–1</div><div class="mo">Galatasaray</div><div class="mc">UCL R16 · Away</div></div>
+            <div class="mr"><div class="rd L"></div><div class="ms">1–2</div><div class="mo">Wolves</div><div class="mc">PL · Home</div></div>
           </div>
         </div>
+
       </div>
-      <div class="f-legend">
-        <div class="fl"><div class="fl-dot" style="background:var(--low)"></div>Win</div>
-        <div class="fl"><div class="fl-dot" style="background:var(--med)"></div>Draw</div>
-        <div class="fl"><div class="fl-dot" style="background:var(--high)"></div>Loss</div>
+      <div class="f-leg">
+        <div class="fl"><div class="fld" style="background:var(--low)"></div>Win</div>
+        <div class="fl"><div class="fld" style="background:var(--med)"></div>Draw</div>
+        <div class="fl"><div class="fld" style="background:var(--high)"></div>Loss</div>
       </div>
     </div>
   </div>
@@ -542,39 +507,39 @@ footer {
   <!-- SEASON AVERAGES -->
   <div class="card fw">
     <div class="card-hd">
-      <div class="card-hd-dot" style="background:#a78bfa"></div>
-      <div class="card-hd-title">Season Averages per Match</div>
+      <div class="hd-dot" style="background:#a78bfa"></div>
+      <div class="hd-title">Season Averages per Match</div>
     </div>
     <div class="card-body">
       <div class="avg-pair">
-        <div class="avg-grp">
-          <div class="avg-grp-lbl" style="color:#4dbb7a">Sporting CP — Liga NOS + UCL 25/26</div>
-          <div class="avg-grid">
-            <div class="ac"><div class="v">17.9</div><div class="l">Shots</div></div>
-            <div class="ac"><div class="v">7.0</div><div class="l">SOT</div></div>
-            <div class="ac"><div class="v">6.5</div><div class="l">Corners</div></div>
-            <div class="ac"><div class="v">11.2</div><div class="l">Fouls</div></div>
+        <div class="a-grp">
+          <div class="a-grp-lbl" style="color:#7aafff">PSG — Ligue 1 &amp; UCL 25/26</div>
+          <div class="avg-g">
+            <div class="ac"><div class="av">17.9</div><div class="al">Shots</div></div>
+            <div class="ac"><div class="av">7.0</div><div class="al">SOT</div></div>
+            <div class="ac"><div class="av">5.3</div><div class="al">Corners</div></div>
+            <div class="ac"><div class="av">2.4</div><div class="al">Goals/Gm</div></div>
           </div>
-          <div class="avg-grid" style="margin-top:6px">
-            <div class="ac"><div class="v">55%</div><div class="l">Possess.</div></div>
-            <div class="ac"><div class="v">16</div><div class="l">Corners vs Bodø</div></div>
-            <div class="ac"><div class="v">38</div><div class="l">Shots vs Bodø</div></div>
-            <div class="ac"><div class="v">17</div><div class="l">H. Games Won</div></div>
+          <div class="avg-g" style="margin-top:6px">
+            <div class="ac"><div class="av">67%</div><div class="al">Possession</div></div>
+            <div class="ac"><div class="av">8–2</div><div class="al">v Chelsea (agg)</div></div>
+            <div class="ac"><div class="av">15</div><div class="al">Goals last 4</div></div>
+            <div class="ac"><div class="av">41%</div><div class="al">Clean sheet %</div></div>
           </div>
         </div>
-        <div class="avg-grp">
-          <div class="avg-grp-lbl" style="color:#f47070">Arsenal — PL + UCL 25/26</div>
-          <div class="avg-grid">
-            <div class="ac"><div class="v">14.7</div><div class="l">Shots</div></div>
-            <div class="ac"><div class="v">5.0</div><div class="l">SOT</div></div>
-            <div class="ac"><div class="v">5.8</div><div class="l">Corners</div></div>
-            <div class="ac"><div class="v">9.8</div><div class="l">Fouls</div></div>
+        <div class="a-grp">
+          <div class="a-grp-lbl" style="color:#f07070">Liverpool — PL &amp; UCL 25/26</div>
+          <div class="avg-g">
+            <div class="ac"><div class="av">13.8</div><div class="al">Shots</div></div>
+            <div class="ac"><div class="av">4.5</div><div class="al">SOT</div></div>
+            <div class="ac"><div class="av">4.5</div><div class="al">Corners</div></div>
+            <div class="ac"><div class="av">1.9</div><div class="al">Goals/Gm</div></div>
           </div>
-          <div class="avg-grid" style="margin-top:6px">
-            <div class="ac"><div class="v">59%</div><div class="l">Possess.</div></div>
-            <div class="ac"><div class="v">0.5</div><div class="l">UCL GA/Gm</div></div>
-            <div class="ac"><div class="v">2.7</div><div class="l">UCL SOT vs /Gm</div></div>
-            <div class="ac"><div class="v">10</div><div class="l">UCL Unbeaten</div></div>
+          <div class="avg-g" style="margin-top:6px">
+            <div class="ac"><div class="av">53%</div><div class="al">Possession</div></div>
+            <div class="ac"><div class="av">15</div><div class="al">PL Losses</div></div>
+            <div class="ac"><div class="av">5th</div><div class="al">PL Position</div></div>
+            <div class="ac"><div class="av">29%</div><div class="al">Clean sheet %</div></div>
           </div>
         </div>
       </div>
@@ -584,191 +549,172 @@ footer {
   <!-- H2H -->
   <div class="card fw">
     <div class="card-hd">
-      <div class="card-hd-dot" style="background:var(--high)"></div>
-      <div class="card-hd-title">Head to Head — Last 5 Meetings (All UEFA Comps)</div>
+      <div class="hd-dot" style="background:var(--high)"></div>
+      <div class="hd-title">Head to Head — Last 5 Meetings (UEFA Comps)</div>
     </div>
     <div class="card-body">
-      <div class="h2h-strip">
-        <div class="hs"><div class="hn" style="color:#4dbb7a">0</div><div class="hl">Sporting Wins</div></div>
+      <div class="h2h-bar">
+        <div class="hs"><div class="hn" style="color:#7aafff">2</div><div class="hl">PSG Wins</div></div>
         <div class="hd"></div>
-        <div class="hs"><div class="hn" style="color:var(--med)">3</div><div class="hl">Draws</div></div>
+        <div class="hs"><div class="hn" style="color:var(--med)">1</div><div class="hl">Draw / Pens</div></div>
         <div class="hd"></div>
-        <div class="hs"><div class="hn" style="color:#f47070">2</div><div class="hl">Arsenal Wins</div></div>
+        <div class="hs"><div class="hn" style="color:#f07070">2</div><div class="hl">Liverpool Wins</div></div>
         <div class="hd"></div>
-        <div class="hs"><div class="hn">7</div><div class="hl">Total Meetings</div></div>
+        <div class="hs"><div class="hn">1–0</div><div class="hl">Avg margin</div></div>
       </div>
-      <div class="h2h-list">
-        <div class="h2h-row">
-          <div class="h2h-home">Arsenal</div><div class="h2h-sc">5 – 1</div><div class="h2h-away">Sporting CP</div>
-          <div class="h2h-sub">UCL League Phase · Nov 2024 (Alvalade)</div>
+      <div class="h2h-rows">
+        <div class="h2h-r">
+          <div class="rh">Liverpool</div><div class="rs">1–1 &nbsp;<span class="leg-note">[1–4p]</span></div><div class="ra">PSG</div>
+          <div class="rsub">UCL Round of 16 2nd Leg · Anfield · Mar 2025 · PSG advance</div>
         </div>
-        <div class="h2h-row">
-          <div class="h2h-home">Arsenal</div><div class="h2h-sc">1 – 1</div><div class="h2h-away">Sporting CP</div>
-          <div class="h2h-sub">UCL League Phase · Sep 2024 (Emirates)</div>
+        <div class="h2h-r">
+          <div class="rh">PSG</div><div class="rs">0–1</div><div class="ra">Liverpool</div>
+          <div class="rsub">UCL Round of 16 1st Leg · Parc des Princes · Mar 2025</div>
         </div>
-        <div class="h2h-row">
-          <div class="h2h-home">Arsenal</div><div class="h2h-sc">1 – 1*</div><div class="h2h-away">Sporting CP</div>
-          <div class="h2h-sub">UEL R16 · Mar 2023 · *Sporting won on pens 5–3</div>
+        <div class="h2h-r">
+          <div class="rh">PSG</div><div class="rs">2–1</div><div class="ra">Liverpool</div>
+          <div class="rsub">UCL Group Stage · Parc des Princes · Nov 2018</div>
         </div>
-        <div class="h2h-row">
-          <div class="h2h-home">Sporting CP</div><div class="h2h-sc">0 – 1</div><div class="h2h-away">Arsenal</div>
-          <div class="h2h-sub">UEL R16 1st Leg · Mar 2023 (Alvalade)</div>
+        <div class="h2h-r">
+          <div class="rh">Liverpool</div><div class="rs">3–2</div><div class="ra">PSG</div>
+          <div class="rsub">UCL Group Stage · Anfield · Sep 2018</div>
         </div>
-        <div class="h2h-row">
-          <div class="h2h-home">Sporting CP</div><div class="h2h-sc">0 – 1</div><div class="h2h-away">Arsenal</div>
-          <div class="h2h-sub">UEL Group Stage · Oct 2022 (Alvalade)</div>
+        <div class="h2h-r">
+          <div class="rh">Liverpool</div><div class="rs">2–0</div><div class="ra">PSG</div>
+          <div class="rsub">UEFA Cup Winners' Cup SF · Anfield · Apr 1997</div>
         </div>
       </div>
-      <p style="font-size:11px;color:var(--muted);margin-top:10px;">Sporting have <em>never beaten Arsenal in 90 minutes</em> across 7 meetings (W0 D4 L3). Arsenal's Nov 2024 5–1 demolition was at this very ground. But Sporting's home form in 2026 is unrecognisable from then.</p>
+      <p style="font-size:11px;color:var(--muted);margin-top:10px;">All six UEFA meetings settled by 1 goal or on penalties. PSG knocked Liverpool out last season despite losing the 1st leg 1–0. No goalless draws in any meeting. Liverpool have won only 1 of their last 3 competitive away games vs French clubs.</p>
     </div>
   </div>
 
-  <!-- PREDICTIONS SCP vs ARS -->
+  <!-- PREDICTIONS PSG vs LFC -->
   <div class="card fw">
     <div class="card-hd">
-      <div class="card-hd-dot" style="background:var(--low)"></div>
-      <div class="card-hd-title">📊 Predicted Ranges — Sporting CP vs Arsenal (Both Teams Combined)</div>
+      <div class="hd-dot" style="background:var(--low)"></div>
+      <div class="hd-title">Weighted Predictions — PSG vs Liverpool (Both Teams)</div>
     </div>
     <div class="card-body">
-      <div class="pred-legend">
+      <div class="pred-leg">
         <div class="pli"><div class="pld" style="background:var(--low)"></div><span style="color:var(--low);font-weight:700">Low</span> = conservative floor</div>
-        <div class="pli"><div class="pld" style="background:var(--med)"></div><span style="color:var(--med);font-weight:700">Median</span> = average-based expected</div>
+        <div class="pli"><div class="pld" style="background:var(--med)"></div><span style="color:var(--med);font-weight:700">Median</span> = weighted average expected</div>
         <div class="pli"><div class="pld" style="background:var(--high)"></div><span style="color:var(--high);font-weight:700">High</span> = ceiling</div>
       </div>
-      <div class="pred-wrap">
-      <table class="pred-table">
-        <colgroup>
-          <col class="cm"><col class="cl"><col class="cn"><col class="ch"><col class="cb">
-        </colgroup>
-        <thead>
-          <tr>
-            <th>Metric</th>
-            <th style="color:var(--low)">Low</th>
-            <th class="th-med">Median</th>
-            <th style="color:var(--high)">High</th>
-            <th style="text-align:center;color:var(--muted)">Intensity</th>
-          </tr>
-        </thead>
+      <div class="pw">
+      <table class="pt">
+        <colgroup><col class="cm"><col class="cl"><col class="cn"><col class="ch"><col class="cb"></colgroup>
+        <thead><tr><th>Metric</th><th style="color:var(--low)">Low</th><th class="th-m">Median</th><th style="color:var(--high)">High</th><th style="text-align:center;color:var(--muted)">Intensity</th></tr></thead>
         <tbody>
-          <tr><td class="cm-cell">Corners</td><td><span class="lv">9</span></td><td><span class="mv">11</span></td><td><span class="hv">16</span></td><td><div class="bar-w"><div class="bar-f bar-scp-ars" style="width:66%"></div></div></td></tr>
-          <tr><td class="cm-cell">Total Shots</td><td><span class="lv">22</span></td><td><span class="mv">28</span></td><td><span class="hv">38</span></td><td><div class="bar-w"><div class="bar-f bar-scp-ars" style="width:74%"></div></div></td></tr>
-          <tr><td class="cm-cell">Shots on Target</td><td><span class="lv">7</span></td><td><span class="mv">11</span></td><td><span class="hv">16</span></td><td><div class="bar-w"><div class="bar-f bar-scp-ars" style="width:64%"></div></div></td></tr>
-          <tr><td class="cm-cell">Fouls</td><td><span class="lv">18</span></td><td><span class="mv">23</span></td><td><span class="hv">32</span></td><td><div class="bar-w"><div class="bar-f bar-scp-ars" style="width:60%"></div></div></td></tr>
-          <tr><td class="cm-cell">Throw-ins</td><td><span class="lv">38</span></td><td><span class="mv">47</span></td><td><span class="hv">60</span></td><td><div class="bar-w"><div class="bar-f bar-scp-ars" style="width:70%"></div></div></td></tr>
-          <tr><td class="cm-cell">Goal Kicks</td><td><span class="lv">15</span></td><td><span class="mv">20</span></td><td><span class="hv">28</span></td><td><div class="bar-w"><div class="bar-f bar-scp-ars" style="width:58%"></div></div></td></tr>
-          <tr><td class="cm-cell">Tackles</td><td><span class="lv">28</span></td><td><span class="mv">34</span></td><td><span class="hv">46</span></td><td><div class="bar-w"><div class="bar-f bar-scp-ars" style="width:68%"></div></div></td></tr>
-          <tr><td class="cm-cell">Offsides</td><td><span class="lv">3</span></td><td><span class="mv">5</span></td><td><span class="hv">9</span></td><td><div class="bar-w"><div class="bar-f bar-scp-ars" style="width:48%"></div></div></td></tr>
+          <tr><td class="cmc">Corners</td>        <td><span class="lv">7</span></td><td><span class="mv">10</span></td><td><span class="hv">15</span></td><td><div class="bw"><div class="bf bf-psg" style="width:60%"></div></div></td></tr>
+          <tr><td class="cmc">Total Shots</td>    <td><span class="lv">22</span></td><td><span class="mv">27</span></td><td><span class="hv">38</span></td><td><div class="bw"><div class="bf bf-psg" style="width:72%"></div></div></td></tr>
+          <tr><td class="cmc">Shots on Target</td><td><span class="lv">7</span></td><td><span class="mv">11</span></td><td><span class="hv">17</span></td><td><div class="bw"><div class="bf bf-psg" style="width:66%"></div></div></td></tr>
+          <tr><td class="cmc">Fouls</td>          <td><span class="lv">17</span></td><td><span class="mv">22</span></td><td><span class="hv">30</span></td><td><div class="bw"><div class="bf bf-psg" style="width:58%"></div></div></td></tr>
+          <tr><td class="cmc">Throw-ins</td>      <td><span class="lv">36</span></td><td><span class="mv">46</span></td><td><span class="hv">62</span></td><td><div class="bw"><div class="bf bf-psg" style="width:68%"></div></div></td></tr>
+          <tr><td class="cmc">Goal Kicks</td>     <td><span class="lv">14</span></td><td><span class="mv">19</span></td><td><span class="hv">28</span></td><td><div class="bw"><div class="bf bf-psg" style="width:56%"></div></div></td></tr>
+          <tr><td class="cmc">Tackles</td>        <td><span class="lv">24</span></td><td><span class="mv">30</span></td><td><span class="hv">42</span></td><td><div class="bw"><div class="bf bf-psg" style="width:64%"></div></div></td></tr>
+          <tr><td class="cmc">Offsides</td>       <td><span class="lv">3</span></td><td><span class="mv">6</span></td><td><span class="hv">11</span></td><td><div class="bw"><div class="bf bf-psg" style="width:52%"></div></div></td></tr>
         </tbody>
       </table>
       </div>
     </div>
   </div>
 
-  <!-- NOTES SCP vs ARS -->
+  <!-- NOTES PSG vs LFC -->
   <div class="card fw">
     <div class="card-hd">
-      <div class="card-hd-dot" style="background:#60a5fa"></div>
-      <div class="card-hd-title">Analytical Notes — Sporting vs Arsenal</div>
+      <div class="hd-dot" style="background:#60a5fa"></div>
+      <div class="hd-title">Analytical Notes — Weighting Factors</div>
     </div>
     <div class="card-body">
-      <div class="callout">
-        <strong>Corners (9–11–16):</strong> Sporting are a set-piece machine — they earned 16 corners in a single UCL game vs Bodø/Glimt. Arsenal allow very few (2.7 shots on target against per UCL game) suggesting a disciplined structure. Median of 11 blends Sporting's aggressive attacking wing play (6.5 corners/game) with Arsenal's ability to limit territory when organised. High end is very plausible on Sporting's home patch.<br><br>
-        <strong>Total Shots (22–28–38):</strong> Sporting average 17.9 shots/game at home in Liga NOS, while Arsenal generate ~14.7 away. Combined season baseline is ~29 but away UCL games are typically tighter; Arsenal also suppress opponent attack better than any UCL side. The 38 ceiling reflects Sporting's extreme home pressing scenario (they literally fired 38 shots at Bodø/Glimt). Median of 28 is realistic for a high-tempo first leg.<br><br>
-        <strong>Shots on Target (7–11–16):</strong> Arsenal have the best defensive record in UCL (2.7 SOT against per game). Their defensive organisation will suppress the high end. Median of 11 combines Sporting's 7.0 own SOT with Arsenal's ~4–5 away. High end reflects a game where Arsenal get into trouble early and Sporting keep Raya busy.<br><br>
-        <strong>Fouls (18–23–32):</strong> Arsenal average 9.8 fouls/game; Sporting ~11.2. The absence of Hjulmand in Sporting's midfield may actually reduce fouls (he's their most-carded midfielder). But UCL quarter-final intensity drives the median above the season average. High end if the referee is permissive and the game is physical.<br><br>
-        <strong>Throw-ins (38–47–60):</strong> Both teams press wide channels intensely. Sporting's aggressive full-back play and Arsenal's overlapping system create frequent boundary breaks. UCL QF games typically see 45–55 throw-ins; Sporting's home environment and high pressing tempo push the ceiling.<br><br>
-        <strong>Goal Kicks (15–20–28):</strong> Arsenal concede very few shots, meaning David Raya won't be heavily tested — his goal kicks will be fewer. Rui Silva (Sporting) will launch long balls under Arsenal's high press. High end if Arsenal park deep in second-half defensive phases.<br><br>
-        <strong>Tackles (28–34–46):</strong> Sporting's pressing system is tackle-intensive; Arsenal without Merino may expose a slightly less dominant midfield. UCL context drives both teams to contest every duel. Median of 34 reflects both teams' combined season tackle averages (~16–18 each).<br><br>
-        <strong>Offsides (3–5–9):</strong> Arsenal run a high defensive line (the source of their UCL success). Sporting's pacey forwards — Catamo, Trincão, Luis Suárez — will test it repeatedly. Gyökeres knows Sporting's runs intimately from the other side. Median of 5 is standard UCL fare; high end if Arsenal's line catches Sporting in behind several times.
-      </div>
+      <div class="note-block"><strong>Corners (7–10–15):</strong> PSG earn 5.3 corners/UCL game at home; Liverpool concede territory away, earning only ~4–4.5 corners vs top opposition. Combined baseline: ~9–10. PSG's pacey wide play (Dembélé on the right, Kvaratskhelia left) will force corners throughout. The low end reflects a Liverpool that parks defensively and concedes few corners of their own; the high of 15 accounts for PSG dominance periods. <em>Weighted toward 10 given recent H2H tightness</em> — none of the last 5 meetings were free-flowing corner fests.</div>
+      <div class="note-block"><strong>Total Shots (22–27–38):</strong> PSG average 17.9 shots at home; Liverpool ~13.8 away. Weighted combined baseline: 28–30, but PSG's possession dominance (67%) and Liverpool's current pressing inability suppresses the visitor's output. <em>Weighted low-end skew:</em> all 5 recent H2H meetings have been <1 goal margins; tight games produce fewer shots. High end requires a Liverpool collapse similar to their FA Cup display.</div>
+      <div class="note-block"><strong>Shots on Target (7–11–17):</strong> PSG 7.0 SOT/game; Liverpool 4.5. Combined baseline ~11.5. Liverpool's chaotic high-line (exposed by Man City's runners) could gift PSG multiple clean SOT. The backup goalkeeper (Caoimhin Kelleher replacing Alisson) is a risk factor on high-pressure set pieces. <em>Median weighted at 11</em> respects the defensive nature of recent PSG–Liverpool meetings.</div>
+      <div class="note-block"><strong>Fouls (17–22–30):</strong> PSG foul ~10/game in Ligue 1; Liverpool ~11–12. UCL QF pressure inflates this. Liverpool will commit tactical fouls to disrupt PSG's press-triggering build-up. Szoboszlai, Salah and Gravenberch will be physical. <em>Weighted toward 22</em> — the tactical importance of stopping PSG transitions makes this a foul-heavy tie, but neither side is gratuitously dirty.</div>
+      <div class="note-block"><strong>Throw-ins (36–46–62):</strong> PSG's width-heavy system and Liverpool's wide press creates frequent boundary exits. In high-tempo Parc des Princes nights, transitions happen quickly and the ball goes out of play often. <em>Weighted toward 46</em> given the expected pace and pressing on both sides; high end if Liverpool concede ground and PSG recycle constantly in wide areas.</div>
+      <div class="note-block"><strong>Goal Kicks (14–19–28):</strong> With PSG dominating possession (67%), Liverpool's goalkeeper will restart frequently under PSG's press. Kelleher (replacing Alisson) is less comfortable distributing under pressure and will resort to long clearances. PSG's Safonov faces fewer low-block attacks. <em>Weighted toward 19</em> — UCL QF average is ~20 combined; Liverpool's defensive shape inflates their contribution.</div>
+      <div class="note-block"><strong>Tackles (24–30–42):</strong> PSG average ~13–14 tackles/Ligue 1 game; Liverpool ~14–15. Combined baseline: ~28–29. UCL QF intensity and Liverpool's need to win the ball back in transition (they have little other way to build) drives this up. <em>Weighted toward 30</em> — Liverpool's midfield will be especially aggressive given how far they're chasing the game tactically.</div>
+      <div class="note-block"><strong>Offsides (3–6–11):</strong> PSG attack with sprint runners (Kvaratskhelia, Doué) who target the channels; Liverpool's high-line is disorganised and has been caught repeatedly this season. Combined expected: 5–6/game in UCL. <em>Weighted toward 6</em> — PSG's rapid transitions create more offside calls than a possession team; Liverpool's disorganised defensive shape means their own line isn't reliable enough to catch Dembélé consistently.</div>
     </div>
   </div>
 
-</div><!-- /match-grid -->
+</div><!-- /m-grid -->
 
-<!-- ══════════════════════════════════════════════
-     DIVIDER
-═══════════════════════════════════════════════ -->
-<div class="match-divider">
-  <div class="match-divider-inner">
-    <span class="ucl-star-icon">★</span>
-    Second Quarter-Final
-    <span class="ucl-star-icon">★</span>
-  </div>
+<!-- ════════════ SECTION DIVIDER ════════════ -->
+<div class="s-div">
+  <div class="s-div-in"><span>★</span> Second Quarter-Final <span>★</span></div>
 </div>
 
-<!-- ══════════════════════════════════════════════
-     MATCH 2 HERO: REAL MADRID vs BAYERN MUNICH
-═══════════════════════════════════════════════ -->
-</div><!-- close .page -->
+</div><!-- /page -->
 
-<div class="match-hero rma-bay">
-  <div class="hero-inner">
-    <!-- REAL MADRID -->
+<!-- ══════════════════════════════════════
+     MATCH 2 HERO: BARCELONA vs ATLETICO
+═══════════════════════════════════════ -->
+<div class="match-hero mh-barca" id="barca">
+  <div class="mh-glow"></div>
+  <div class="hero-row">
+
+    <!-- BARCELONA -->
     <div class="hero-team">
-      <div class="badge-ring">
+      <div class="club-badge">
         <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-          <!-- White/gold base circle -->
-          <circle cx="50" cy="50" r="46" fill="#1e2a5e"/>
-          <circle cx="50" cy="50" r="46" fill="none" stroke="#c4a84f" stroke-width="2.5"/>
-          <!-- Crown top detail -->
-          <path d="M30 28 L33 20 L38 26 L43 18 L48 25 L50 17 L52 25 L57 18 L62 26 L67 20 L70 28 Z" fill="#c4a84f"/>
-          <!-- RM initials or shield-like emblem -->
-          <circle cx="50" cy="55" r="22" fill="rgba(255,255,255,0.06)" stroke="rgba(196,168,79,0.3)" stroke-width="1"/>
-          <!-- R M text -->
-          <text x="50" y="60" text-anchor="middle" font-family="Georgia,serif" font-size="16" font-weight="bold" fill="#c4a84f" letter-spacing="2">RM</text>
-          <text x="50" y="86" text-anchor="middle" font-family="Arial,sans-serif" font-size="7.5" font-weight="bold" fill="#c4a84f" letter-spacing="1.5">REAL MADRID</text>
+          <circle cx="50" cy="50" r="47" fill="#004d98"/>
+          <circle cx="50" cy="50" r="47" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="2"/>
+          <!-- Diagonal stripe -->
+          <path d="M30 20 L80 70 L80 80 L20 80 Z" fill="#a50044" opacity="0.7"/>
+          <!-- Cross -->
+          <rect x="44" y="18" width="12" height="64" fill="rgba(255,200,0,0.7)" rx="2"/>
+          <rect x="18" y="44" width="64" height="12" fill="rgba(255,200,0,0.7)" rx="2"/>
+          <!-- FCB text -->
+          <text x="50" y="90" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" font-weight="900" fill="#fff" letter-spacing="1.5">FCB</text>
         </svg>
       </div>
-      <div class="hero-name">Real Madrid</div>
-      <div class="hero-pos">La Liga · 2nd · Home</div>
+      <div class="h-name">BARCELONA</div>
+      <div class="h-pos">La Liga Leaders · 7pts clear · Home</div>
     </div>
 
-    <div class="vs-block">
-      <div class="vs-text">VS</div>
-      <div class="vs-leg">1st Leg</div>
-      <div class="vs-meta">Santiago Bernabéu<br>Madrid · 7 Apr · 9pm CET</div>
+    <div class="vs-col">
+      <div class="vs-big">VS</div>
+      <div class="leg-tag">1st Leg</div>
+      <div class="venue-txt">Spotify Camp Nou<br>Barcelona · Wed 8 Apr · 9pm CET</div>
     </div>
 
-    <!-- BAYERN MUNICH -->
+    <!-- ATLETICO -->
     <div class="hero-team">
-      <div class="badge-ring">
+      <div class="club-badge">
         <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-          <!-- Outer ring -->
-          <circle cx="50" cy="50" r="46" fill="#dc052d"/>
-          <circle cx="50" cy="50" r="46" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="2"/>
-          <!-- Classic Bayern checker pattern (simplified) -->
-          <circle cx="50" cy="50" r="34" fill="#fff"/>
-          <!-- Four quadrants in Bayern blue/white checker -->
-          <path d="M50 16 A34 34 0 0 1 84 50 L50 50 Z" fill="#0066b2"/>
-          <path d="M84 50 A34 34 0 0 1 50 84 L50 50 Z" fill="#fff"/>
-          <path d="M50 84 A34 34 0 0 1 16 50 L50 50 Z" fill="#0066b2"/>
-          <path d="M16 50 A34 34 0 0 1 50 16 L50 50 Z" fill="#fff"/>
-          <!-- Inner circle -->
-          <circle cx="50" cy="50" r="16" fill="#dc052d"/>
-          <text x="50" y="54" text-anchor="middle" font-family="Arial,sans-serif" font-size="8" font-weight="bold" fill="#fff" letter-spacing="0.5">FCB</text>
-          <text x="50" y="90" text-anchor="middle" font-family="Arial,sans-serif" font-size="7.5" font-weight="bold" fill="#fff" letter-spacing="1">MÜNCHEN</text>
+          <circle cx="50" cy="50" r="47" fill="#ce3524"/>
+          <circle cx="50" cy="50" r="47" fill="none" stroke="rgba(255,255,255,0.18)" stroke-width="1.5"/>
+          <!-- White and blue stripes (Atletico vertical) -->
+          <rect x="20" y="18" width="11" height="64" fill="#fff" rx="1"/>
+          <rect x="35" y="18" width="11" height="64" fill="#272e61" rx="1"/>
+          <rect x="54" y="18" width="11" height="64" fill="#fff" rx="1"/>
+          <rect x="69" y="18" width="11" height="64" fill="#272e61" rx="1"/>
+          <!-- Bear & Strawberry tree (simplified circle) -->
+          <circle cx="50" cy="78" r="6" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+          <!-- ATM text -->
+          <text x="50" y="13" text-anchor="middle" font-family="Arial,sans-serif" font-size="8" font-weight="900" fill="#fff" letter-spacing="1">ATLÉTICO</text>
         </svg>
       </div>
-      <div class="hero-name">Bayern Munich</div>
-      <div class="hero-pos">Bundesliga · 1st · Away</div>
+      <div class="h-name">ATLÉTICO</div>
+      <div class="h-pos">La Liga 4th · 3 losses in row · Away</div>
     </div>
+
   </div>
 </div>
 
 <div class="page">
-<div class="match-grid">
+<div class="m-grid">
 
   <!-- CONTEXT -->
   <div class="card fw">
     <div class="card-hd">
-      <div class="card-hd-dot" style="background:var(--ucl-star)"></div>
-      <div class="card-hd-title">Match Context — Real Madrid vs Bayern Munich</div>
-      <div class="card-hd-badge" style="color:var(--ucl-star);border-color:rgba(200,168,75,0.3);background:rgba(200,168,75,0.07)">UCL QF Leg 1 · Record 29th Meeting</div>
+      <div class="hd-dot" style="background:var(--ucl-gold)"></div>
+      <div class="hd-title">Match Context</div>
+      <div class="hd-tag" style="color:var(--ucl-gold);border-color:rgba(201,168,64,0.28);background:rgba(201,168,64,0.07)">UCL QF · Leg 1 · 5th Meeting This Season</div>
     </div>
     <div class="card-body">
       <div class="callout">
-        The <strong>most-played fixture in UEFA competition history</strong> — 29th encounter. Real Madrid eliminated Manchester City 5–1 on aggregate; Bayern demolished Atalanta 10–2 over two legs. Madrid are unbeaten in their last <strong>nine European meetings with Bayern (W7 D2)</strong> and have progressed from all three previous UCL QF ties. Bayern's Vincent Kompany believes this is the best Bayern squad in years — Harry Kane has scored <strong>48 goals in 40 appearances</strong> this season and targets a return from an ankle issue. Real Madrid's Courtois is out for six weeks; Lunin starts. Rodrygo is also absent. Bellingham is working back from a hamstring injury. Bayern missing Ulreich. Mbappé leads UCL scoring with <strong>13 goals in 9 matches</strong>. Referee: Michael Oliver.
+        <strong>The El Clásico of the Cup</strong> — this will be the <em>fifth meeting between these sides in just two months</em>. Barcelona have won three of the four (twice in La Liga, once in Copa del Rey). Atlético won 4–0 in the Copa away leg but lost the tie overall. <strong>Barcelona just beat Atletico 2–1 in La Liga on Saturday</strong> with Lewandowski's 87th-minute winner, going 7pts clear. Atletico have lost <em>three consecutive matches</em> and carry Simeone's UCL record (W2 D2 L4) away from home this season. Barcelona stormed past Newcastle 8–3 on aggregate. Key absences: <strong>Raphinha (5 weeks, hip), Frenkie de Jong, Marc Bernal, Andreas Christensen</strong> all out for Barcelona. Atletico missing <strong>Jan Oblak</strong> (first-choice GK) and others — backup Musso expected to start.
       </div>
     </div>
   </div>
@@ -776,44 +722,45 @@ footer {
   <!-- LAST 5 FORM -->
   <div class="card fw">
     <div class="card-hd">
-      <div class="card-hd-dot" style="background:var(--ucl-star)"></div>
-      <div class="card-hd-title">Last 5 Matches — All Competitions</div>
+      <div class="hd-dot" style="background:#7ab0ff"></div>
+      <div class="hd-title">Last 5 Matches — All Competitions</div>
     </div>
     <div class="card-body">
-      <div class="form-grid">
-        <!-- REAL MADRID -->
-        <div class="form-col">
-          <div class="team-pill pill-rma">
-            <svg class="tp-badge" viewBox="0 0 100 100"><circle cx="50" cy="50" r="46" fill="#1e2a5e"/><text x="50" y="55" text-anchor="middle" font-size="20" font-weight="bold" fill="#c4a84f">RM</text></svg>
-            Real Madrid
+      <div class="form-cols">
+
+        <div class="fcol">
+          <div class="team-lab lab-b">
+            <svg class="tl-badge" viewBox="0 0 100 100"><circle cx="50" cy="50" r="47" fill="#004d98"/><path d="M30 20 L80 70 L80 80 L20 80 Z" fill="#a50044" opacity="0.7"/></svg>
+            Barcelona &mdash; La Liga 1st
           </div>
           <div class="match-list">
-            <div class="mr"><div class="rd W"></div><div class="ms">3–2</div><div class="mo">Atlético Madrid</div><div class="mc">La Liga · Home</div></div>
-            <div class="mr"><div class="rd W"></div><div class="ms">3–0</div><div class="mo">Man City</div><div class="mc">UCL R16 · Away</div></div>
-            <div class="mr"><div class="rd W"></div><div class="ms">2–0</div><div class="mo">Man City</div><div class="mc">UCL R16 · Home</div></div>
-            <div class="mr"><div class="rd L"></div><div class="ms">0–1</div><div class="mo">Getafe</div><div class="mc">La Liga · Away</div></div>
-            <div class="mr"><div class="rd W"></div><div class="ms">2–1</div><div class="mo">Rayo Vallecano</div><div class="mc">La Liga · Home</div></div>
+            <div class="mr"><div class="rd W"></div><div class="ms">2–1</div><div class="mo">Atlético Madrid</div><div class="mc">La Liga · Away</div></div>
+            <div class="mr"><div class="rd W"></div><div class="ms">7–2</div><div class="mo">Newcastle Utd</div><div class="mc">UCL R16 · Home</div></div>
+            <div class="mr"><div class="rd W"></div><div class="ms">3–1</div><div class="mo">Real Sociedad</div><div class="mc">La Liga · Home</div></div>
+            <div class="mr"><div class="rd W"></div><div class="ms">4–1</div><div class="mo">Newcastle Utd</div><div class="mc">UCL R16 · Away</div></div>
+            <div class="mr"><div class="rd D"></div><div class="ms">2–2</div><div class="mo">Girona</div><div class="mc">La Liga · Away</div></div>
           </div>
         </div>
-        <!-- BAYERN -->
-        <div class="form-col">
-          <div class="team-pill pill-bay">
-            <svg class="tp-badge" viewBox="0 0 100 100"><circle cx="50" cy="50" r="46" fill="#dc052d"/><circle cx="50" cy="50" r="28" fill="#fff"/><path d="M50 22 A28 28 0 0 1 78 50 L50 50 Z" fill="#0066b2"/><path d="M50 78 A28 28 0 0 1 22 50 L50 50 Z" fill="#0066b2"/></svg>
-            Bayern Munich
+
+        <div class="fcol">
+          <div class="team-lab lab-a">
+            <svg class="tl-badge" viewBox="0 0 100 100"><circle cx="50" cy="50" r="47" fill="#ce3524"/><rect x="22" y="22" width="10" height="56" fill="#fff" rx="1"/><rect x="37" y="22" width="10" height="56" fill="#272e61" rx="1"/></svg>
+            Atletico &mdash; La Liga 4th
           </div>
           <div class="match-list">
-            <div class="mr"><div class="rd W"></div><div class="ms">3–2</div><div class="mo">Freiburg</div><div class="mc">Bundesliga · Away</div></div>
-            <div class="mr"><div class="rd W"></div><div class="ms">4–1</div><div class="mo">Atalanta</div><div class="mc">UCL R16 · Away</div></div>
-            <div class="mr"><div class="rd W"></div><div class="ms">6–1</div><div class="mo">Atalanta</div><div class="mc">UCL R16 · Home</div></div>
-            <div class="mr"><div class="rd W"></div><div class="ms">4–1</div><div class="mo">B. Mönchengladbach</div><div class="mc">Bundesliga · Home</div></div>
-            <div class="mr"><div class="rd W"></div><div class="ms">3–1</div><div class="mo">Union Berlin</div><div class="mc">Bundesliga · Home</div></div>
+            <div class="mr"><div class="rd L"></div><div class="ms">1–2</div><div class="mo">Barcelona</div><div class="mc">La Liga · Home</div></div>
+            <div class="mr"><div class="rd L"></div><div class="ms">2–3</div><div class="mo">Real Madrid</div><div class="mc">La Liga · Away</div></div>
+            <div class="mr"><div class="rd W"></div><div class="ms">3–0</div><div class="mo">Tottenham</div><div class="mc">UCL R16 · Home</div></div>
+            <div class="mr"><div class="rd W"></div><div class="ms">2–3</div><div class="mo">Tottenham</div><div class="mc">UCL R16 · Away</div></div>
+            <div class="mr"><div class="rd L"></div><div class="ms">0–4</div><div class="mo">Barcelona</div><div class="mc">Copa del Rey · Away</div></div>
           </div>
         </div>
+
       </div>
-      <div class="f-legend">
-        <div class="fl"><div class="fl-dot" style="background:var(--low)"></div>Win</div>
-        <div class="fl"><div class="fl-dot" style="background:var(--med)"></div>Draw</div>
-        <div class="fl"><div class="fl-dot" style="background:var(--high)"></div>Loss</div>
+      <div class="f-leg">
+        <div class="fl"><div class="fld" style="background:var(--low)"></div>Win</div>
+        <div class="fl"><div class="fld" style="background:var(--med)"></div>Draw</div>
+        <div class="fl"><div class="fld" style="background:var(--high)"></div>Loss</div>
       </div>
     </div>
   </div>
@@ -821,39 +768,39 @@ footer {
   <!-- SEASON AVERAGES -->
   <div class="card fw">
     <div class="card-hd">
-      <div class="card-hd-dot" style="background:#a78bfa"></div>
-      <div class="card-hd-title">Season Averages per Match — UCL 2025/26</div>
+      <div class="hd-dot" style="background:#a78bfa"></div>
+      <div class="hd-title">Season Averages per Match — UCL &amp; League 25/26</div>
     </div>
     <div class="card-body">
       <div class="avg-pair">
-        <div class="avg-grp">
-          <div class="avg-grp-lbl" style="color:#e0c97a">Real Madrid — UCL this season</div>
-          <div class="avg-grid">
-            <div class="ac"><div class="v">17.7</div><div class="l">Shots</div></div>
-            <div class="ac"><div class="v">6.9</div><div class="l">SOT</div></div>
-            <div class="ac"><div class="v">5.3</div><div class="l">Corners</div></div>
-            <div class="ac"><div class="v">2.4</div><div class="l">Goals / Gm</div></div>
+        <div class="a-grp">
+          <div class="a-grp-lbl" style="color:#7ab0ff">Barcelona — La Liga &amp; UCL</div>
+          <div class="avg-g">
+            <div class="ac"><div class="av">19.7</div><div class="al">Shots</div></div>
+            <div class="ac"><div class="av">7.2</div><div class="al">SOT</div></div>
+            <div class="ac"><div class="av">6.8</div><div class="al">Corners</div></div>
+            <div class="ac"><div class="av">3.2</div><div class="al">Goals/Gm</div></div>
           </div>
-          <div class="avg-grid" style="margin-top:6px">
-            <div class="ac"><div class="v">57%</div><div class="l">Possess.</div></div>
-            <div class="ac"><div class="v">29</div><div class="l">UCL Goals</div></div>
-            <div class="ac"><div class="v">14</div><div class="l">UCL GA</div></div>
-            <div class="ac"><div class="v">4.6</div><div class="l">Opp. Corners</div></div>
+          <div class="avg-g" style="margin-top:6px">
+            <div class="ac"><div class="av">65%</div><div class="al">Possession</div></div>
+            <div class="ac"><div class="av">30</div><div class="al">UCL Goals</div></div>
+            <div class="ac"><div class="av">17</div><div class="al">UCL GA</div></div>
+            <div class="ac"><div class="av">15–0</div><div class="al">Home W–L La Liga</div></div>
           </div>
         </div>
-        <div class="avg-grp">
-          <div class="avg-grp-lbl" style="color:#f4606a">Bayern Munich — UCL this season</div>
-          <div class="avg-grid">
-            <div class="ac"><div class="v">18.9</div><div class="l">Shots</div></div>
-            <div class="ac"><div class="v">8.2</div><div class="l">SOT</div></div>
-            <div class="ac"><div class="v">6.3</div><div class="l">Corners</div></div>
-            <div class="ac"><div class="v">3.2</div><div class="l">Goals / Gm</div></div>
+        <div class="a-grp">
+          <div class="a-grp-lbl" style="color:#f07060">Atlético — La Liga &amp; UCL</div>
+          <div class="avg-g">
+            <div class="ac"><div class="av">14.6</div><div class="al">Shots</div></div>
+            <div class="ac"><div class="av">5.6</div><div class="al">SOT</div></div>
+            <div class="ac"><div class="av">4.7</div><div class="al">Corners</div></div>
+            <div class="ac"><div class="av">2.6</div><div class="al">Goals/Gm</div></div>
           </div>
-          <div class="avg-grid" style="margin-top:6px">
-            <div class="ac"><div class="v">64%</div><div class="l">Possess.</div></div>
-            <div class="ac"><div class="v">32</div><div class="l">UCL Goals</div></div>
-            <div class="ac"><div class="v">10</div><div class="l">UCL GA</div></div>
-            <div class="ac"><div class="v">2.8</div><div class="l">Opp. Corners</div></div>
+          <div class="avg-g" style="margin-top:6px">
+            <div class="ac"><div class="av">52%</div><div class="al">Possession</div></div>
+            <div class="ac"><div class="av">31</div><div class="al">UCL Goals</div></div>
+            <div class="ac"><div class="av">24</div><div class="al">UCL GA</div></div>
+            <div class="ac"><div class="av">702</div><div class="al">Alvarez pressures</div></div>
           </div>
         </div>
       </div>
@@ -863,111 +810,99 @@ footer {
   <!-- H2H -->
   <div class="card fw">
     <div class="card-hd">
-      <div class="card-hd-dot" style="background:var(--high)"></div>
-      <div class="card-hd-title">Head to Head — Last 5 Meetings (UCL)</div>
+      <div class="hd-dot" style="background:var(--high)"></div>
+      <div class="hd-title">Head to Head — Last 5 Meetings (All Comps)</div>
     </div>
     <div class="card-body">
-      <div class="h2h-strip">
-        <div class="hs"><div class="hn" style="color:#e0c97a">4</div><div class="hl">Madrid Wins</div></div>
+      <div class="h2h-bar">
+        <div class="hs"><div class="hn" style="color:#7ab0ff">3</div><div class="hl">Barca Wins</div></div>
         <div class="hd"></div>
         <div class="hs"><div class="hn" style="color:var(--med)">0</div><div class="hl">Draws</div></div>
         <div class="hd"></div>
-        <div class="hs"><div class="hn" style="color:#f4606a">1</div><div class="hl">Bayern Wins</div></div>
+        <div class="hs"><div class="hn" style="color:#f07060">2</div><div class="hl">Atletico Wins</div></div>
         <div class="hd"></div>
-        <div class="hs"><div class="hn">3+</div><div class="hl">Goals in 7/7 Mtgs</div></div>
+        <div class="hs"><div class="hn">3.2</div><div class="hl">Avg Goals/Mtg</div></div>
       </div>
-      <div class="h2h-list">
-        <div class="h2h-row">
-          <div class="h2h-home">Real Madrid</div><div class="h2h-sc">2 – 1</div><div class="h2h-away">Bayern Munich</div>
-          <div class="h2h-sub">UCL Semi-Final 2nd Leg · May 2024 (Bernabéu)</div>
+      <div class="h2h-rows">
+        <div class="h2h-r">
+          <div class="rh">Atlético Madrid</div><div class="rs">1–2</div><div class="ra">Barcelona</div>
+          <div class="rsub">La Liga · Estadio Metropolitano · Apr 2026</div>
         </div>
-        <div class="h2h-row">
-          <div class="h2h-home">Bayern Munich</div><div class="h2h-sc">2 – 2</div><div class="h2h-away">Real Madrid</div>
-          <div class="h2h-sub">UCL Semi-Final 1st Leg · Apr 2024 (Allianz Arena)</div>
+        <div class="h2h-r">
+          <div class="rh">Atlético Madrid</div><div class="rs">4–0</div><div class="ra">Barcelona</div>
+          <div class="rsub">Copa del Rey · Metropolitano (2nd leg, Atléti advance) · Mar 2026</div>
         </div>
-        <div class="h2h-row">
-          <div class="h2h-home">Real Madrid</div><div class="h2h-sc">4 – 0</div><div class="h2h-away">Bayern Munich</div>
-          <div class="h2h-sub">UCL Semi-Final 2nd Leg · May 2018 (Bernabéu)</div>
+        <div class="h2h-r">
+          <div class="rh">Barcelona</div><div class="rs">3–0</div><div class="ra">Atlético Madrid</div>
+          <div class="rsub">Copa del Rey · Camp Nou (1st leg) · Feb 2026</div>
         </div>
-        <div class="h2h-row">
-          <div class="h2h-home">Bayern Munich</div><div class="h2h-sc">2 – 1</div><div class="h2h-away">Real Madrid</div>
-          <div class="h2h-sub">UCL Semi-Final 1st Leg · Apr 2018 (Allianz Arena)</div>
+        <div class="h2h-r">
+          <div class="rh">Barcelona</div><div class="rs">4–0</div><div class="ra">Atlético Madrid</div>
+          <div class="rsub">La Liga · Camp Nou · Jan 2026</div>
         </div>
-        <div class="h2h-row">
-          <div class="h2h-home">Real Madrid</div><div class="h2h-sc">3 – 2</div><div class="h2h-away">Bayern Munich</div>
-          <div class="h2h-sub">UCL QF 2nd Leg · Apr 2017 (Bernabéu)</div>
+        <div class="h2h-r">
+          <div class="rh">Atlético Madrid</div><div class="rs">2–1</div><div class="ra">Barcelona</div>
+          <div class="rsub">La Liga · Estadio Metropolitano · Nov 2025</div>
         </div>
       </div>
-      <p style="font-size:11px;color:var(--muted);margin-top:10px;">Madrid unbeaten in last 9 UEFA meetings (W7 D2). Over 2.5 goals in all of the last 7 encounters. Madrid have won all three previous UCL QF ties between the clubs. Over 11 corners in 6 of the last 7 meetings.</p>
+      <p style="font-size:11px;color:var(--muted);margin-top:10px;">Over 2.5 goals in 8 of their last 9 meetings. Over 8.5 corners in 10 consecutive head-to-heads. Barcelona are <em>unbeaten in 25 home games against Atletico</em>. Atletico have eliminated Barca in both previous UCL QF meetings (2014, 2016) but have never won a UCL away game vs Spanish opposition (L4 D1). Atlético missing Jan Oblak adds significant goalkeeper vulnerability.</p>
     </div>
   </div>
 
-  <!-- PREDICTIONS RMA vs BAY -->
+  <!-- PREDICTIONS BAR vs ATM -->
   <div class="card fw">
     <div class="card-hd">
-      <div class="card-hd-dot" style="background:var(--low)"></div>
-      <div class="card-hd-title">📊 Predicted Ranges — Real Madrid vs Bayern Munich (Both Teams Combined)</div>
+      <div class="hd-dot" style="background:var(--low)"></div>
+      <div class="hd-title">Weighted Predictions — Barcelona vs Atlético (Both Teams)</div>
     </div>
     <div class="card-body">
-      <div class="pred-legend">
+      <div class="pred-leg">
         <div class="pli"><div class="pld" style="background:var(--low)"></div><span style="color:var(--low);font-weight:700">Low</span> = conservative floor</div>
-        <div class="pli"><div class="pld" style="background:var(--med)"></div><span style="color:var(--med);font-weight:700">Median</span> = average-based expected</div>
+        <div class="pli"><div class="pld" style="background:var(--med)"></div><span style="color:var(--med);font-weight:700">Median</span> = weighted average expected</div>
         <div class="pli"><div class="pld" style="background:var(--high)"></div><span style="color:var(--high);font-weight:700">High</span> = ceiling</div>
       </div>
-      <div class="pred-wrap">
-      <table class="pred-table">
-        <colgroup>
-          <col class="cm"><col class="cl"><col class="cn"><col class="ch"><col class="cb">
-        </colgroup>
-        <thead>
-          <tr>
-            <th>Metric</th>
-            <th style="color:var(--low)">Low</th>
-            <th class="th-med">Median</th>
-            <th style="color:var(--high)">High</th>
-            <th style="text-align:center;color:var(--muted)">Intensity</th>
-          </tr>
-        </thead>
+      <div class="pw">
+      <table class="pt">
+        <colgroup><col class="cm"><col class="cl"><col class="cn"><col class="ch"><col class="cb"></colgroup>
+        <thead><tr><th>Metric</th><th style="color:var(--low)">Low</th><th class="th-m">Median</th><th style="color:var(--high)">High</th><th style="text-align:center;color:var(--muted)">Intensity</th></tr></thead>
         <tbody>
-          <tr><td class="cm-cell">Corners</td><td><span class="lv">9</span></td><td><span class="mv">12</span></td><td><span class="hv">17</span></td><td><div class="bar-w"><div class="bar-f bar-rma-bay" style="width:72%"></div></div></td></tr>
-          <tr><td class="cm-cell">Total Shots</td><td><span class="lv">24</span></td><td><span class="mv">33</span></td><td><span class="hv">44</span></td><td><div class="bar-w"><div class="bar-f bar-rma-bay" style="width:82%"></div></div></td></tr>
-          <tr><td class="cm-cell">Shots on Target</td><td><span class="lv">10</span></td><td><span class="mv">14</span></td><td><span class="hv">21</span></td><td><div class="bar-w"><div class="bar-f bar-rma-bay" style="width:76%"></div></div></td></tr>
-          <tr><td class="cm-cell">Fouls</td><td><span class="lv">18</span></td><td><span class="mv">24</span></td><td><span class="hv">34</span></td><td><div class="bar-w"><div class="bar-f bar-rma-bay" style="width:62%"></div></div></td></tr>
-          <tr><td class="cm-cell">Throw-ins</td><td><span class="lv">40</span></td><td><span class="mv">51</span></td><td><span class="hv">66</span></td><td><div class="bar-w"><div class="bar-f bar-rma-bay" style="width:78%"></div></div></td></tr>
-          <tr><td class="cm-cell">Goal Kicks</td><td><span class="lv">16</span></td><td><span class="mv">22</span></td><td><span class="hv">32</span></td><td><div class="bar-w"><div class="bar-f bar-rma-bay" style="width:64%"></div></div></td></tr>
-          <tr><td class="cm-cell">Tackles</td><td><span class="lv">26</span></td><td><span class="mv">32</span></td><td><span class="hv">46</span></td><td><div class="bar-w"><div class="bar-f bar-rma-bay" style="width:70%"></div></div></td></tr>
-          <tr><td class="cm-cell">Offsides</td><td><span class="lv">4</span></td><td><span class="mv">7</span></td><td><span class="hv">12</span></td><td><div class="bar-w"><div class="bar-f bar-rma-bay" style="width:62%"></div></div></td></tr>
+          <tr><td class="cmc">Corners</td>        <td><span class="lv">9</span></td><td><span class="mv">13</span></td><td><span class="hv">18</span></td><td><div class="bw"><div class="bf bf-barca" style="width:76%"></div></div></td></tr>
+          <tr><td class="cmc">Total Shots</td>    <td><span class="lv">24</span></td><td><span class="mv">31</span></td><td><span class="hv">44</span></td><td><div class="bw"><div class="bf bf-barca" style="width:80%"></div></div></td></tr>
+          <tr><td class="cmc">Shots on Target</td><td><span class="lv">9</span></td><td><span class="mv">13</span></td><td><span class="hv">20</span></td><td><div class="bw"><div class="bf bf-barca" style="width:74%"></div></div></td></tr>
+          <tr><td class="cmc">Fouls</td>          <td><span class="lv">20</span></td><td><span class="mv">28</span></td><td><span class="hv">38</span></td><td><div class="bw"><div class="bf bf-barca" style="width:78%"></div></div></td></tr>
+          <tr><td class="cmc">Throw-ins</td>      <td><span class="lv">38</span></td><td><span class="mv">50</span></td><td><span class="hv">66</span></td><td><div class="bw"><div class="bf bf-barca" style="width:76%"></div></div></td></tr>
+          <tr><td class="cmc">Goal Kicks</td>     <td><span class="lv">15</span></td><td><span class="mv">22</span></td><td><span class="hv">32</span></td><td><div class="bw"><div class="bf bf-barca" style="width:68%"></div></div></td></tr>
+          <tr><td class="cmc">Tackles</td>        <td><span class="lv">26</span></td><td><span class="mv">35</span></td><td><span class="hv">48</span></td><td><div class="bw"><div class="bf bf-barca" style="width:82%"></div></div></td></tr>
+          <tr><td class="cmc">Offsides</td>       <td><span class="lv">4</span></td><td><span class="mv">8</span></td><td><span class="hv">14</span></td><td><div class="bw"><div class="bf bf-barca" style="width:72%"></div></div></td></tr>
         </tbody>
       </table>
       </div>
     </div>
   </div>
 
-  <!-- NOTES RMA vs BAY -->
+  <!-- NOTES BAR vs ATM -->
   <div class="card fw">
     <div class="card-hd">
-      <div class="card-hd-dot" style="background:#60a5fa"></div>
-      <div class="card-hd-title">Analytical Notes — Real Madrid vs Bayern Munich</div>
+      <div class="hd-dot" style="background:#60a5fa"></div>
+      <div class="hd-title">Analytical Notes — Weighting Factors</div>
     </div>
     <div class="card-body">
-      <div class="callout">
-        <strong>Corners (9–12–17):</strong> Real Madrid earn 5.3 corners/UCL game; Bayern average 6.3. Combined season baseline is 11.6 — H2H data confirms over 11 corners in 6 of the last 7 meetings. Madrid's disciplined defensive structure limits opponent corners (only 4.6 allowed per UCL game). High end reflects Bayern's wing overloads with Olise, Gnabry and Díaz targeting the Bernabéu flanks. Median of 12 aligns perfectly with historical trends.<br><br>
-        <strong>Total Shots (24–33–44):</strong> This is the highest-volume match of the four QFs. Real shoot 17.7 and Bayern 18.9 per UCL game — combined that's 36.6 as a baseline. Away teams typically shoot 80–90% of their home volume, giving ~32–33. Bayern had 38 shots in their 6–1 first leg vs Atalanta. The high end of 44 is plausible at the Bernabéu if the game opens up. Median of 33 reflects both teams' elite UCL firepower.<br><br>
-        <strong>Shots on Target (10–14–21):</strong> Bayern lead the UCL with 8.2 SOT/game; Real produce 6.9. Combined baseline: 15.1 — but Lunin replacing Courtois may affect the goalkeeping quality without reducing shot counts. The 2023/24 semi-final 2nd leg produced 17 combined SOT. Median of 14 is grounded in season averages; ceiling of 21 reflects both goalkeepers being heavily tested.<br><br>
-        <strong>Fouls (18–24–34):</strong> Both teams average 10–11 fouls per game, giving a combined ~22 baseline. UCL QF high-stakes context, an English referee (Michael Oliver) who averages 3.96 yellow cards per game, and Bayern's intense pressing style push the median to 24. High end if Bayern's aggressive transition press draws repeated fouls from Madrid's fullbacks. Bayern's Carreras already has 4 UCL yellow cards this season — a flashpoint.<br><br>
-        <strong>Throw-ins (40–51–66):</strong> Both teams play wide with attacking fullbacks and wingers who drive down the flanks — Vinicius, Mbappé, Olise, Díaz all operate in wide areas. The Bernabéu's atmosphere creates intense pressure in wide zones, and Bayern's counter-pressing game creates frequent out-of-bounds situations. Median of 51 reflects a high-tempo, wide-play-dominated UCL quarter-final.<br><br>
-        <strong>Goal Kicks (16–22–32):</strong> Bayern's high press (64% possession) will force Lunin to launch regularly. Real's own press will test Neuer. In UCL games with high pressing intensity, both goalkeepers field frequent restarts. The absence of Courtois (replaced by Lunin) may actually produce slightly more goal kicks as Lunin reads the press differently. High end if Bayern pin Madrid back in extended periods.<br><br>
-        <strong>Tackles (26–32–46):</strong> Real Madrid average ~14–15 tackles/game; Bayern ~15–16. Combined baseline is ~30. The UCL QF context — with both teams knowing every duel matters — pushes the median to 32. The high end reflects a particularly combative mid-field battle between Tchouaméni/Valverde and Kimmich/Pavlović. Over 2.5 goals in all seven meetings historically, suggesting an open, contested game.<br><br>
-        <strong>Offsides (4–7–12):</strong> This is the highest offside range of the four QF matches. Madrid's high defensive line meets Bayern's forward runs from Olise, Gnabry and Kane; while Bayern's line meets Mbappé and Vinícius' sprint capacity. Recent UCL meetings between high-pressing sides regularly produce 6–9 combined offsides. Median of 7 is well-grounded in both teams' line management styles; ceiling of 12 if both coaches aggressively set high lines.
-      </div>
+      <div class="note-block"><strong>Corners (9–13–18):</strong> This is the highest corner median of all four QF matches. H2H data is definitive: <em>over 8.5 corners in 10 consecutive meetings</em>. Barcelona earn 6.8 corners/game, Atlético 4.7. Combined baseline: 11.5. Barcelona's narrow high-tempo possession football (Yamal on the right wing) constantly forces corners against deep defences. <em>Weighted to 13</em> — the H2H trend is the single strongest statistical anchor; the high end of 18 is possible if Barcelona dominate for long periods against a depleted Atlético defensive unit.</div>
+      <div class="note-block"><strong>Total Shots (24–31–44):</strong> The highest shot projection of all four QFs. Barcelona fire 19.7 shots/game; Atlético 14.6. Combined: 34.3 baseline. Barcelona allowed Newcastle 14 shots in a 7–2 home win — both teams attack aggressively. Flick's high line invites Atlético counter-attacks. <em>Weighted to 31</em> — over 2.5 goals in 8 of 9 recent meetings strongly suggests a high-volume, open game at Camp Nou.</div>
+      <div class="note-block"><strong>Shots on Target (9–13–20):</strong> Barcelona's 7.2 SOT at home + Atlético's 5.6 = 12.8 combined baseline. Without Oblak in goal, Atlético are more vulnerable to Barcelona's technical finishing. Julián Alvarez and Griezmann will create dangerous counter-attacks against Flick's high line. <em>Weighted to 13</em> — both keepers (Barcelona's Joan García and Atlético's Musso) may face heavy workloads. High end of 20 is the most plausible ceiling of all four QFs.</div>
+      <div class="note-block"><strong>Fouls (20–28–38):</strong> This is the highest projected foul count of all four QFs. Atlético under Simeone are tactically physical, averaging ~13+ fouls/UCL game. Julian Alvarez alone committed 702 pressures — that intensity results in fouls. The rivalry is heated (Nico González red card on Saturday). <em>Weighted to 28</em> — a familiarity-bred intensity. Referee Istvan Kovacs averages high card counts. High end of 38 if Atlético respond to early Barcelona pressure with a cynical foul strategy.</div>
+      <div class="note-block"><strong>Throw-ins (38–50–66):</strong> Camp Nou's possession-dominated games create wide-area congestion. Both teams press wide aggressively — Yamal on the right, Rashford left; Atlético's Giuliano Simeone and Lookman contest every wide duel. UCL high-intensity clashes average 46–52 throw-ins; the familiarity of these sides and the emotional temperature boost the median to 50. <em>High end of 66</em> if Simeone's press creates chaotic possession transitions throughout.</div>
+      <div class="note-block"><strong>Goal Kicks (15–22–32):</strong> Barcelona's aggressive high press will force Atlético's backup keeper (Musso) to launch long balls repeatedly. Barcelona's own keeper Joan García faces Atlético's powerful counter-attacks and high-press triggers. Combined: higher than a typical UCL game. <em>Weighted to 22</em> — Atlético's long-ball counter-strategy under pressure inflates their GK contribution significantly.</div>
+      <div class="note-block"><strong>Tackles (26–35–48):</strong> The highest tackle projection across all four QF matches this week. Atlético (Simeone system) average ~16–18 tackles/game; Barcelona ~14–15. Combined baseline: ~31–33. UCL QF intensity and the personal rivalry element between players who know each other intimately from four recent meetings drives this to a median of 35. <em>High of 48</em> if Atlético adopt a sit-and-disrupt approach in second half.</div>
+      <div class="note-block"><strong>Offsides (4–8–14):</strong> The highest offside projection of the four QFs. Barcelona play a famously aggressive high defensive line (exposed by Newcastle for some offsides during 7–2); Atlético's pace runners — Griezmann, Sørloth, Alvarez — exploit space behind the line. In their last 4 meetings combined, there have been 28+ offsides. <em>Weighted to 8</em> — Flick's high line is a known offside trap weapon, and Atlético's direct counter-attack game will test it repeatedly throughout the night.</div>
     </div>
   </div>
 
-</div><!-- /match-grid -->
+</div><!-- /m-grid -->
 </div><!-- /page -->
 
 <footer>
-  <strong>Team Bilbo Statistical Analysis</strong><br>Predictions are statistical estimates based on actual data, H2H analysis and contextual factors. <strong>Not financial advice.</strong><br>· 7 April 2026 · 
+  <strong>TEAM BILBO Statistical Analysis</strong><br>Predictions are statistical estimates based on actual data, H2H analysis and contextual factors. <strong>Not financial advice.</strong><br> · 8 April 2026 ·
 </footer>
 </body>
 </html>
