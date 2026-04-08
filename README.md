@@ -373,7 +373,7 @@ footer {
 
 <!-- ══════════ HEADER ══════════ -->
 <header class="site-header">
-  <div class="ucl-badge">★★★★★ UEFA Champions League ★★★★★<br> Quarter-Finals · First Legs · 8 April 2026 </div>
+  <div class="ucl-badge">★★★ UEFA Champions League ★★★<br> Quarter-Finals · First Legs · 8 April 2026 </div>
   <p class="sub">Last 5 form &nbsp;·&nbsp; Season averages &nbsp;·&nbsp; H2H &nbsp;<br>· Weighted Low / Median / High predictions ·</p>
   <div class="match-nav">
     <a href="#psg" class="mnav-pill mnav-psg">PSG vs Liverpool · Parc des Princes</a>
