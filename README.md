@@ -624,7 +624,201 @@
         }
       }
 
-      /* TABLET */
+      /* ===== MOBILE (up to 479px) ===== */
+      @media (max-width: 479px) {
+        .container {
+          padding: 0 10px;
+        }
+        .match-header {
+          padding: 18px 0 12px;
+        }
+        .match-meta {
+          font-size: 0.68rem;
+          gap: 6px;
+        }
+        .teams-showcase {
+          gap: 12px;
+          padding: 12px 0 16px;
+        }
+        .team-block {
+          max-width: 130px;
+        }
+        .team-badge {
+          width: 52px;
+          height: 52px;
+        }
+        .team-name {
+          font-size: 0.82rem;
+        }
+        .team-position {
+          font-size: 0.62rem;
+          padding: 2px 8px;
+        }
+        .form-dot {
+          width: 18px;
+          height: 18px;
+          font-size: 0.5rem;
+        }
+        .vs-divider {
+          font-size: 1rem;
+        }
+        .context-alert {
+          padding: 12px 14px;
+          margin-bottom: 18px;
+        }
+        .context-alert h3 {
+          font-size: 0.74rem;
+        }
+        .context-alert p {
+          font-size: 0.7rem;
+        }
+        .tab-nav {
+          gap: 5px;
+          padding: 0 0 12px;
+          margin-bottom: 14px;
+          -webkit-overflow-scrolling: touch;
+        }
+        .tab-btn {
+          padding: 7px 14px;
+          font-size: 0.7rem;
+        }
+        .section-title {
+          font-size: 0.85rem;
+          margin-bottom: 12px;
+        }
+        .pred-grid {
+          grid-template-columns: 1fr;
+          gap: 10px;
+        }
+        .pred-card {
+          padding: 12px;
+        }
+        .pred-label {
+          font-size: 0.68rem;
+          margin-bottom: 8px;
+        }
+        .pred-values {
+          gap: 6px;
+        }
+        .pred-item-label {
+          font-size: 0.55rem;
+        }
+        .pred-num {
+          font-size: 0.95rem;
+        }
+        .bar-wrap {
+          height: 6px;
+        }
+        .match-row {
+          padding: 8px 10px;
+          gap: 6px;
+        }
+        .match-home,
+        .match-away {
+          font-size: 0.72rem;
+        }
+        .match-score {
+          padding: 3px 8px;
+          font-size: 0.75rem;
+          min-width: 42px;
+        }
+        .match-date {
+          font-size: 0.55rem;
+        }
+        .card-grid {
+          grid-template-columns: 1fr;
+          gap: 10px;
+        }
+        .card-team {
+          padding: 12px;
+        }
+        .card-team-header {
+          font-size: 0.75rem;
+        }
+        .player-card {
+          padding: 6px 0;
+        }
+        .player-name {
+          font-size: 0.72rem;
+        }
+        .player-risk {
+          font-size: 0.6rem;
+          padding: 2px 6px;
+          white-space: nowrap;
+          flex-shrink: 0;
+        }
+        .player-yellows {
+          font-size: 0.58rem;
+        }
+        .stats-table {
+          font-size: 0.7rem;
+        }
+        .stats-table th {
+          padding: 8px 8px;
+          font-size: 0.58rem;
+        }
+        .stats-table td {
+          padding: 8px 8px;
+        }
+        .method-box {
+          padding: 12px;
+          font-size: 0.7rem;
+        }
+        .method-box h4 {
+          font-size: 0.75rem;
+        }
+        .weight-tag {
+          font-size: 0.55rem;
+          padding: 2px 6px;
+        }
+        .h2h-card {
+          padding: 12px;
+        }
+        footer {
+          padding: 20px 0;
+          font-size: 0.6rem;
+        }
+      }
+
+      /* ===== SMALL MOBILE (up to 359px) ===== */
+      @media (max-width: 359px) {
+        .container {
+          padding: 0 8px;
+        }
+        .teams-showcase {
+          gap: 8px;
+        }
+        .team-badge {
+          width: 44px;
+          height: 44px;
+        }
+        .team-name {
+          font-size: 0.75rem;
+        }
+        .form-dot {
+          width: 16px;
+          height: 16px;
+          font-size: 0.45rem;
+        }
+        .match-home,
+        .match-away {
+          font-size: 0.65rem;
+        }
+        .match-score {
+          font-size: 0.7rem;
+          min-width: 38px;
+          padding: 3px 6px;
+        }
+        .tab-btn {
+          padding: 6px 10px;
+          font-size: 0.65rem;
+        }
+        .pred-num {
+          font-size: 0.85rem;
+        }
+      }
+
+      /* ===== TABLET (600px+) ===== */
       @media (min-width: 600px) {
         .pred-grid {
           grid-template-columns: 1fr 1fr;
@@ -633,7 +827,8 @@
           padding: 0 24px;
         }
       }
-      /* DESKTOP */
+
+      /* ===== DESKTOP (900px+) ===== */
       @media (min-width: 900px) {
         .pred-grid {
           grid-template-columns: 1fr 1fr;
