@@ -265,7 +265,7 @@ body{
 .pred-leg{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:12px;}
 .pli{display:flex;align-items:center;gap:5px;font-size:10.5px;color:var(--muted);}
 .pld{width:7px;height:7px;border-radius:50%;}
-.pw{overflow-x:auto;-webkit-overflow-scrolling:touch;}
+.pw{overflow-x:auto;-webkit-overflow-scrolling:touch; background-color: #0c0e14;}
 .pt{width:100%;border-collapse:collapse;table-layout:fixed;min-width:290px;}
 .pt col.cm{width:28%;}
 .pt col.cl{width:16%;}
@@ -420,7 +420,7 @@ footer{text-align:center;padding:16px 14px;font-size:11px;color:rgba(78,86,114,.
   <div class="hero-inner">
     <div class="h-team">
       <div class="badge-ring">
-        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/53/Arsenal_FC.svg/120px-Arsenal_FC.svg.png" alt="Arsenal">
+        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/53/Arsenal_FC.svg/120px-Arsenal_FC.svg.png" alt="Arsenal" style="background-color: #19141b;">
       </div>
       <div class="h-name">Arsenal</div>
       <div class="h-pos">1st · 70 pts · Leaders</div>
@@ -432,7 +432,7 @@ footer{text-align:center;padding:16px 14px;font-size:11px;color:rgba(78,86,114,.
     </div>
     <div class="h-team">
       <div class="badge-ring" style="animation-delay:.12s">
-        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/e/e5/AFC_Bournemouth_%282013%29.svg/120px-AFC_Bournemouth_%282013%29.svg.png" alt="Bournemouth">
+        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/e/e5/AFC_Bournemouth_%282013%29.svg/120px-AFC_Bournemouth_%282013%29.svg.png" alt="Bournemouth" style="background-color: #19141b;">
       </div>
       <div class="h-name">Bournemouth</div>
       <div class="h-pos">13th · 42 pts</div>
@@ -456,7 +456,7 @@ footer{text-align:center;padding:16px 14px;font-size:11px;color:rgba(78,86,114,.
     <div class="card-body">
       <div class="form-cols">
         <div class="fcol">
-          <div class="team-lab lab-ars"><img class="tl-img" src="https://upload.wikimedia.org/wikipedia/en/thumb/5/53/Arsenal_FC.svg/120px-Arsenal_FC.svg.png" alt="">Arsenal</div>
+          <div class="team-lab lab-ars"><img class="tl-img" src="https://upload.wikimedia.org/wikipedia/en/thumb/5/53/Arsenal_FC.svg/120px-Arsenal_FC.svg.png" alt="" style="background-color: #19141b;">Arsenal</div>
           <div class="match-list">
             <div class="mr"><div class="rd W"></div><div class="ms">1–0</div><div class="mo">Sporting CP</div><div class="mc">UCL QF <span class="ucl-note">Tue</span></div></div>
             <div class="mr"><div class="rd L"></div><div class="ms">1–2</div><div class="mo">Southampton</div><div class="mc">FAC · Away</div></div>
@@ -466,7 +466,7 @@ footer{text-align:center;padding:16px 14px;font-size:11px;color:rgba(78,86,114,.
           </div>
         </div>
         <div class="fcol">
-          <div class="team-lab lab-bou"><img class="tl-img" src="https://upload.wikimedia.org/wikipedia/en/thumb/e/e5/AFC_Bournemouth_%282013%29.svg/120px-AFC_Bournemouth_%282013%29.svg.png" alt="">Bournemouth</div>
+          <div class="team-lab lab-bou"><img class="tl-img" src="https://upload.wikimedia.org/wikipedia/en/thumb/e/e5/AFC_Bournemouth_%282013%29.svg/120px-AFC_Bournemouth_%282013%29.svg.png" alt="" style="background-color: #19141b;">Bournemouth</div>
           <div class="match-list">
             <div class="mr"><div class="rd D"></div><div class="ms">0–0</div><div class="mo">Burnley</div><div class="mc">PL · Away</div></div>
             <div class="mr"><div class="rd D"></div><div class="ms">0–0</div><div class="mo">West Ham</div><div class="mc">PL · Away</div></div>
@@ -582,7 +582,7 @@ footer{text-align:center;padding:16px 14px;font-size:11px;color:rgba(78,86,114,.
   <div class="hero-inner">
     <div class="h-team">
       <div class="badge-ring">
-        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/2/2a/Brentford_FC_crest.svg/120px-Brentford_FC_crest.svg.png" alt="Brentford">
+        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/2/2a/Brentford_FC_crest.svg/120px-Brentford_FC_crest.svg.png" alt="Brentford" style="background-color: #19141b;">
       </div>
       <div class="h-name">Brentford</div>
       <div class="h-pos">7th · 46 pts</div>
@@ -594,7 +594,7 @@ footer{text-align:center;padding:16px 14px;font-size:11px;color:rgba(78,86,114,.
     </div>
     <div class="h-team">
       <div class="badge-ring" style="animation-delay:.12s">
-        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/7/7c/Everton_FC_logo.svg/120px-Everton_FC_logo.svg.png" alt="Everton">
+        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/7/7c/Everton_FC_logo.svg/120px-Everton_FC_logo.svg.png" alt="Everton" style="background-color: #19141b;">
       </div>
       <div class="h-name">Everton</div>
       <div class="h-pos">8th · 46 pts</div>
@@ -618,7 +618,7 @@ footer{text-align:center;padding:16px 14px;font-size:11px;color:rgba(78,86,114,.
     <div class="card-body">
       <div class="form-cols">
         <div class="fcol">
-          <div class="team-lab lab-bre"><img class="tl-img" src="https://upload.wikimedia.org/wikipedia/en/thumb/2/2a/Brentford_FC_crest.svg/120px-Brentford_FC_crest.svg.png" alt="">Brentford</div>
+          <div class="team-lab lab-bre"><img class="tl-img" src="https://upload.wikimedia.org/wikipedia/en/thumb/2/2a/Brentford_FC_crest.svg/120px-Brentford_FC_crest.svg.png" alt="" style="background-color: #19141b;">Brentford</div>
           <div class="match-list">
             <div class="mr"><div class="rd D"></div><div class="ms">2–2</div><div class="mo">Wolves</div><div class="mc">PL · Home</div></div>
             <div class="mr"><div class="rd D"></div><div class="ms">0–0</div><div class="mo">Leeds United</div><div class="mc">PL · Away</div></div>
@@ -628,7 +628,7 @@ footer{text-align:center;padding:16px 14px;font-size:11px;color:rgba(78,86,114,.
           </div>
         </div>
         <div class="fcol">
-          <div class="team-lab lab-eve"><img class="tl-img" src="https://upload.wikimedia.org/wikipedia/en/thumb/7/7c/Everton_FC_logo.svg/120px-Everton_FC_logo.svg.png" alt="">Everton</div>
+          <div class="team-lab lab-eve"><img class="tl-img" src="https://upload.wikimedia.org/wikipedia/en/thumb/7/7c/Everton_FC_logo.svg/120px-Everton_FC_logo.svg.png" alt="" style="background-color: #19141b;">Everton</div>
           <div class="match-list">
             <div class="mr"><div class="rd W"></div><div class="ms">3–0</div><div class="mo">Chelsea</div><div class="mc">PL · Home</div></div>
             <div class="mr"><div class="rd W"></div><div class="ms">3–2</div><div class="mo">Newcastle</div><div class="mc">PL · Away</div></div>
@@ -742,7 +742,7 @@ footer{text-align:center;padding:16px 14px;font-size:11px;color:rgba(78,86,114,.
   <div class="hero-inner">
     <div class="h-team">
       <div class="badge-ring">
-        <img src="https://brandlogos.net/wp-content/uploads/2023/07/burnley_fc-logo_brandlogos.net_vh9ys.png" alt="Burnley">
+        <img src="https://brandlogos.net/wp-content/uploads/2023/07/burnley_fc-logo_brandlogos.net_vh9ys.png" alt="Burnley" style="background-color: #19141b;">
       </div>
       <div class="h-name">Burnley</div>
       <div class="h-pos">19th · 20 pts · Relegation</div>
@@ -754,7 +754,7 @@ footer{text-align:center;padding:16px 14px;font-size:11px;color:rgba(78,86,114,.
     </div>
     <div class="h-team">
       <div class="badge-ring" style="animation-delay:.12s">
-        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/f/fd/Brighton_%26_Hove_Albion_logo.svg/120px-Brighton_%26_Hove_Albion_logo.svg.png" alt="Brighton">
+        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/f/fd/Brighton_%26_Hove_Albion_logo.svg/120px-Brighton_%26_Hove_Albion_logo.svg.png" alt="Brighton" style="background-color: #19141b;">
       </div>
       <div class="h-name">Brighton</div>
       <div class="h-pos">10th · 43 pts · European Push</div>
@@ -778,7 +778,7 @@ footer{text-align:center;padding:16px 14px;font-size:11px;color:rgba(78,86,114,.
     <div class="card-body">
       <div class="form-cols">
         <div class="fcol">
-          <div class="team-lab lab-bur"><img class="tl-img" src="https://upload.wikimedia.org/wikipedia/en/thumb/6/62/Burnley_F.C._Logo.svg/120px-Burnley_F.C._Logo.svg.png" alt="">Burnley</div>
+          <div class="team-lab lab-bur"><img class="tl-img" src="https://upload.wikimedia.org/wikipedia/en/thumb/6/62/Burnley_F.C._Logo.svg/120px-Burnley_F.C._Logo.svg.png" alt="" style="background-color: #19141b;">Burnley</div>
           <div class="match-list">
             <div class="mr"><div class="rd L"></div><div class="ms">1–3</div><div class="mo">Fulham</div><div class="mc">PL · Away</div></div>
             <div class="mr"><div class="rd D"></div><div class="ms">0–0</div><div class="mo">Bournemouth</div><div class="mc">PL · Home</div></div>
@@ -788,7 +788,7 @@ footer{text-align:center;padding:16px 14px;font-size:11px;color:rgba(78,86,114,.
           </div>
         </div>
         <div class="fcol">
-          <div class="team-lab lab-bri"><img class="tl-img" src="https://upload.wikimedia.org/wikipedia/en/thumb/f/fd/Brighton_%26_Hove_Albion_logo.svg/120px-Brighton_%26_Hove_Albion_logo.svg.png" alt="">Brighton</div>
+          <div class="team-lab lab-bri"><img class="tl-img" src="https://upload.wikimedia.org/wikipedia/en/thumb/f/fd/Brighton_%26_Hove_Albion_logo.svg/120px-Brighton_%26_Hove_Albion_logo.svg.png" alt="" style="background-color: #19141b;">Brighton</div>
           <div class="match-list">
             <div class="mr"><div class="rd W"></div><div class="ms">2–1</div><div class="mo">Liverpool</div><div class="mc">PL · Home</div></div>
             <div class="mr"><div class="rd W"></div><div class="ms">1–0</div><div class="mo">Sunderland</div><div class="mc">PL · Away</div></div>
@@ -904,7 +904,7 @@ footer{text-align:center;padding:16px 14px;font-size:11px;color:rgba(78,86,114,.
   <div class="hero-inner">
     <div class="h-team">
       <div class="badge-ring">
-        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/0c/Liverpool_FC.svg/120px-Liverpool_FC.svg.png" alt="Liverpool">
+        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/0c/Liverpool_FC.svg/120px-Liverpool_FC.svg.png" alt="Liverpool" style="background-color: #19141b;">
       </div>
       <div class="h-name">Liverpool</div>
       <div class="h-pos">5th · 49 pts · UCL Wed</div>
@@ -916,7 +916,7 @@ footer{text-align:center;padding:16px 14px;font-size:11px;color:rgba(78,86,114,.
     </div>
     <div class="h-team">
       <div class="badge-ring" style="animation-delay:.12s">
-        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/e/eb/Fulham_FC_%28shield%29.svg/120px-Fulham_FC_%28shield%29.svg.png" alt="Fulham">
+        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/e/eb/Fulham_FC_%28shield%29.svg/120px-Fulham_FC_%28shield%29.svg.png" alt="Fulham" style="background-color: #19141b;">
       </div>
       <div class="h-name">Fulham</div>
       <div class="h-pos">9th · 44 pts</div>
@@ -945,7 +945,7 @@ footer{text-align:center;padding:16px 14px;font-size:11px;color:rgba(78,86,114,.
     <div class="card-body">
       <div class="form-cols">
         <div class="fcol">
-          <div class="team-lab lab-liv"><img class="tl-img" src="https://upload.wikimedia.org/wikipedia/en/thumb/0/0c/Liverpool_FC.svg/120px-Liverpool_FC.svg.png" alt="">Liverpool</div>
+          <div class="team-lab lab-liv"><img class="tl-img" src="https://upload.wikimedia.org/wikipedia/en/thumb/0/0c/Liverpool_FC.svg/120px-Liverpool_FC.svg.png" alt="" style="background-color: #19141b;">Liverpool</div>
           <div class="match-list">
             <div class="mr"><div class="rd L"></div><div class="ms">0–2</div><div class="mo">PSG</div><div class="mc">UCL QF <span class="ucl-note">Wed</span></div></div>
             <div class="mr"><div class="rd L"></div><div class="ms">1–2</div><div class="mo">Brighton</div><div class="mc">PL · Away</div></div>
@@ -955,7 +955,7 @@ footer{text-align:center;padding:16px 14px;font-size:11px;color:rgba(78,86,114,.
           </div>
         </div>
         <div class="fcol">
-          <div class="team-lab lab-ful"><img class="tl-img" src="https://upload.wikimedia.org/wikipedia/en/thumb/e/eb/Fulham_FC_%28shield%29.svg/120px-Fulham_FC_%28shield%29.svg.png" alt="">Fulham</div>
+          <div class="team-lab lab-ful"><img class="tl-img" src="https://upload.wikimedia.org/wikipedia/en/thumb/e/eb/Fulham_FC_%28shield%29.svg/120px-Fulham_FC_%28shield%29.svg.png" alt="" style="background-color: #19141b;">Fulham</div>
           <div class="match-list">
             <div class="mr"><div class="rd W"></div><div class="ms">3–1</div><div class="mo">Burnley</div><div class="mc">PL · Home</div></div>
             <div class="mr"><div class="rd W"></div><div class="ms">2–1</div><div class="mo">Brentford</div><div class="mc">PL · Away</div></div>
