@@ -463,6 +463,7 @@ footer { text-align:center; padding:18px 14px; font-size:11.5px; color:rgba(76,8
       <div class="badge-ring pop">
         <img src="https://upload.wikimedia.org/wikipedia/en/thumb/c/cc/Chelsea_FC.svg/120px-Chelsea_FC.svg.png"
              alt="Chelsea FC"
+             style="background-color: #131620;"
              onerror="this.parentElement.innerHTML='<svg viewBox=&quot;0 0 60 60&quot; style=&quot;width:52px;height:52px&quot;><circle cx=&quot;30&quot; cy=&quot;30&quot; r=&quot;28&quot; fill=&quot;#034694&quot;/><text x=&quot;30&quot; y=&quot;35&quot; text-anchor=&quot;middle&quot; font-size=&quot;11&quot; fill=&quot;#fff&quot; font-weight=&quot;bold&quot;>CFC</text></svg>'">
       </div>
       <div class="h-name">Chelsea FC</div>
@@ -480,6 +481,7 @@ footer { text-align:center; padding:18px 14px; font-size:11.5px; color:rgba(76,8
       <div class="badge-ring pop2">
         <img src="https://upload.wikimedia.org/wikipedia/en/thumb/e/eb/Manchester_City_FC_badge.svg/120px-Manchester_City_FC_badge.svg.png"
              alt="Manchester City"
+             style="background-color: #131620;"
              onerror="this.parentElement.innerHTML='<svg viewBox=&quot;0 0 60 60&quot; style=&quot;width:52px;height:52px&quot;><circle cx=&quot;30&quot; cy=&quot;30&quot; r=&quot;28&quot; fill=&quot;#1c2c5b&quot;/><text x=&quot;30&quot; y=&quot;35&quot; text-anchor=&quot;middle&quot; font-size=&quot;11&quot; fill=&quot;#6cabdd&quot; font-weight=&quot;bold&quot;>MCFC</text></svg>'">
       </div>
       <div class="h-name">Manchester City</div>
