@@ -444,7 +444,7 @@ footer { text-align:center; padding:18px 14px; font-size:11.5px; color:rgba(76,8
 <!-- ══════════ SITE HEADER ══════════ -->
 <header class="site-header au2">
   <div class="pl-badge">Premier League · Matchweek 32 · Super Sunday · 12 April 2026</div>
-  <h1>Tam Bilbo Analytics</h1>
+  <h1>Team Bilbo Analytics</h1>
   <p class="sub">· Stamford Bridge &nbsp;·&nbsp; 4:30pm BST &nbsp;·&nbsp; Ref: Chris Kavanagh &nbsp;·</p>
 
   <div class="gap-strip">
@@ -548,7 +548,7 @@ footer { text-align:center; padding:18px 14px; font-size:11.5px; color:rgba(76,8
         <!-- CHELSEA -->
         <div class="fcol">
           <div class="team-lab lab-che">
-            <img class="tl-img" src="https://upload.wikimedia.org/wikipedia/en/thumb/c/cc/Chelsea_FC.svg/120px-Chelsea_FC.svg.png" alt="">
+            <img class="tl-img" src="https://upload.wikimedia.org/wikipedia/en/thumb/c/cc/Chelsea_FC.svg/120px-Chelsea_FC.svg.png" alt="" style="background-color: #131620;">
             Chelsea
           </div>
           <div class="match-list">
@@ -564,7 +564,7 @@ footer { text-align:center; padding:18px 14px; font-size:11.5px; color:rgba(76,8
         <!-- MAN CITY -->
         <div class="fcol">
           <div class="team-lab lab-mci">
-            <img class="tl-img" src="https://upload.wikimedia.org/wikipedia/en/thumb/e/eb/Manchester_City_FC_badge.svg/120px-Manchester_City_FC_badge.svg.png" alt="">
+            <img class="tl-img" src="https://upload.wikimedia.org/wikipedia/en/thumb/e/eb/Manchester_City_FC_badge.svg/120px-Manchester_City_FC_badge.svg.png" alt="" style="background-color: #131620;">
             Manchester City
           </div>
           <div class="match-list">
