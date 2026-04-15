@@ -412,8 +412,8 @@ footer { text-align: center;
   <h1>TEAM BILBO Stats Predictor</h1>
   <p class="sub">Arsenal vs Sporting CP &nbsp;·&nbsp; Bayern Munich vs Real Madrid &nbsp;·&nbsp; Form · Averages · H2H · Weighted Predictions · Score Forecasts</p>
   <nav class="match-nav">
-    <a href="#ars" class="mn-btn mn-ars">🔴 Arsenal vs Sporting CP · Emirates · 8pm BST</a>
-    <a href="#bay" class="mn-btn mn-bay">🔴 Bayern Munich vs Real Madrid · Allianz Arena · 9pm CET</a>
+    <a href="#ars" class="mn-btn mn-ars">🔴 Arsenal vs Sporting CP · Emirates · 20:00</a>
+    <a href="#bay" class="mn-btn mn-bay">🔴 Bayern Munich vs Real Madrid · Allianz Arena · 20:00</a>
   </nav>
 </header>
 
@@ -440,7 +440,7 @@ footer { text-align: center;
     </div>
     <div class="vs-col">
       <div class="vs-txt">VS</div>
-      <div class="ko-chip">8pm BST</div>
+      <div class="ko-chip">20:00</div>
       <div class="venue-txt">Emirates Stadium · London<br>Ref: François Letexier (FRA)</div>
     </div>
     <div class="h-team">
@@ -688,7 +688,7 @@ footer { text-align: center;
     </div>
     <div class="vs-col">
       <div class="vs-txt">VS</div>
-      <div class="ko-chip">9pm CET</div>
+      <div class="ko-chip">20:00</div>
       <div class="venue-txt">Allianz Arena · Munich, Germany<br>Ref: Slavko Vinčić (SVN)</div>
     </div>
     <div class="h-team">
