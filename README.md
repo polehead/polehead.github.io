@@ -620,7 +620,7 @@ body {
       <div class="card-body">
         <div class="form-cols">
           <div class="fcol">
-            <div class="team-lab lab-nfo"><img class="tl-img" src="https://cdn.brandfetch.io/nottinghamforest.co.uk/icon" alt="" onerror="this.style.display='none'"> Nott'm Forest</div>
+            <div class="team-lab lab-nfo"><img class="tl-img" src="https://cdn.brandfetch.io/idwmZKybXP/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1773431229883"> Nott'm Forest</div>
             <div class="match-list">
               <div class="mr"><div class="rd D"></div><div class="ms">1–1</div><div class="mo">Crystal Palace</div><div class="mc">PL</div></div>
               <div class="mr"><div class="rd W"></div><div class="ms">2–0</div><div class="mo">Everton</div><div class="mc">PL</div></div>
