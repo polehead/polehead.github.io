@@ -658,7 +658,7 @@ body {
 </div> <footer style="text-align: center; padding: 24px 16px; font-family:'Inter',sans-serif; font-size: 11px; color: var(--muted); border-top: 1px solid var(--border);">
   <strong>Team Bilbo Statistical Analysis</strong><br>
   Predictions are statistical estimates based on historical profiles and Premier League dynamics.<br>
-  · Generated 2026 · Not Financial Advice ·
+  <strong>NOT FINANCIAL ADVICE</strong>
 </footer>
 
 <script>
