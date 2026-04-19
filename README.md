@@ -1997,12 +1997,7 @@
             <div class="team-col">
               <div class="badge">
                 <img
-                  src="https://cdn.brandfetch.io/evertonfc.com/w/200/h/200"
-                  onerror="
-                    this.onerror = null;
-                    this.src =
-                      'https://upload.wikimedia.org/wikipedia/en/thumb/7/7c/Everton_FC_logo.svg/120px-Everton_FC_logo.svg.png';
-                  "
+                  src="https://cdn.brandfetch.io/idQ-GKpmoP/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1668077963834"
                   alt="Everton"
                   style="background: transparent;"
                 />
@@ -2022,12 +2017,7 @@
             <div class="team-col">
               <div class="badge">
                 <img
-                  src="https://cdn.brandfetch.io/liverpoolfc.com/w/200/h/200"
-                  onerror="
-                    this.onerror = null;
-                    this.src =
-                      'https://upload.wikimedia.org/wikipedia/en/thumb/0/0c/Liverpool_FC.svg/120px-Liverpool_FC.svg.png';
-                  "
+                  src="https://cdn.brandfetch.io/idLw_x5PBk/w/185/h/185/theme/dark/logo.webp?c=1bxid64Mup7aczewSAYMX&t=1746516677234"
                   alt="Liverpool"
                   style="background: transparent;"
                 />
@@ -3562,12 +3552,7 @@
             <div class="team-col">
               <div class="badge">
                 <img
-                  src="https://cdn.brandfetch.io/mancity.com/w/200/h/200"
-                  onerror="
-                    this.onerror = null;
-                    this.src =
-                      'https://upload.wikimedia.org/wikipedia/en/thumb/e/eb/Manchester_City_FC_badge.svg/120px-Manchester_City_FC_badge.svg.png';
-                  "
+                  src="https://cdn.brandfetch.io/idNRR8KZnO/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1668077960626"
                   alt="Man City"
                   style="background: transparent;"
                 />
@@ -3587,12 +3572,7 @@
             <div class="team-col">
               <div class="badge">
                 <img
-                  src="https://cdn.brandfetch.io/arsenal.com/w/200/h/200"
-                  onerror="
-                    this.onerror = null;
-                    this.src =
-                      'https://upload.wikimedia.org/wikipedia/en/thumb/5/53/Arsenal_FC.svg/120px-Arsenal_FC.svg.png';
-                  "
+                  src="https://cdn.brandfetch.io/ida744DnR8/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1667609875130"
                   alt="Arsenal"
                   style="background: transparent;"
                 />
