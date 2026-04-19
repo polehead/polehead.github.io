@@ -1232,6 +1232,7 @@
                 <img
                   src="https://cdn.brandfetch.io/idFPmd025E/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1668077974118"
                   alt="Aston Villa"
+                  style="background: transparent;"
                 />
               </div>
               <div class="t-name" style="color: #95bfe5">Aston Villa</div>
@@ -1251,6 +1252,7 @@
                 <img
                   src="https://cdn.brandfetch.io/idMQ7TtI1j/theme/light/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1772760463945"
                   alt="Sunderland"
+                  style="background: transparent;"
                 />
               </div>
               <div class="t-name" style="color: #eb172b">Sunderland AFC</div>
@@ -2002,6 +2004,7 @@
                       'https://upload.wikimedia.org/wikipedia/en/thumb/7/7c/Everton_FC_logo.svg/120px-Everton_FC_logo.svg.png';
                   "
                   alt="Everton"
+                  style="background: transparent;"
                 />
               </div>
               <div class="t-name" style="color: #274488">Everton FC</div>
@@ -2026,6 +2029,7 @@
                       'https://upload.wikimedia.org/wikipedia/en/thumb/0/0c/Liverpool_FC.svg/120px-Liverpool_FC.svg.png';
                   "
                   alt="Liverpool"
+                  style="background: transparent;"
                 />
               </div>
               <div class="t-name" style="color: #c8102e">Liverpool FC</div>
@@ -2784,13 +2788,9 @@
             <div class="team-col">
               <div class="badge">
                 <img
-                  src="https://cdn.brandfetch.io/nottinghamforest.co.uk/w/200/h/200"
-                  onerror="
-                    this.onerror = null;
-                    this.src =
-                      'https://upload.wikimedia.org/wikipedia/en/thumb/e/e5/Nottingham_Forest_F.C._logo.svg/120px-Nottingham_Forest_F.C._logo.svg.png';
-                  "
+                  src="https://cdn.brandfetch.io/idwmZKybXP/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1773431229883"
                   alt="Forest"
+                  style="background: transparent;"
                 />
               </div>
               <div class="t-name" style="color: #e8003d">Nottingham Forest</div>
@@ -2810,6 +2810,7 @@
                 <img
                   src="https://cdn.brandfetch.io/idATU8hDrd/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1668077989078"
                   alt="Burnley"
+                  style="background: transparent;"
                 />
               </div>
               <div class="t-name" style="color: #6e3b1f">Burnley FC</div>
@@ -3568,6 +3569,7 @@
                       'https://upload.wikimedia.org/wikipedia/en/thumb/e/eb/Manchester_City_FC_badge.svg/120px-Manchester_City_FC_badge.svg.png';
                   "
                   alt="Man City"
+                  style="background: transparent;"
                 />
               </div>
               <div class="t-name" style="color: #6cabdd">Manchester City</div>
@@ -3592,6 +3594,7 @@
                       'https://upload.wikimedia.org/wikipedia/en/thumb/5/53/Arsenal_FC.svg/120px-Arsenal_FC.svg.png';
                   "
                   alt="Arsenal"
+                  style="background: transparent;"
                 />
               </div>
               <div class="t-name" style="color: #ef0107">Arsenal FC</div>
