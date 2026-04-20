@@ -1931,7 +1931,7 @@
                     <th class="tc" style="color: var(--lo)">Total Low</th>
                     <th class="tc" style="color: var(--med)">Median</th>
                     <th class="tc" style="color: var(--hi)">Total High</th>
-                    <th class="tc" style="color: var(--muted)">Bar</th>
+                    <th class="tc" style="color: var(--muted)">Intensity</th>
                   </tr>
                 </thead>
                 <tbody>
