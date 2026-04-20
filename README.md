@@ -1289,7 +1289,7 @@
     <!-- PAGE HEADER -->
     <header class="page-header">
       <div class="pl-chip">
-        <div class="t-name" style="color: #e84060">Crystal Palace</div> <span>vs</span> <div class="t-name" style="color: #1bb1e7">West Ham Utd</div>
+        <div class="t-name" style="color: #1bb1e7">Crystal Palace</div> <span>vs</span> <div class="t-name" style="color: #e84060">West Ham Utd</div>
       </div>
       <h1>Premier League <span>Team Bilbo Analytics</span></h1>
       <p class="sub">
