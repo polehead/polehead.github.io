@@ -1359,7 +1359,7 @@
                   alt="Crystal Palace"
                   style="background-color: transparent" />
               </div>
-              <div class="t-name" style="color: #e84060">Crystal Palace</div>
+              <div class="t-name" style="color: #1bb1e7">Crystal Palace</div>
               <div class="t-stat">
                 13th · ~35 pts · W4 D2 last 7<br />UECL Semi-Final vs Shakhtar
               </div>
@@ -1378,7 +1378,7 @@
                   alt="West Ham"
                   style="background-color: transparent" />
               </div>
-              <div class="t-name" style="color: #1bb1e7">West Ham Utd</div>
+              <div class="t-name" style="color: #e84060">West Ham Utd</div>
               <div class="t-stat">
                 17th · ~30 pts · 1pt above drop<br />Full squad available —
                 Desperate
