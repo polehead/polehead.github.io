@@ -1427,7 +1427,8 @@
             <div class="badge-ring" style="animation-delay:.05s">
               <img src="https://cdn.cdnlogo.com/logos/b/32/brighton-hove-albion.svg"
                 onerror="this.onerror=null;this.src='https://upload.wikimedia.org/wikipedia/en/thumb/f/fd/Brighton_%26_Hove_Albion_logo.svg/120px-Brighton_%26_Hove_Albion_logo.svg.png'"
-                alt="Brighton">
+                alt="Brighton"
+                style="background-color: transparent;">
             </div>
             <div class="team-name" style="color:#60a5fa">Brighton</div>
             <div class="team-meta">9th · ~46 pts<br>Unbeaten last 7 PL<br>W3 H2H vs Chelsea in a row</div>
@@ -1441,7 +1442,8 @@
             <div class="badge-ring" style="animation-delay:.12s">
               <img src="https://cdn.cdnlogo.com/logos/c/8/chelsea-fc.svg"
                 onerror="this.onerror=null;this.src='https://upload.wikimedia.org/wikipedia/en/thumb/c/cc/Chelsea_FC.svg/120px-Chelsea_FC.svg.png'"
-                alt="Chelsea">
+                alt="Chelsea"
+                style="background-color: transparent;">
             </div>
             <div class="team-name" style="color:#a5c4ff">Chelsea FC</div>
             <div class="team-meta">6th · ~48 pts · 1pt ahead<br>4 PL losses in a row (0 goals)<br>FA Cup SF vs Leeds on
