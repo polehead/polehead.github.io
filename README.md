@@ -1383,8 +1383,8 @@
 
   <!-- PAGE HEADER -->
   <header class="page-hd">
-    <div class="pl-badge"><h1>Premier League<br> <span>Team Bilbo Analytics</span></h1></div>
-    <h1>Brighton <span>vs</span> Chelsea</h1>
+    <div class="pl-badge"><h1><span style="color: var(--red);">Premier League</span><br> <span>Team Bilbo Analytics</span></h1></div>
+    <h1><span style="color: var(--bha-blue);">BRIGHTON</span> <span style="color: var(--amber);">v</span> <span style="color: var(--che-blue);">CHELSEA</span></h1>
     <p class="sub">Statistical Match Prediction · American Express Stadium · 20:00 · Referee: Craig Pawson</p>
   </header>
 
