@@ -3,10 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Matchday Analytics · PL Predictor · 22 April 2026</title>
+  <title>Premier League MW33 · Stats Predictor · 18 April 2026</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
   <style>
+    /* ======================================
+   DESIGN TOKENS
+====================================== */
     :root {
       --bou-primary: #b50e12;
       --bou-secondary: #000000;
@@ -47,22 +52,99 @@
       --pl-green: #00ff85;
     }
 
-    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+    :root {
+      --bou-primary: #b50e12;
+      --bou-secondary: #000000;
+      --lee-primary: #1d428a;
+      --lee-secondary: #ffcd00;
+      --bur-primary: #6c1d45;
+      --bur-secondary: #99c5e7;
+      --mci-primary: #6cabdd;
+      --mci-secondary: #1c2c5b;
+
+      /* Match specific lights */
+      --bou-light: rgba(181, 14, 18, 0.15);
+      --lee-light: rgba(29, 66, 138, 0.15);
+      --bur-light: rgba(108, 29, 69, 0.15);
+      --mci-light: rgba(108, 171, 221, 0.15);
+
+      /* UI */
+      --bg: #06080f;
+      --bg2: #0b0e1c;
+      --bg3: #111628;
+      --bg4: #171e32;
+      --bg5: #1d263d;
+      --border: rgba(255, 255, 255, 0.07);
+      --border2: rgba(255, 255, 255, 0.13);
+      --text: #c2cde4;
+      --muted: #4a5a7a;
+      --label: #8093b5;
+      --white: #fff;
+
+      /* Stat colours */
+      --green: #0fd9a2;
+      --amber: #f7c948;
+      --red: #f5522a;
+      --purple: #a78bfa;
+
+      /* PL */
+      --pl-purple: #37003c;
+      --pl-green: #00ff85;
+    }
+
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       font-family: 'Inter', sans-serif;
-      background: var(--bg); color: var(--text);
-      font-size: 14px; line-height: 1.55;
-      -webkit-font-smoothing: antialiased; overflow-x: hidden;
+      background: var(--bg);
+      color: var(--text);
+      font-size: 14px;
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
     }
 
     /* ─── ANIMATIONS ─── */
-    @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-    @keyframes popIn { from { transform: scale(5) rotate(-8deg); opacity: 0; } to { transform: scale(1) rotate(0); opacity: 1; } }
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes popIn {
+      from {
+        transform: scale(5) rotate(-8deg);
+        opacity: 0;
+      }
+
+      to {
+        transform: scale(1) rotate(0);
+        opacity: 1;
+      }
+    }
 
     /* ─── BACKGROUND ─── */
     .bg-layer {
-      position: fixed; inset: 0; z-index: 0; pointer-events: none;
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
       background:
         radial-gradient(ellipse 70% 50% at 15% 10%, rgba(0, 87, 184, .07), transparent 60%),
         radial-gradient(ellipse 60% 45% at 85% 80%, rgba(3, 70, 148, .06), transparent 60%),
@@ -74,203 +156,2125 @@
     .page-hd {
       background: linear-gradient(150deg, #050820 0%, #070022 55%, #050820 100%);
       border-bottom: 2px solid rgba(55, 0, 60, .8);
-      padding: 20px 16px 16px; text-align: center; position: relative; overflow: hidden;
+      padding: 20px 16px 16px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
     }
+
     .page-hd::before {
-      content: ''; position: absolute; inset: 0;
+      content: '';
+      position: absolute;
+      inset: 0;
       background: radial-gradient(ellipse 110% 60% at 50% -10%, rgba(0, 255, 133, .07), transparent 65%);
     }
+
     .pl-badge {
-      display: inline-flex; align-items: center; gap: 7px;
-      font-family: 'Exo 2', sans-serif; font-size: 10px; font-weight: 700;
-      letter-spacing: 2px; text-transform: uppercase;
-      color: var(--pl-green); background: rgba(0, 255, 133, .08);
-      border: 1px solid rgba(0, 255, 133, .25); padding: 4px 14px;
-      border-radius: 20px; margin-bottom: 10px; position: relative;
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      font-family: 'Exo 2', sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--pl-green);
+      background: rgba(0, 255, 133, .08);
+      border: 1px solid rgba(0, 255, 133, .25);
+      padding: 4px 14px;
+      border-radius: 20px;
+      margin-bottom: 10px;
+      position: relative;
     }
+
     .page-hd h1 {
-      font-family: 'Exo 2', sans-serif; font-size: clamp(20px, 5vw, 40px);
-      font-weight: 900; letter-spacing: .5px; color: #fff; line-height: 1.1; position: relative;
+      font-family: 'Exo 2', sans-serif;
+      font-size: clamp(20px, 5vw, 40px);
+      font-weight: 900;
+      letter-spacing: .5px;
+      color: #fff;
+      line-height: 1.1;
+      position: relative;
     }
-    .page-hd h1 span { color: var(--pl-green); }
-    .page-hd .sub { font-size: clamp(10.5px, 3vw, 12px); color: var(--muted); margin-top: 6px; position: relative; }
+
+    .page-hd h1 span {
+      color: var(--pl-green);
+    }
+
+    .page-hd .sub {
+      font-size: clamp(10.5px, 3vw, 12px);
+      color: var(--muted);
+      margin-top: 6px;
+      position: relative;
+    }
 
     /* ─── MAIN CONTAINER ─── */
-    .wrap { position: relative; z-index: 1; max-width: 1260px; margin: 0 auto; padding: 0 12px 64px; }
+    .wrap {
+      position: relative;
+      z-index: 1;
+      max-width: 1260px;
+      margin: 0 auto;
+      padding: 0 12px 64px;
+    }
 
     /* ─── HERO MATCH CARD ─── */
     .hero-card {
-      border-radius: 16px; border: 1px solid var(--border2); overflow: hidden;
-      margin-top: 24px; box-shadow: 0 12px 40px rgba(0, 0, 0, .4);
+      border-radius: 16px;
+      border: 1px solid var(--border2);
+      overflow: hidden;
+      margin-top: 24px;
+      box-shadow: 0 12px 40px rgba(0, 0, 0, .4);
       animation: fadeUp .55s ease both;
     }
-    .bou-lee-bg { background: linear-gradient(135deg, var(--bou-light) 0%, var(--bg2) 45%, var(--lee-light) 100%); }
-    .bur-mci-bg { background: linear-gradient(135deg, var(--bur-light) 0%, var(--bg2) 45%, var(--mci-light) 100%); }
 
-    .hero-inner { padding: 24px 16px 20px; display: flex; flex-direction: column; align-items: center; gap: 14px; }
-    .hero-meta { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; }
-    .hm-chip { font-family: 'Exo 2', sans-serif; font-size: 9px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 3px 10px; border-radius: 4px; border: 1px solid; }
-
-    .teams-row { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 10px; width: 100%; max-width: 580px; }
-    .team-col { display: flex; flex-direction: column; align-items: center; gap: 6px; }
-    .badge-ring {
-      width: 70px; height: 70px; background: rgba(255, 255, 255, .04); border: 1.5px solid var(--border2); border-radius: 50%;
-      display: flex; align-items: center; justify-content: center; overflow: hidden;
-      transition: transform .35s cubic-bezier(.34, 1.56, .64, 1); animation: popIn .55s cubic-bezier(.34, 1.56, .64, 1) both;
+    .bou-lee-bg {
+      background: linear-gradient(135deg, var(--bou-light) 0%, var(--bg2) 45%, var(--lee-light) 100%);
     }
-    .badge-ring:hover { transform: scale(1.12) rotate(5deg); }
-    .badge-ring img { width: 48px; height: 48px; object-fit: contain; }
-    .team-name { font-family: 'Exo 2', sans-serif; font-size: clamp(12px, 3.5vw, 15px); font-weight: 800; text-transform: uppercase; letter-spacing: .5px; text-align: center; color: #fff; line-height: 1.2; }
-    .team-meta { font-size: clamp(8.5px, 2.5vw, 9.5px); color: var(--muted); text-align: center; line-height: 1.4; }
 
-    .vs-col { display: flex; flex-direction: column; align-items: center; gap: 4px; }
-    .vs-txt { font-family: 'Exo 2', sans-serif; font-size: 18px; font-weight: 900; color: rgba(255, 255, 255, .08); letter-spacing: 2px; }
-    .ko-tag { font-family: 'Exo 2', sans-serif; font-size: 9px; font-weight: 700; letter-spacing: 1.5px; color: var(--amber); background: rgba(247, 201, 72, .09); border: 1px solid rgba(247, 201, 72, .28); padding: 2px 6px; border-radius: 4px; white-space: nowrap; }
-    
-    .mot-row { display: flex; align-items: center; gap: 8px; width: 100%; max-width: 580px; background: rgba(255, 255, 255, .03); border: 1px solid var(--border); border-radius: 8px; padding: 8px 12px; }
-    .mot-lbl { font-family: 'Exo 2', sans-serif; font-size: 8px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--muted); display: none; }
-    .mot-track { flex: 1; height: 5px; background: rgba(255, 255, 255, .07); border-radius: 3px; overflow: hidden; }
-    .mot-bar { height: 100%; border-radius: 3px; transition: width 1s ease .4s; width: 0; }
-    .mot-val { font-family: 'Exo 2', sans-serif; font-size: 11px; font-weight: 800; }
+    .bur-mci-bg {
+      background: linear-gradient(135deg, var(--bur-light) 0%, var(--bg2) 45%, var(--mci-light) 100%);
+    }
 
-    .odds-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; width: 100%; max-width: 520px; }
-    .odds-box { background: var(--bg3); border: 1px solid var(--border); border-radius: 8px; padding: 10px 4px; text-align: center; transition: border-color .25s, transform .25s; }
-    .odds-box:hover { transform: translateY(-2px); border-color: var(--border2); }
-    .ob-lbl { font-size: 8px; text-transform: uppercase; letter-spacing: 0.5px; color: var(--muted); white-space: nowrap; }
-    .ob-odds { font-family: 'Exo 2', sans-serif; font-size: 18px; font-weight: 800; color: #fff; margin: 2px 0; line-height: 1; }
-    .ob-impl { font-size: 8.5px; color: var(--label); }
-    .ob-val { border-color: rgba(247, 201, 72, .38) !important; background: linear-gradient(135deg, rgba(247, 201, 72, .07), var(--bg3)) !important; }
+    .hero-inner {
+      padding: 24px 16px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .hero-meta {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .hm-chip {
+      font-family: 'Exo 2', sans-serif;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 3px 10px;
+      border-radius: 4px;
+      border: 1px solid;
+    }
+
+    .teams-row {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      gap: 10px;
+      width: 100%;
+      max-width: 580px;
+    }
+
+    .team-col {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .badge-ring {
+      width: 70px;
+      height: 70px;
+      background: rgba(255, 255, 255, .04);
+      border: 1.5px solid var(--border2);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      transition: transform .35s cubic-bezier(.34, 1.56, .64, 1);
+      animation: popIn .55s cubic-bezier(.34, 1.56, .64, 1) both;
+    }
+
+    .badge-ring:hover {
+      transform: scale(1.12) rotate(5deg);
+    }
+
+    .badge-ring img {
+      width: 48px;
+      height: 48px;
+      object-fit: contain;
+    }
+
+    .team-name {
+      font-family: 'Exo 2', sans-serif;
+      font-size: clamp(12px, 3.5vw, 15px);
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .5px;
+      text-align: center;
+      color: #fff;
+      line-height: 1.2;
+    }
+
+    .team-meta {
+      font-size: clamp(8.5px, 2.5vw, 9.5px);
+      color: var(--muted);
+      text-align: center;
+      line-height: 1.4;
+    }
+
+    .vs-col {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .vs-txt {
+      font-family: 'Exo 2', sans-serif;
+      font-size: 18px;
+      font-weight: 900;
+      color: rgba(255, 255, 255, .08);
+      letter-spacing: 2px;
+    }
+
+    .ko-tag {
+      font-family: 'Exo 2', sans-serif;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      color: var(--amber);
+      background: rgba(247, 201, 72, .09);
+      border: 1px solid rgba(247, 201, 72, .28);
+      padding: 2px 6px;
+      border-radius: 4px;
+      white-space: nowrap;
+    }
+
+    .mot-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      width: 100%;
+      max-width: 580px;
+      background: rgba(255, 255, 255, .03);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 8px 12px;
+    }
+
+    .mot-lbl {
+      font-family: 'Exo 2', sans-serif;
+      font-size: 8px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--muted);
+      display: none;
+    }
+
+    .mot-track {
+      flex: 1;
+      height: 5px;
+      background: rgba(255, 255, 255, .07);
+      border-radius: 3px;
+      overflow: hidden;
+    }
+
+    .mot-bar {
+      height: 100%;
+      border-radius: 3px;
+      transition: width 1s ease .4s;
+      width: 0;
+    }
+
+    .mot-val {
+      font-family: 'Exo 2', sans-serif;
+      font-size: 11px;
+      font-weight: 800;
+    }
+
+    .odds-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 6px;
+      width: 100%;
+      max-width: 520px;
+    }
+
+    .odds-box {
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 10px 4px;
+      text-align: center;
+      transition: border-color .25s, transform .25s;
+    }
+
+    .odds-box:hover {
+      transform: translateY(-2px);
+      border-color: var(--border2);
+    }
+
+    .ob-lbl {
+      font-size: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--muted);
+      white-space: nowrap;
+    }
+
+    .ob-odds {
+      font-family: 'Exo 2', sans-serif;
+      font-size: 18px;
+      font-weight: 800;
+      color: #fff;
+      margin: 2px 0;
+      line-height: 1;
+    }
+
+    .ob-impl {
+      font-size: 8.5px;
+      color: var(--label);
+    }
+
+    .ob-val {
+      border-color: rgba(247, 201, 72, .38) !important;
+      background: linear-gradient(135deg, rgba(247, 201, 72, .07), var(--bg3)) !important;
+    }
 
     /* ─── GRID & CARDS ─── */
-    .grid { display: grid; grid-template-columns: 1fr; gap: 16px; margin-top: 16px; }
-    .card { background: var(--bg2); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0, 0, 0, .25); animation: fadeUp .5s ease both; }
-    .card-hd { padding: 10px 14px; border-bottom: 1px solid var(--border); display: flex; align-items: center; gap: 8px; }
-    .hd-dot { width: 5px; height: 5px; border-radius: 50%; flex-shrink: 0; }
-    .hd-title { font-family: 'Exo 2', sans-serif; font-size: 9px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted); flex: 1; }
-    .card-body { padding: 14px; }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+      margin-top: 16px;
+    }
+
+    .card {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, .25);
+      animation: fadeUp .5s ease both;
+    }
+
+    .card-hd {
+      padding: 10px 14px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .hd-dot {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .hd-title {
+      font-family: 'Exo 2', sans-serif;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--muted);
+      flex: 1;
+    }
+
+    .card-body {
+      padding: 14px;
+    }
 
     /* Responsive Grid Adjustments */
-    @media(min-width: 860px) { 
-      .grid { grid-template-columns: 1fr 1fr; } 
-      .span2 { grid-column: 1 / -1; } 
-      .mot-lbl { display: block; }
-      .odds-row { display: flex; justify-content: center; }
-      .odds-box { padding: 11px 8px; flex: 1; max-width: 145px; }
-      .ob-lbl { font-size: 9px; letter-spacing: 1px; }
-      .ob-odds { font-size: 23px; }
-      .badge-ring { width: 82px; height: 82px; }
-      .badge-ring img { width: 60px; height: 60px; }
-      .vs-txt { font-size: 22px; }
-      .card-body { padding: 18px; }
-      .card-hd { padding: 12px 18px; }
-      .hd-title { font-size: 9.5px; letter-spacing: 2px; }
+    @media(min-width: 860px) {
+      .grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .span2 {
+        grid-column: 1 / -1;
+      }
+
+      .mot-lbl {
+        display: block;
+      }
+
+      .odds-row {
+        display: flex;
+        justify-content: center;
+      }
+
+      .odds-box {
+        padding: 11px 8px;
+        flex: 1;
+        max-width: 145px;
+      }
+
+      .ob-lbl {
+        font-size: 9px;
+        letter-spacing: 1px;
+      }
+
+      .ob-odds {
+        font-size: 23px;
+      }
+
+      .badge-ring {
+        width: 82px;
+        height: 82px;
+      }
+
+      .badge-ring img {
+        width: 60px;
+        height: 60px;
+      }
+
+      .vs-txt {
+        font-size: 22px;
+      }
+
+      .card-body {
+        padding: 18px;
+      }
+
+      .card-hd {
+        padding: 12px 18px;
+      }
+
+      .hd-title {
+        font-size: 9.5px;
+        letter-spacing: 2px;
+      }
     }
 
     /* ─── MODULES ─── */
-    .ctx { background: rgba(255, 255, 255, .025); border: 1px solid var(--border2); border-radius: 8px; padding: 12px; font-size: clamp(11.5px, 3vw, 12.5px); line-height: 1.6; color: var(--label); }
-    .ctx strong { color: var(--amber); font-weight: 700; }
-    
-    .inline-note { background: var(--bg3); border-radius: 6px; padding: 10px 12px; border: 1px solid var(--border); font-size: clamp(11px, 3vw, 12px); color: var(--label); line-height: 1.6; margin-bottom: 12px; border-left: 3px solid var(--amber); }
-    .inline-note strong { color: #fff; display: block; margin-bottom: 2px; }
-
-    .xg-row { display: grid; grid-template-columns: repeat(2, 1fr); gap: 6px; margin-top: 10px; margin-bottom: 15px; background: linear-gradient(135deg, rgba(15, 217, 162, .06), rgba(15, 217, 162, .02)); border: 1px solid rgba(15, 217, 162, .22); border-radius: 7px; padding: 10px; }
-    .xg-item { text-align: center; }
-    .xg-v { font-family: 'Exo 2', sans-serif; font-size: 20px; font-weight: 800; line-height: 1; }
-    .xg-l { font-size: 8px; color: var(--muted); text-transform: uppercase; letter-spacing: .5px; margin-top: 2px; }
-
-    .score-zone { border-radius: 10px; padding: 14px; background: linear-gradient(135deg, rgba(255, 255, 255, .04), rgba(255, 255, 255, .01)); border: 1px solid var(--border2); display: flex; flex-direction: column; gap: 12px; }
-    .sz-head { font-family: 'Exo 2', sans-serif; font-size: 9px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); text-align: center; }
-    .s-boxes { display: grid; grid-template-columns: 1fr; gap: 8px; }
-    @media(min-width: 480px) { .s-boxes { grid-template-columns: repeat(3, 1fr); } }
-    .sbox { background: var(--bg3); border: 1px solid var(--border); border-radius: 9px; padding: 10px 8px; text-align: center; }
-    .sbox.feat { border-color: rgba(247, 201, 72, .4); background: linear-gradient(135deg, rgba(247, 201, 72, .07), var(--bg3)); }
-    .sb-lbl { font-size: 8px; text-transform: uppercase; letter-spacing: 1px; color: var(--muted); }
-    .sb-score { font-family: 'Exo 2', sans-serif; font-size: 24px; font-weight: 900; color: #fff; letter-spacing: 2px; margin: 4px 0; line-height: 1; }
-    @media(min-width: 860px) { .sb-score { font-size: 30px; } }
-    .sb-prob { font-size: 9px; color: var(--muted); }
-    
-    .safe-box { background: linear-gradient(135deg, rgba(15, 217, 162, .07), rgba(15, 217, 162, .02)); border: 1px solid rgba(15, 217, 162, .25); border-radius: 7px; padding: 10px; font-size: clamp(11.5px, 3vw, 12px); color: var(--label); line-height: 1.6; margin-top: 6px; }
-    .safe-box strong { color: var(--green); font-weight: 700; display: block; margin-bottom: 4px; }
-
-    .table-wrap { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
-    .pred-table { width: 100%; border-collapse: collapse; min-width: 300px; }
-    .pred-table th { font-family: 'Exo 2', sans-serif; font-size: 8.5px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--muted); padding: 0 4px 8px; text-align: left; border-bottom: 1px solid var(--border); white-space: nowrap; }
-    .pred-table td { padding: 8px 4px; border-bottom: 1px solid rgba(255, 255, 255, .03); font-size: 11px; color: var(--label); font-weight: 600; white-space: nowrap; }
-    .pred-table td.tv { text-align: center; font-family: 'Exo 2', sans-serif; font-size: 13px; font-weight: 700; }
-    @media(min-width: 860px) {
-      .pred-table th { font-size: 10px; padding: 0 6px 10px; }
-      .pred-table td { padding: 9px 6px; font-size: 12px; }
-      .pred-table td.tv { font-size: 14px; }
+    .ctx {
+      background: rgba(255, 255, 255, .025);
+      border: 1px solid var(--border2);
+      border-radius: 8px;
+      padding: 12px;
+      font-size: clamp(11.5px, 3vw, 12.5px);
+      line-height: 1.6;
+      color: var(--label);
     }
-    .val-low { color: var(--text); opacity: 0.7; }
-    .val-exp { color: var(--amber); font-size: 110% !important; }
-    .val-high { color: var(--text); opacity: 0.7;}
+
+    .ctx strong {
+      color: var(--amber);
+      font-weight: 700;
+    }
+
+    .inline-note {
+      background: var(--bg3);
+      border-radius: 6px;
+      padding: 10px 12px;
+      border: 1px solid var(--border);
+      font-size: clamp(11px, 3vw, 12px);
+      color: var(--label);
+      line-height: 1.6;
+      margin-bottom: 12px;
+      border-left: 3px solid var(--amber);
+    }
+
+    .inline-note strong {
+      color: #fff;
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    .xg-row {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 6px;
+      margin-top: 10px;
+      margin-bottom: 15px;
+      background: linear-gradient(135deg, rgba(15, 217, 162, .06), rgba(15, 217, 162, .02));
+      border: 1px solid rgba(15, 217, 162, .22);
+      border-radius: 7px;
+      padding: 10px;
+    }
+
+    .xg-item {
+      text-align: center;
+    }
+
+    .xg-v {
+      font-family: 'Exo 2', sans-serif;
+      font-size: 20px;
+      font-weight: 800;
+      line-height: 1;
+    }
+
+    .xg-l {
+      font-size: 8px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: .5px;
+      margin-top: 2px;
+    }
+
+    .score-zone {
+      border-radius: 10px;
+      padding: 14px;
+      background: linear-gradient(135deg, rgba(255, 255, 255, .04), rgba(255, 255, 255, .01));
+      border: 1px solid var(--border2);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .sz-head {
+      font-family: 'Exo 2', sans-serif;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    .s-boxes {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 8px;
+    }
+
+    @media(min-width: 480px) {
+      .s-boxes {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .sbox {
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: 9px;
+      padding: 10px 8px;
+      text-align: center;
+    }
+
+    .sbox.feat {
+      border-color: rgba(247, 201, 72, .4);
+      background: linear-gradient(135deg, rgba(247, 201, 72, .07), var(--bg3));
+    }
+
+    .sb-lbl {
+      font-size: 8px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--muted);
+    }
+
+    .sb-score {
+      font-family: 'Exo 2', sans-serif;
+      font-size: 24px;
+      font-weight: 900;
+      color: #fff;
+      letter-spacing: 2px;
+      margin: 4px 0;
+      line-height: 1;
+    }
+
+    @media(min-width: 860px) {
+      .sb-score {
+        font-size: 30px;
+      }
+    }
+
+    .sb-prob {
+      font-size: 9px;
+      color: var(--muted);
+    }
+
+    .safe-box {
+      background: linear-gradient(135deg, rgba(15, 217, 162, .07), rgba(15, 217, 162, .02));
+      border: 1px solid rgba(15, 217, 162, .25);
+      border-radius: 7px;
+      padding: 10px;
+      font-size: clamp(11.5px, 3vw, 12px);
+      color: var(--label);
+      line-height: 1.6;
+      margin-top: 6px;
+    }
+
+    .safe-box strong {
+      color: var(--green);
+      font-weight: 700;
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .table-wrap {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .pred-table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 300px;
+    }
+
+    .pred-table th {
+      font-family: 'Exo 2', sans-serif;
+      font-size: 8.5px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--muted);
+      padding: 0 4px 8px;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+      white-space: nowrap;
+    }
+
+    .pred-table td {
+      padding: 8px 4px;
+      border-bottom: 1px solid rgba(255, 255, 255, .03);
+      font-size: 11px;
+      color: var(--label);
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .pred-table td.tv {
+      text-align: center;
+      font-family: 'Exo 2', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    @media(min-width: 860px) {
+      .pred-table th {
+        font-size: 10px;
+        padding: 0 6px 10px;
+      }
+
+      .pred-table td {
+        padding: 9px 6px;
+        font-size: 12px;
+      }
+
+      .pred-table td.tv {
+        font-size: 14px;
+      }
+    }
+
+    .val-low {
+      color: var(--text);
+      opacity: 0.7;
+    }
+
+    .val-exp {
+      color: var(--amber);
+      font-size: 110% !important;
+    }
+
+    .val-high {
+      color: var(--text);
+      opacity: 0.7;
+    }
 
     /* Sub-grid layouts */
-    .analysis-grid { display: grid; grid-template-columns: 1fr; gap: 16px; margin-top: 16px; }
-    @media(min-width: 768px) { .analysis-grid { grid-template-columns: 1fr 1fr; } }
-    
-    .section-lbl { font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
+    .analysis-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+      margin-top: 16px;
+    }
 
-    .yc-list { display: flex; flex-direction: column; gap: 6px; }
-    .yc-row { display: flex; align-items: flex-start; gap: 8px; background: var(--bg3); border: 1px solid var(--border); border-radius: 8px; padding: 8px 10px; }
-    .yc-name { font-size: 12px; font-weight: 700; color: #fff; }
-    .yc-club { font-family: 'Exo 2', sans-serif; font-size: 8.5px; letter-spacing: .7px; text-transform: uppercase; margin-left: 5px; color: var(--muted); }
-    .yc-reason { font-size: 10.5px; color: var(--muted); margin-top: 2px; line-height: 1.4; }
-    
-    .bet-grid { display: grid; grid-template-columns: 1fr; gap: 8px; }
-    .bet-cell { background: var(--bg3); border: 1px solid var(--border); border-radius: 8px; padding: 10px 12px; }
-    .bet-cell.bval { border-color: rgba(247, 201, 72, .38); background: linear-gradient(135deg, rgba(247, 201, 72, .07), var(--bg3)); }
-    .bc-mkt { font-size: 8.5px; text-transform: uppercase; letter-spacing: 1px; color: var(--muted); margin-bottom: 3px; }
-    .bc-line { font-family: 'Exo 2', sans-serif; font-size: 16px; font-weight: 800; color: #fff; line-height: 1.1; }
-    .bc-rsn { font-size: 10.5px; color: var(--label); margin-top: 4px; line-height: 1.4; }
+    @media(min-width: 768px) {
+      .analysis-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .section-lbl {
+      font-size: 10px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+    }
+
+    .yc-list {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .yc-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 8px 10px;
+    }
+
+    .yc-name {
+      font-size: 12px;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .yc-club {
+      font-family: 'Exo 2', sans-serif;
+      font-size: 8.5px;
+      letter-spacing: .7px;
+      text-transform: uppercase;
+      margin-left: 5px;
+      color: var(--muted);
+    }
+
+    .yc-reason {
+      font-size: 10.5px;
+      color: var(--muted);
+      margin-top: 2px;
+      line-height: 1.4;
+    }
+
+    .bet-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 8px;
+    }
+
+    .bet-cell {
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 10px 12px;
+    }
+
+    .bet-cell.bval {
+      border-color: rgba(247, 201, 72, .38);
+      background: linear-gradient(135deg, rgba(247, 201, 72, .07), var(--bg3));
+    }
+
+    .bc-mkt {
+      font-size: 8.5px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--muted);
+      margin-bottom: 3px;
+    }
+
+    .bc-line {
+      font-family: 'Exo 2', sans-serif;
+      font-size: 16px;
+      font-weight: 800;
+      color: #fff;
+      line-height: 1.1;
+    }
+
+    .bc-rsn {
+      font-size: 10.5px;
+      color: var(--label);
+      margin-top: 4px;
+      line-height: 1.4;
+    }
+
+    /* ======================================
+   PAGE HEADER
+====================================== */
+    .page-header {
+      background: linear-gradient(135deg, #0a0f1e 0%, #12003a 50%, #0a0f1e 100%);
+      border-bottom: 2px solid rgba(55, 0, 60, 0.8);
+      padding: 24px 20px 20px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .page-header::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 120% 60% at 50% -10%, rgba(55, 0, 60, 0.5), transparent 65%);
+    }
+
+    .pl-logo-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      position: relative;
+    }
+
+    .pl-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: #00ff85;
+      background: rgba(0, 255, 133, 0.1);
+      border: 1px solid rgba(0, 255, 133, 0.25);
+      padding: 4px 12px;
+      border-radius: 20px;
+    }
+
+    .page-header h1 {
+      font-size: clamp(20px, 4vw, 32px);
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      color: #fff;
+      line-height: 1.1;
+      margin-top: 10px;
+      position: relative;
+    }
+
+    .page-header h1 span {
+      color: #00ff85;
+    }
+
+    .page-header .subtitle {
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 6px;
+      position: relative;
+    }
+
+    /* Quick nav */
+    .quick-nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 6px;
+      margin-top: 14px;
+      position: relative;
+    }
+
+    .qn-btn {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      padding: 5px 12px;
+      border-radius: 4px;
+      border: 1px solid;
+      text-decoration: none;
+      transition: all 0.2s;
+      white-space: nowrap;
+    }
+
+    /* ======================================
+   MATCH WRAPPER
+====================================== */
+    .match-wrap {
+      width: 100%;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 12px;
+    }
+
+    /* ======================================
+   MATCH CARD
+====================================== */
+    .match-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      overflow: hidden;
+      margin-bottom: 28px;
+      box-shadow: 0 4px 32px rgba(0, 0, 0, 0.4);
+      transition: border-color 0.3s;
+    }
+
+    .match-card:hover {
+      border-color: var(--border-hi);
+    }
+
+    /* Match top bar */
+    .match-bar {
+      height: 4px;
+      width: 100%;
+    }
+
+    /* Match header */
+    .match-header {
+      padding: 20px 20px 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      position: relative;
+    }
+
+    .match-meta {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .meta-chip {
+      font-size: 9.5px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 3px 9px;
+      border-radius: 3px;
+      border: 1px solid;
+    }
+
+    .teams-hero {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      gap: 16px;
+      width: 100%;
+      max-width: 560px;
+    }
+
+    .team-side {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .team-side.right {
+      align-items: center;
+    }
+
+    .badge-container {
+      width: 64px;
+      height: 64px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--border-hi);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+      flex-shrink: 0;
+    }
+
+    .badge-container:hover {
+      transform: scale(1.08);
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.15);
+    }
+
+    .badge-container img {
+      width: 44px;
+      height: 44px;
+      object-fit: contain;
+    }
+
+    .team-name {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      text-align: center;
+      color: #fff;
+    }
+
+    .team-pos {
+      font-size: 9.5px;
+      color: var(--muted);
+      text-align: center;
+      line-height: 1.4;
+    }
+
+    .vs-block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .vs-text {
+      font-size: 22px;
+      font-weight: 800;
+      color: rgba(255, 255, 255, 0.1);
+      letter-spacing: 2px;
+    }
+
+    .ko-time {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: var(--med-c);
+      background: rgba(245, 200, 66, 0.1);
+      border: 1px solid rgba(245, 200, 66, 0.25);
+      padding: 2px 8px;
+      border-radius: 3px;
+    }
+
+    .venue-info {
+      font-size: 9px;
+      color: var(--muted);
+      text-align: center;
+      line-height: 1.5;
+    }
+
+    /* ======================================
+   CONTENT GRID
+====================================== */
+    .content-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+
+    @media(min-width:900px) {
+      .content-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .full-width {
+        grid-column: 1/-1;
+      }
+    }
+
+    /* ======================================
+   SECTION BLOCKS
+====================================== */
+    .section-block {
+      padding: 16px 20px;
+      border-top: 1px solid var(--border);
+    }
+
+    .section-block:nth-child(odd) {
+      background: rgba(255, 255, 255, 0.015);
+    }
+
+    .section-title {
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .section-title::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    /* ======================================
+   CONTEXT CALLOUT
+====================================== */
+    .context-box {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--border-hi);
+      border-radius: 8px;
+      padding: 12px 14px;
+      font-size: 12.5px;
+      line-height: 1.7;
+      color: var(--label);
+    }
+
+    .context-box strong {
+      color: var(--med-c);
+      font-weight: 700;
+    }
+
+    .context-box .alert {
+      display: inline-block;
+      padding: 1px 7px;
+      background: rgba(245, 82, 42, 0.15);
+      border: 1px solid rgba(245, 82, 42, 0.3);
+      border-radius: 3px;
+      color: #ff8060;
+      font-size: 10.5px;
+      font-weight: 700;
+    }
+
+    /* ======================================
+   FORM TABLE (last 5)
+====================================== */
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .form-col {}
+
+    .form-team-label {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .tl-badge {
+      width: 16px;
+      height: 16px;
+      object-fit: contain;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .form-list {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 22px 46px 1fr 60px;
+      align-items: center;
+      gap: 6px;
+      background: var(--raised);
+      border-radius: 5px;
+      padding: 5px 8px;
+      transition: background 0.2s;
+    }
+
+    .form-row:hover {
+      background: rgba(255, 255, 255, 0.06);
+    }
+
+    .result-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .result-dot.W {
+      background: var(--lo-c);
+      box-shadow: 0 0 4px rgba(16, 217, 160, 0.5);
+    }
+
+    .result-dot.D {
+      background: var(--med-c);
+    }
+
+    .result-dot.L {
+      background: var(--hi-c);
+    }
+
+    .form-score {
+      font-family: 'DM Mono', monospace;
+      font-size: 13px;
+      font-weight: 500;
+      color: #fff;
+      text-align: center;
+    }
+
+    .form-opp {
+      font-size: 11px;
+      color: var(--text);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .form-comp {
+      font-size: 9px;
+      color: var(--muted);
+      text-align: right;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+    }
+
+    .form-legend {
+      display: flex;
+      gap: 10px;
+      margin-top: 8px;
+    }
+
+    .fl-item {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 10px;
+      color: var(--muted);
+    }
+
+    .fl-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+    }
+
+    /* ======================================
+   H2H SECTION
+====================================== */
+    .h2h-summary {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 4px;
+      margin-bottom: 10px;
+    }
+
+    .h2h-stat {
+      background: var(--raised);
+      border-radius: 6px;
+      padding: 10px 8px;
+      text-align: center;
+    }
+
+    .h2h-stat .num {
+      font-family: 'DM Mono', monospace;
+      font-size: 22px;
+      font-weight: 500;
+      line-height: 1;
+    }
+
+    .h2h-stat .lbl {
+      font-size: 9px;
+      color: var(--muted);
+      margin-top: 2px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .h2h-list {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .h2h-row {
+      display: grid;
+      grid-template-columns: 1fr 60px 1fr;
+      align-items: center;
+      gap: 4px;
+      background: var(--raised);
+      border-radius: 5px;
+      padding: 5px 8px;
+    }
+
+    .h2h-team {
+      font-size: 11px;
+      font-weight: 600;
+    }
+
+    .h2h-team.home {
+      text-align: right;
+      color: var(--text);
+    }
+
+    .h2h-team.away {
+      text-align: left;
+      color: var(--text);
+    }
+
+    .h2h-score {
+      font-family: 'DM Mono', monospace;
+      font-size: 13px;
+      font-weight: 500;
+      color: #fff;
+      text-align: center;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 3px;
+      padding: 2px 0;
+    }
+
+    .h2h-ctx {
+      font-size: 9px;
+      color: var(--muted);
+      text-align: center;
+      grid-column: 1/-1;
+      margin-top: -2px;
+    }
+
+    /* ======================================
+   SEASON AVERAGES
+====================================== */
+    .avgs-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .avg-team {}
+
+    .avg-team-label {
+      font-size: 9.5px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+      padding: 3px 8px;
+      border-radius: 3px;
+      display: inline-block;
+    }
+
+    .avg-stats {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 4px;
+    }
+
+    .avg-cell {
+      background: var(--raised);
+      border-radius: 6px;
+      padding: 8px 6px;
+      text-align: center;
+      transition: background 0.2s;
+    }
+
+    .avg-cell:hover {
+      background: rgba(255, 255, 255, 0.07);
+    }
+
+    .avg-cell .val {
+      font-family: 'DM Mono', monospace;
+      font-size: 18px;
+      font-weight: 500;
+      color: #fff;
+      line-height: 1;
+    }
+
+    .avg-cell .lbl {
+      font-size: 8px;
+      color: var(--muted);
+      margin-top: 2px;
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+    }
+
+    /* ======================================
+   PREDICTIONS TABLE
+====================================== */
+    .pred-intro {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 12px;
+    }
+
+    .pred-key {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 10px;
+      color: var(--muted);
+    }
+
+    .pred-key-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+    }
+
+    .pred-table-wrap {
+      overflow-x: auto;
+    }
+
+    .pred-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12.5px;
+      min-width: 520px;
+    }
+
+    .pred-table th {
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--muted);
+      padding: 0 8px 8px;
+      text-align: left;
+    }
+
+    .pred-table th.center {
+      text-align: center;
+    }
+
+    .pred-table td {
+      padding: 7px 8px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    }
+
+    .pred-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .pred-table tr:hover td {
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    .pred-table td.stat-name {
+      color: var(--label);
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .pred-table td.team-stat {
+      text-align: center;
+    }
+
+    /* Range bar cell */
+    .range-bar-cell {
+      min-width: 180px;
+      padding: 7px 8px;
+    }
+
+    .range-bar-container {
+      position: relative;
+      height: 18px;
+      display: flex;
+      align-items: center;
+    }
+
+    .range-track {
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: rgba(255, 255, 255, 0.07);
+      border-radius: 2px;
+    }
+
+    .range-fill {
+      position: absolute;
+      height: 4px;
+      border-radius: 2px;
+      background: linear-gradient(90deg, var(--lo-c), var(--hi-c));
+      transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .range-values {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+    }
+
+    .rv-lo {
+      color: var(--lo-c);
+      font-weight: 500;
+    }
+
+    .rv-med {
+      color: var(--med-c);
+      font-weight: 700;
+      font-size: 13px;
+    }
+
+    .rv-hi {
+      color: var(--hi-c);
+      font-weight: 500;
+    }
+
+    /* Team split cells */
+    .team-split {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2px;
+    }
+
+    .ts-val {
+      font-family: 'DM Mono', monospace;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 1;
+    }
+
+    .ts-lbl {
+      font-size: 8.5px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+    }
+
+    /* ======================================
+   SCORE PREDICTION
+====================================== */
+    .score-pred {
+      border-radius: 10px;
+      padding: 16px;
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.01));
+      border: 1px solid var(--border-hi);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .score-pred-header {
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    .score-boxes {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+    }
+
+    .score-box {
+      flex: 1;
+      max-width: 170px;
+      background: var(--raised);
+      border-radius: 8px;
+      padding: 12px 8px;
+      text-align: center;
+      border: 1px solid var(--border);
+      transition: border-color 0.2s;
+    }
+
+    .score-box:hover {
+      border-color: var(--border-hi);
+    }
+
+    .score-box.featured {
+      border-color: rgba(245, 200, 66, 0.4);
+      background: linear-gradient(135deg, rgba(245, 200, 66, 0.06), var(--raised));
+    }
+
+    .sb-label {
+      font-size: 9px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--muted);
+    }
+
+    .sb-score {
+      font-family: 'DM Mono', monospace;
+      font-size: 30px;
+      font-weight: 500;
+      color: #fff;
+      letter-spacing: 2px;
+      margin: 4px 0;
+    }
+
+    .sb-score.featured-score {
+      color: var(--med-c);
+    }
+
+    .sb-prob {
+      font-size: 9.5px;
+      color: var(--muted);
+    }
+
+    .score-notes {
+      font-size: 12px;
+      color: var(--label);
+      line-height: 1.65;
+      border-top: 1px solid var(--border);
+      padding-top: 10px;
+    }
+
+    .score-notes strong {
+      color: var(--med-c);
+    }
+
+    /* ======================================
+   YELLOW CARDS
+====================================== */
+    .yc-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .yc-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      background: var(--raised);
+      border-radius: 7px;
+      padding: 9px 11px;
+      border: 1px solid var(--border);
+      transition: border-color 0.2s, transform 0.2s;
+    }
+
+    .yc-row:hover {
+      border-color: rgba(255, 224, 51, 0.2);
+      transform: translateX(2px);
+    }
+
+    .yc-icon {
+      font-size: 15px;
+      flex-shrink: 0;
+      padding-top: 1px;
+    }
+
+    .yc-info {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .yc-name {
+      font-size: 12.5px;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .yc-club {
+      font-size: 9px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      margin-left: 5px;
+    }
+
+    .yc-reason {
+      font-size: 11px;
+      color: var(--muted);
+      margin-top: 3px;
+      line-height: 1.45;
+    }
+
+    .yc-risk {
+      font-size: 8.5px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 2px 8px;
+      border-radius: 3px;
+      align-self: center;
+      flex-shrink: 0;
+      border: 1px solid;
+    }
+
+    .risk-high {
+      color: var(--risk-h);
+      border-color: rgba(245, 82, 42, 0.35);
+      background: rgba(245, 82, 42, 0.1);
+    }
+
+    .risk-med {
+      color: var(--risk-m);
+      border-color: rgba(245, 200, 66, 0.35);
+      background: rgba(245, 200, 66, 0.08);
+    }
+
+    /* ======================================
+   SCROLLBAR HIDE
+====================================== */
+    .pred-table-wrap::-webkit-scrollbar {
+      height: 4px;
+    }
+
+    .pred-table-wrap::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    .pred-table-wrap::-webkit-scrollbar-thumb {
+      background: var(--border-hi);
+      border-radius: 2px;
+    }
+
+    /* ======================================
+   ANIMATIONS
+====================================== */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(16px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .match-card {
+      animation: fadeInUp 0.5s ease both;
+    }
+
+    .match-card:nth-child(1) {
+      animation-delay: 0.05s;
+    }
+
+    .match-card:nth-child(2) {
+      animation-delay: 0.10s;
+    }
+
+    .match-card:nth-child(3) {
+      animation-delay: 0.15s;
+    }
+
+    .match-card:nth-child(4) {
+      animation-delay: 0.20s;
+    }
+
+    .match-card:nth-child(5) {
+      animation-delay: 0.25s;
+    }
+
+    /* ======================================
+   FOOTER
+====================================== */
+    footer {
+      text-align: center;
+      padding: 20px 16px;
+      font-size: 10px;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+    }
+
+    /* ======================================
+   RESPONSIVE
+====================================== */
+    @media(min-width:768px) {
+      .badge-container {
+        width: 76px;
+        height: 76px;
+      }
+
+      .badge-container img {
+        width: 54px;
+        height: 54px;
+      }
+
+      .section-block {
+        padding: 18px 24px;
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* ---- Mobile: ≤ 600px ---- */
+    @media(max-width:600px) {
+      body {
+        font-size: 13px;
+      }
+
+      /* Page header */
+      .page-header {
+        padding: 18px 12px 16px;
+      }
+
+      .page-header h1 {
+        font-size: 18px;
+      }
+
+      .page-header .subtitle {
+        font-size: 10.5px;
+      }
+
+      .pl-badge {
+        font-size: 8.5px;
+        letter-spacing: 1.5px;
+        padding: 3px 8px;
+      }
+
+      .quick-nav {
+        gap: 4px;
+        margin-top: 10px;
+      }
+
+      .qn-btn {
+        font-size: 8.5px;
+        padding: 4px 8px;
+      }
+
+      /* Match wrap */
+      .match-wrap {
+        padding: 8px;
+      }
+
+      .match-card {
+        margin-bottom: 20px;
+        border-radius: 10px;
+      }
+
+      /* Match header — teams hero */
+      .match-header {
+        padding: 14px 12px 12px;
+        gap: 10px;
+      }
+
+      .teams-hero {
+        gap: 8px;
+        max-width: 100%;
+      }
+
+      .badge-container {
+        width: 50px;
+        height: 50px;
+      }
+
+      .badge-container img {
+        width: 34px;
+        height: 34px;
+      }
+
+      .team-name {
+        font-size: 10.5px;
+      }
+
+      .team-pos {
+        font-size: 8.5px;
+      }
+
+      .vs-text {
+        font-size: 16px;
+      }
+
+      .ko-time {
+        font-size: 9px;
+        padding: 2px 6px;
+      }
+
+      .venue-info {
+        font-size: 8px;
+      }
+
+      .meta-chip {
+        font-size: 8px;
+        padding: 2px 6px;
+        letter-spacing: 0.8px;
+      }
+
+      /* Section blocks */
+      .section-block {
+        padding: 12px;
+      }
+
+      /* Context box */
+      .context-box {
+        font-size: 11.5px;
+        padding: 10px 12px;
+        line-height: 1.6;
+      }
+
+      /* Form grid → stack */
+      .form-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+      }
+
+      .form-row {
+        grid-template-columns: 18px 42px 1fr 48px;
+        gap: 4px;
+        padding: 4px 6px;
+      }
+
+      .form-score {
+        font-size: 12px;
+      }
+
+      .form-opp {
+        font-size: 10px;
+      }
+
+      .form-comp {
+        font-size: 8px;
+      }
+
+      /* H2H */
+      .h2h-row {
+        grid-template-columns: 1fr 50px 1fr;
+        gap: 3px;
+        padding: 5px 6px;
+      }
+
+      .h2h-team {
+        font-size: 10px;
+      }
+
+      .h2h-score {
+        font-size: 12px;
+      }
+
+      .h2h-stat .num {
+        font-size: 18px;
+      }
+
+      .h2h-stat .lbl {
+        font-size: 8px;
+      }
+
+      .h2h-stat {
+        padding: 8px 4px;
+      }
+
+      /* Averages → stack */
+      .avgs-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+      }
+
+      .avg-cell .val {
+        font-size: 15px;
+      }
+
+      .avg-cell .lbl {
+        font-size: 7.5px;
+      }
+
+      .avg-cell {
+        padding: 6px 4px;
+      }
+
+      /* ---- Predictions table → mobile card layout ---- */
+      .pred-table {
+        min-width: 0;
+        font-size: 11.5px;
+      }
+
+      .pred-table thead {
+        display: none;
+      }
+
+      .pred-table tbody tr {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4px 8px;
+        background: var(--raised);
+        border-radius: 8px;
+        padding: 10px 10px 8px;
+        margin-bottom: 6px;
+        border: 1px solid var(--border);
+      }
+
+      .pred-table td {
+        padding: 2px 0;
+        border-bottom: none;
+      }
+
+      .pred-table td.stat-name {
+        grid-column: 1 / -1;
+        font-size: 10px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: var(--muted);
+        font-weight: 700;
+        padding-bottom: 2px;
+        border-bottom: 1px solid var(--border);
+        margin-bottom: 2px;
+      }
+
+      .pred-table td.team-stat {
+        text-align: left;
+      }
+
+      .pred-table td.team-stat .team-split {
+        flex-direction: row;
+        align-items: center;
+        gap: 6px;
+      }
+
+      .pred-table td.team-stat .ts-val {
+        font-size: 14px;
+      }
+
+      .pred-table td.team-stat .ts-lbl {
+        font-size: 8px;
+      }
+
+      .pred-table td.range-bar-cell {
+        grid-column: 1 / -1;
+        min-width: 0;
+        padding: 4px 0 0;
+      }
+
+      .range-bar-cell {
+        min-width: 0;
+      }
+
+      .range-values {
+        font-size: 10px;
+      }
+
+      .rv-med {
+        font-size: 12px;
+      }
+
+      /* Score prediction */
+      .score-boxes {
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .score-box {
+        max-width: 100%;
+      }
+
+      .sb-score {
+        font-size: 24px;
+      }
+
+      .sb-label {
+        font-size: 8px;
+      }
+
+      .sb-prob {
+        font-size: 9px;
+      }
+
+      .score-pred {
+        padding: 12px;
+        border-radius: 8px;
+      }
+
+      .score-notes {
+        font-size: 11px;
+        line-height: 1.55;
+      }
+
+      /* Yellow cards */
+      .yc-row {
+        padding: 8px 9px;
+        gap: 8px;
+      }
+
+      .yc-name {
+        font-size: 11.5px;
+      }
+
+      .yc-reason {
+        font-size: 10px;
+      }
+
+      .yc-risk {
+        font-size: 7.5px;
+        padding: 2px 6px;
+      }
+
+      .yc-icon {
+        font-size: 13px;
+      }
+
+      .yc-club {
+        font-size: 8px;
+      }
+
+      /* Pred intro key */
+      .pred-intro {
+        gap: 8px;
+        margin-bottom: 8px;
+      }
+
+      .pred-key {
+        font-size: 9px;
+      }
+    }
+
+    /* ---- Extra small: ≤ 380px ---- */
+    @media(max-width:380px) {
+      .page-header h1 {
+        font-size: 15px;
+      }
+
+      .pl-badge {
+        font-size: 7.5px;
+        padding: 2px 6px;
+      }
+
+      .qn-btn {
+        font-size: 7.5px;
+        padding: 3px 6px;
+      }
+
+      .badge-container {
+        width: 42px;
+        height: 42px;
+      }
+
+      .badge-container img {
+        width: 28px;
+        height: 28px;
+      }
+
+      .team-name {
+        font-size: 9.5px;
+      }
+
+      .teams-hero {
+        gap: 4px;
+      }
+
+      .score-box {
+        padding: 10px 6px;
+      }
+
+      .sb-score {
+        font-size: 20px;
+      }
+
+      .form-row {
+        grid-template-columns: 16px 38px 1fr 40px;
+        gap: 3px;
+        padding: 3px 5px;
+      }
+
+      .form-score {
+        font-size: 11px;
+      }
+
+      .form-opp {
+        font-size: 9px;
+      }
+
+      .avg-stats {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3px;
+      }
+    }
   </style>
 </head>
 
 <body>
+
   <div class="bg-layer"></div>
-  
+
   <header class="page-hd">
     <div class="pl-badge">
       <svg width="10" height="10" viewBox="0 0 1 1" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path
-    d="M0.773542 0.613333L1 0.5L0.773542 0.386667L0.853542 0.146458L0.613333 0.226458L0.5 0L0.386667 0.226458L0.146458 0.146458L0.226458 0.386667L0 0.5L0.226458 0.613333L0.146458 0.853542L0.386667 0.773542L0.5 1L0.613333 0.773542L0.853542 0.853542L0.773542 0.613333Z"
-    fill="#00ff85"
-  />
-</svg>
+        <path
+          d="M0.773542 0.613333L1 0.5L0.773542 0.386667L0.853542 0.146458L0.613333 0.226458L0.5 0L0.386667 0.226458L0.146458 0.146458L0.226458 0.386667L0 0.5L0.226458 0.613333L0.146458 0.853542L0.386667 0.773542L0.5 1L0.613333 0.773542L0.853542 0.853542L0.773542 0.613333Z"
+          fill="#00ff85" />
+      </svg>
       Team Bilbo Analytics
       <svg width="10" height="10" viewBox="0 0 1 1" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path
-    d="M0.773542 0.613333L1 0.5L0.773542 0.386667L0.853542 0.146458L0.613333 0.226458L0.5 0L0.386667 0.226458L0.146458 0.146458L0.226458 0.386667L0 0.5L0.226458 0.613333L0.146458 0.853542L0.386667 0.773542L0.5 1L0.613333 0.773542L0.853542 0.853542L0.773542 0.613333Z"
-    fill="#00ff85"
-  />
+        <path
+          d="M0.773542 0.613333L1 0.5L0.773542 0.386667L0.853542 0.146458L0.613333 0.226458L0.5 0L0.386667 0.226458L0.146458 0.146458L0.226458 0.386667L0 0.5L0.226458 0.613333L0.146458 0.853542L0.386667 0.773542L0.5 1L0.613333 0.773542L0.853542 0.853542L0.773542 0.613333Z"
+          fill="#00ff85" />
     </div>
     <h1>Data-Driven <span>Matchday</span> Analytics</h1>
     <p class="sub">Prop Variance Modeling & Referee Impact · 22 April 2026</p>
   </header>
 
   <div class="wrap">
-    
+
     <div class="hero-card bou-lee-bg">
       <div class="hero-inner">
         <div class="hero-meta">
-          <span class="hm-chip" style="color: var(--pl-green); border-color: rgba(0,255,133,.3);">Matchday 34</span>
+          <span class="hm-chip" style="color: var(--pl-green); border-color: rgba(120, 78, 124, 0.3);">Matchday
+            34</span>
         </div>
-        
+
         <div class="teams-row">
           <div class="team-col">
-            <div class="badge-ring"><img src="https://images.gc.afcbournemouthservices.co.uk/fit-in/170x170/e430db60-34ca-11ef-a088-db17c0a14148.png"
+            <div class="badge-ring"><img
+                src="https://images.gc.afcbournemouthservices.co.uk/fit-in/170x170/e430db60-34ca-11ef-a088-db17c0a14148.png"
                 alt="BOU" style="background: transparent;"></div>
             <div class="team-name">Bournemouth</div>
             <div class="team-meta">9th Place (48 pts)<br>Home</div>
           </div>
           <div class="vs-col">
-            <span class="ko-tag">22:00</span>
+            <span class="ko-tag">20:00</span>
             <span class="vs-txt">V</span>
-            <span class="team-meta" style="font-size: 8px;">Vitality Stadium</span>
           </div>
           <div class="team-col">
-            <div class="badge-ring"><img src="https://contentfulproxy.stadion.io/phva2knh4vy5/59uDDesQq19p5lVzfe45BY/a89feaa950427ef005c9d028e925bef0/Full_colour_crest.png?fm=webp&fit=pad&f=center&w=144&h=144&q=100"
+            <div class="badge-ring"><img
+                src="https://contentfulproxy.stadion.io/phva2knh4vy5/59uDDesQq19p5lVzfe45BY/a89feaa950427ef005c9d028e925bef0/Full_colour_crest.png?fm=webp&fit=pad&f=center&w=144&h=144&q=100"
                 alt="LEE" style="background: transparent;"></div>
             <div class="team-name">Leeds United</div>
             <div class="team-meta">15th Place (39 pts)<br>Away</div>
@@ -279,28 +2283,14 @@
 
         <div class="mot-row">
           <span class="mot-lbl">Motivation Index</span>
-          <div class="mot-track"><div class="mot-bar" style="background: var(--bou-primary);" data-p="85" id="mot-bou1"></div></div>
+          <div class="mot-track">
+            <div class="mot-bar" style="background: var(--bou-primary);" data-p="85" id="mot-bou1"></div>
+          </div>
           <span class="mot-val" style="color: #fff;">85%</span>
-          <span style="color:var(--muted); font-size:10px; margin: 0 4px;">|</span>
+          <span style="color:var(--muted); font-size:10px; margin: 0 5px;">|</span>
           <span class="mot-val" style="color: #fff;">65%</span>
-          <div class="mot-track"><div class="mot-bar" style="background: var(--lee-primary); float: right;" data-p="65" id="mot-lee1"></div></div>
-        </div>
-
-        <div class="odds-row">
-          <div class="odds-box ob-val">
-            <div class="ob-lbl">BOU Win</div>
-            <div class="ob-odds">19/20</div>
-            <div class="ob-impl">Implied: 51.3%</div>
-          </div>
-          <div class="odds-box">
-            <div class="ob-lbl">Draw</div>
-            <div class="ob-odds">13/5</div>
-            <div class="ob-impl">Implied: 27.8%</div>
-          </div>
-          <div class="odds-box">
-            <div class="ob-lbl">LEE Win</div>
-            <div class="ob-odds">11/4</div>
-            <div class="ob-impl">Implied: 26.7%</div>
+          <div class="mot-track">
+            <div class="mot-bar" style="background: var(--lee-primary); float: right;" data-p="65" id="mot-lee1"></div>
           </div>
         </div>
       </div>
@@ -314,17 +2304,23 @@
         </div>
         <div class="card-body">
           <div class="ctx" style="margin-bottom: 12px;">
-            Bournemouth sit comfortably in 9th, holding a <strong>13-game unbeaten home run</strong>. They generate a high volume of set-pieces at the Vitality. Leeds United (39 pts) are safe from the drop and lean heavily on direct play and wing-back crossing, making them dangerous but structurally open on the counter.
+            Bournemouth sit comfortably in 9th, holding a <strong>13-game unbeaten home run</strong>. They generate a
+            high volume of set-pieces at the Vitality. Leeds United (39 pts) are safe from the drop and lean heavily on
+            direct play and wing-back crossing, making them dangerous but structurally open on the counter.
           </div>
-          <div class="section-lbl">Injuries / Suspensions</div>
-          <ul style="font-size: clamp(11px, 3vw, 12px); color: var(--label); padding-left: 15px; line-height: 1.6; margin-bottom: 15px;">
+          <div
+            style="font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px;">
+            Injuries / Suspensions</div>
+          <ul style="font-size: 12px; color: var(--label); padding-left: 15px; line-height: 1.6; margin-bottom: 15px;">
             <li><strong style="color:#fff;">BOU:</strong> Justin Kluivert (Out - Hamstring), Lewis Cook (Doubtful).</li>
-            <li><strong style="color:#fff;">LEE:</strong> No major suspensions; potential rotation for Karl Darlow in goal.</li>
+            <li><strong style="color:#fff;">LEE:</strong> No major suspensions; potential rotation for Karl Darlow in
+              goal.</li>
           </ul>
 
           <div class="inline-note">
-            <strong>Referee Profile: Anthony Taylor</strong>
-            Averages 21.5 fouls and 4.2 yellows per match this season. Known to let physical play go but strict on tactical fouls, increasing the likelihood of cards for transition-stopping tackles on the counter.
+            <strong>Referee Profile: Anthony Taylor</strong><br>
+            Averages 21.5 fouls and 4.2 yellows per match this season. Known to let physical play go but strict on
+            tactical fouls, increasing the likelihood of cards for transition-stopping tackles on the counter.
           </div>
         </div>
       </div>
@@ -345,28 +2341,63 @@
               <div class="xg-l">LEE xG / 90</div>
             </div>
           </div>
-          <div class="table-wrap">
-            <table class="pred-table">
-              <thead>
-                <tr>
-                  <th>Match Metric</th>
-                  <th style="text-align:center;">Low Var.</th>
-                  <th style="text-align:center; color: var(--amber);">Expected</th>
-                  <th style="text-align:center;">High Var.</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr><td>Tackles Attempted</td><td class="tv val-low">25</td><td class="tv val-exp">34</td><td class="tv val-high">42</td></tr>
-                <tr><td>Corners</td><td class="tv val-low">8</td><td class="tv val-exp">10.5</td><td class="tv val-high">14</td></tr>
-                <tr><td>Total Shots</td><td class="tv val-low">20</td><td class="tv val-exp">26</td><td class="tv val-high">32</td></tr>
-                <tr><td>Shots on Target</td><td class="tv val-low">6</td><td class="tv val-exp">9</td><td class="tv val-high">13</td></tr>
-                <tr><td>Fouls Committed</td><td class="tv val-low">18</td><td class="tv val-exp">23</td><td class="tv val-high">28</td></tr>
-                <tr><td>Throw-ins</td><td class="tv val-low">30</td><td class="tv val-exp">38</td><td class="tv val-high">45</td></tr>
-                <tr><td>Goal Kicks</td><td class="tv val-low">11</td><td class="tv val-exp">15</td><td class="tv val-high">19</td></tr>
-              </tbody>
-            </table>
+          <table class="pred-table">
+            <thead>
+              <tr>
+                <th>Match Metric</th>
+                <th style="text-align:center;">Low Var.</th>
+                <th style="text-align:center; color: var(--amber);">Expected</th>
+                <th style="text-align:center;">High Var.</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Tackles Attempted</td>
+                <td class="tv val-low">25</td>
+                <td class="tv val-exp">34</td>
+                <td class="tv val-high">42</td>
+              </tr>
+              <tr>
+                <td>Corners</td>
+                <td class="tv val-low">8</td>
+                <td class="tv val-exp">10.5</td>
+                <td class="tv val-high">14</td>
+              </tr>
+              <tr>
+                <td>Total Shots</td>
+                <td class="tv val-low">20</td>
+                <td class="tv val-exp">26</td>
+                <td class="tv val-high">32</td>
+              </tr>
+              <tr>
+                <td>Shots on Target</td>
+                <td class="tv val-low">6</td>
+                <td class="tv val-exp">9</td>
+                <td class="tv val-high">13</td>
+              </tr>
+              <tr>
+                <td>Fouls Committed</td>
+                <td class="tv val-low">18</td>
+                <td class="tv val-exp">23</td>
+                <td class="tv val-high">28</td>
+              </tr>
+              <tr>
+                <td>Throw-ins</td>
+                <td class="tv val-low">30</td>
+                <td class="tv val-exp">38</td>
+                <td class="tv val-high">45</td>
+              </tr>
+              <tr>
+                <td>Goal Kicks</td>
+                <td class="tv val-low">11</td>
+                <td class="tv val-exp">15</td>
+                <td class="tv val-high">19</td>
+              </tr>
+            </tbody>
+          </table>
+          <div style="font-size: 10px; color: var(--muted); text-align: right; margin-top: 8px;">*Data mapped via
+            <a href="https://github.com/polehead">💀</a>
           </div>
-          <div style="font-size: 9px; color: var(--muted); text-align: right; margin-top: 8px;">*Data mapped via <a href="https://github.com/polehead">💀</a></div>
         </div>
       </div>
 
@@ -396,43 +2427,51 @@
               </div>
             </div>
             <div class="safe-box">
-              <strong>Safe Prediction: BOU 2 - 1 LEE</strong>
-              Bournemouth's home dominance combined with Leeds' leaky away defense heavily favors a home win. Expect Leeds to force a high volume of <strong>goal kicks (Expected 15)</strong> from Bournemouth due to inaccurate direct crossing.
+              <strong>Safe Prediction: BOU 2 - 1 LEE</strong><br>
+              Bournemouth's home dominance combined with Leeds' leaky away defense heavily favors a home win. Expect
+              Leeds to force a high volume of <strong>goal kicks (Expected 15)</strong> from Bournemouth due to
+              inaccurate direct crossing.
             </div>
           </div>
 
-          <div class="analysis-grid">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 16px;">
             <div>
-              <div class="section-lbl">Card Market Targets (Ref Impacted)</div>
+              <div
+                style="font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px;">
+                Card Market Targets (Ref Impacted)</div>
               <div class="yc-list">
                 <div class="yc-row">
                   <div class="yc-info">
                     <div class="yc-name">Marcos Senesi <span class="yc-club">BOU</span></div>
-                    <div class="yc-reason">High volume of tactical fouls. Taylor heavily penalizes disruption of counters.</div>
+                    <div class="yc-reason">High volume of tactical fouls. Taylor heavily penalizes disruption of
+                      counters.</div>
                   </div>
                 </div>
                 <div class="yc-row">
                   <div class="yc-info">
                     <div class="yc-name">Ethan Ampadu <span class="yc-club">LEE</span></div>
-                    <div class="yc-reason">Tasked with breaking up transition in central areas. High tackle volume expected.</div>
+                    <div class="yc-reason">Tasked with breaking up transition in central areas. High tackle volume
+                      expected.</div>
                   </div>
                 </div>
               </div>
             </div>
             <div>
-               <div class="section-lbl">Betting Patterns & Value</div>
-               <div class="bet-grid">
-                 <div class="bet-cell bval">
-                   <div class="bc-mkt">Bet365 Popular Accumulator</div>
-                   <div class="bc-line" style="color: var(--amber);">BOU Win + Over 2.5 Goals</div>
-                   <div class="bc-rsn">Priced at 2.45 (29/20) - Backed heavily by form data.</div>
-                 </div>
-                 <div class="bet-cell">
-                   <div class="bc-mkt">Prop Builder Value</div>
-                   <div class="bc-line">Over 14.5 Goal Kicks</div>
-                   <div class="bc-rsn">Priced at 5/6. Leeds' direct play skews goal kicks heavily.</div>
-                 </div>
-               </div>
+              <div
+                style="font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px;">
+                Betting Patterns & Value</div>
+              <div class="bet-grid" style="grid-template-columns: 1fr;">
+                <div class="bet-cell bval">
+                  <div class="bc-mkt">Bet365 Popular Accumulator</div>
+                  <div class="bc-line" style="color: var(--amber);">BOU Win + Over 2.5 Goals</div>
+                  <div class="bc-rsn">Priced at 2.45 (29/20) - Backed heavily by form data.</div>
+                </div>
+                <div class="bet-cell">
+                  <div class="bc-mkt">Prop Builder Value</div>
+                  <div class="bc-line">Over 14.5 Goal Kicks</div>
+                  <div class="bc-rsn">Priced at 5/6. Leeds' direct play skews goal kicks heavily.</div>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -441,12 +2480,12 @@
     </div>
 
 
-    <div class="hero-card bur-mci-bg" style="margin-top: 40px;">
+    <div class="hero-card bur-mci-bg" style="margin-top: 50px;">
       <div class="hero-inner">
         <div class="hero-meta">
           <span class="hm-chip" style="color: var(--pl-green); border-color: rgba(0,255,133,.3);">Matchday 34</span>
         </div>
-        
+
         <div class="teams-row">
           <div class="team-col">
             <div class="badge-ring"><img
@@ -458,7 +2497,6 @@
           <div class="vs-col">
             <span class="ko-tag">20:00</span>
             <span class="vs-txt">V</span>
-            <span class="team-meta" style="font-size: 8px;">Turf Moor</span>
           </div>
           <div class="team-col">
             <div class="badge-ring"><img
@@ -471,28 +2509,14 @@
 
         <div class="mot-row">
           <span class="mot-lbl">Motivation Index</span>
-          <div class="mot-track"><div class="mot-bar" style="background: var(--bur-primary);" data-p="95" id="mot-bur2"></div></div>
+          <div class="mot-track">
+            <div class="mot-bar" style="background: var(--bur-primary);" data-p="95" id="mot-bur2"></div>
+          </div>
           <span class="mot-val" style="color: #fff;">95%</span>
-          <span style="color:var(--muted); font-size:10px; margin: 0 4px;">|</span>
+          <span style="color:var(--muted); font-size:10px; margin: 0 5px;">|</span>
           <span class="mot-val" style="color: #fff;">98%</span>
-          <div class="mot-track"><div class="mot-bar" style="background: var(--mci-primary); float: right;" data-p="98" id="mot-mci2"></div></div>
-        </div>
-
-        <div class="odds-row">
-          <div class="odds-box">
-            <div class="ob-lbl">BUR Win</div>
-            <div class="ob-odds">12/1</div>
-            <div class="ob-impl">Implied: 7.7%</div>
-          </div>
-          <div class="odds-box">
-            <div class="ob-lbl">Draw</div>
-            <div class="ob-odds">6/1</div>
-            <div class="ob-impl">Implied: 14.3%</div>
-          </div>
-          <div class="odds-box ob-val" style="border-color: rgba(108, 171, 221, 0.4) !important; background: linear-gradient(135deg, rgba(108, 171, 221, .07), var(--bg3)) !important;">
-            <div class="ob-lbl" style="color: var(--mci-primary);">MCI Win</div>
-            <div class="ob-odds">2/9</div>
-            <div class="ob-impl">Implied: 81.8%</div>
+          <div class="mot-track">
+            <div class="mot-bar" style="background: var(--mci-primary); float: right;" data-p="98" id="mot-mci2"></div>
           </div>
         </div>
       </div>
@@ -506,17 +2530,26 @@
         </div>
         <div class="card-body">
           <div class="ctx" style="margin-bottom: 12px;">
-            An extreme mismatch in stakes. Manchester City are chasing the title in a tight race; goal difference is paramount. Burnley are staring down relegation with the <strong>worst defensive record in the division</strong>. City's sheer quality makes this a hostile environment for the desperate hosts.
+            An extreme mismatch in stakes. Manchester City are chasing the title in a tight race; goal difference is
+            paramount. Burnley are staring down relegation with the <strong>worst defensive record in the
+              division</strong>. City's sheer quality makes this a hostile environment for the desperate hosts.
           </div>
-          <div class="section-lbl">Injuries / Suspensions</div>
-          <ul style="font-size: clamp(11px, 3vw, 12px); color: var(--label); padding-left: 15px; line-height: 1.6; margin-bottom: 15px;">
-            <li><strong style="color:#fff;">BUR:</strong> Depleted defensive line. Awaiting late fitness test on Jordan Beyer.</li>
-            <li><strong style="color:#fff;">MCI:</strong> Fully fit squad rotation expected. Erling Haaland expected to start.</li>
+          <div
+            style="font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px;">
+            Injuries / Suspensions</div>
+          <ul style="font-size: 12px; color: var(--label); padding-left: 15px; line-height: 1.6; margin-bottom: 15px;">
+            <li><strong style="color:#fff;">BUR:</strong> Depleted defensive line. Awaiting late fitness test on Jordan
+              Beyer.</li>
+            <li><strong style="color:#fff;">MCI:</strong> Fully fit squad rotation expected. Erling Haaland expected to
+              start.</li>
           </ul>
 
-          <div class="inline-note" style="border-color: rgba(108, 171, 221, 0.4); border-left: 3px solid var(--mci-primary);">
-            <strong>Referee Profile: Michael Oliver</strong>
-            Averages 20.1 fouls and 3.8 yellows per match. Oliver has a lower foul threshold but balances card distribution evenly. Expect a free-flowing game benefiting City's possession, keeping total match fouls on the lower side.
+          <div class="inline-note"
+            style="border-color: rgba(108, 171, 221, 0.4); border-left: 3px solid var(--mci-primary);">
+            <strong>Referee Profile: Michael Oliver</strong><br>
+            Averages 20.1 fouls and 3.8 yellows per match. Oliver has a lower foul threshold but balances card
+            distribution evenly. Expect a free-flowing game benefiting City's possession, keeping total match fouls on
+            the lower side.
           </div>
         </div>
       </div>
@@ -537,28 +2570,62 @@
               <div class="xg-l">MCI xG / 90</div>
             </div>
           </div>
-          <div class="table-wrap">
-            <table class="pred-table">
-              <thead>
-                <tr>
-                  <th>Match Metric</th>
-                  <th style="text-align:center;">Low Var.</th>
-                  <th style="text-align:center; color: var(--amber);">Expected</th>
-                  <th style="text-align:center;">High Var.</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr><td>Tackles Attempted</td><td class="tv val-low">28</td><td class="tv val-exp">36</td><td class="tv val-high">44</td></tr>
-                <tr><td>Corners</td><td class="tv val-low">6</td><td class="tv val-exp">9.5</td><td class="tv val-high">13</td></tr>
-                <tr><td>Total Shots</td><td class="tv val-low">16</td><td class="tv val-exp">23</td><td class="tv val-high">29</td></tr>
-                <tr><td>Shots on Target</td><td class="tv val-low">5</td><td class="tv val-exp">9</td><td class="tv val-high">14</td></tr>
-                <tr><td>Fouls Committed</td><td class="tv val-low">14</td><td class="tv val-exp">19</td><td class="tv val-high">24</td></tr>
-                <tr><td>Throw-ins</td><td class="tv val-low">24</td><td class="tv val-exp">31</td><td class="tv val-high">38</td></tr>
-                <tr><td>Goal Kicks</td><td class="tv val-low">9</td><td class="tv val-exp">13</td><td class="tv val-high">18</td></tr>
-              </tbody>
-            </table>
-          </div>
-          <div style="font-size: 9px; color: var(--muted); text-align: right; margin-top: 8px;">*Data mapped via <a href="https://github.com/polehead">💀</a></div>
+          <table class="pred-table">
+            <thead>
+              <tr>
+                <th>Match Metric</th>
+                <th style="text-align:center;">Low Var.</th>
+                <th style="text-align:center; color: var(--amber);">Expected</th>
+                <th style="text-align:center;">High Var.</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Tackles Attempted</td>
+                <td class="tv val-low">28</td>
+                <td class="tv val-exp">36</td>
+                <td class="tv val-high">44</td>
+              </tr>
+              <tr>
+                <td>Corners</td>
+                <td class="tv val-low">6</td>
+                <td class="tv val-exp">9.5</td>
+                <td class="tv val-high">13</td>
+              </tr>
+              <tr>
+                <td>Total Shots</td>
+                <td class="tv val-low">16</td>
+                <td class="tv val-exp">23</td>
+                <td class="tv val-high">29</td>
+              </tr>
+              <tr>
+                <td>Shots on Target</td>
+                <td class="tv val-low">5</td>
+                <td class="tv val-exp">9</td>
+                <td class="tv val-high">14</td>
+              </tr>
+              <tr>
+                <td>Fouls Committed</td>
+                <td class="tv val-low">14</td>
+                <td class="tv val-exp">19</td>
+                <td class="tv val-high">24</td>
+              </tr>
+              <tr>
+                <td>Throw-ins</td>
+                <td class="tv val-low">24</td>
+                <td class="tv val-exp">31</td>
+                <td class="tv val-high">38</td>
+              </tr>
+              <tr>
+                <td>Goal Kicks</td>
+                <td class="tv val-low">9</td>
+                <td class="tv val-exp">13</td>
+                <td class="tv val-high">18</td>
+              </tr>
+            </tbody>
+          </table>
+          <div style="font-size: 10px; color: var(--muted); text-align: right; margin-top: 8px;">*Data mapped via <a
+              href="https://github.com/polehead">💀</a></div>
         </div>
       </div>
 
@@ -576,7 +2643,8 @@
                 <div class="sb-score">0 - 1</div>
                 <div class="sb-prob">BUR Low Block Holds</div>
               </div>
-              <div class="sbox feat" style="border-color: rgba(108, 171, 221, 0.4); background: linear-gradient(135deg, rgba(108, 171, 221, .07), var(--bg3));">
+              <div class="sbox feat"
+                style="border-color: rgba(108, 171, 221, 0.4); background: linear-gradient(135deg, rgba(108, 171, 221, .07), var(--bg3));">
                 <div class="sb-lbl" style="color: var(--mci-primary);">Median Expectation</div>
                 <div class="sb-score feat-s" style="color: var(--mci-primary);">0 - 2</div>
                 <div class="sb-prob">City Control Tempo</div>
@@ -588,43 +2656,51 @@
               </div>
             </div>
             <div class="safe-box">
-              <strong>Safe Prediction: BUR 0 - 3 MCI</strong>
-              City's relentless attack forces immense pressure. We project Burnley to account for the majority of the <strong>Expected 13 Goal Kicks</strong> due to City's high volume of shots missing the target or being deflected out.
+              <strong>Safe Prediction: BUR 0 - 3 MCI</strong><br>
+              City's relentless attack forces immense pressure. We project Burnley to account for the majority of the
+              <strong>Expected 13 Goal Kicks</strong> due to City's high volume of shots missing the target or being
+              deflected out.
             </div>
           </div>
 
-          <div class="analysis-grid">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 16px;">
             <div>
-              <div class="section-lbl">Card Market Targets (Ref Impacted)</div>
+              <div
+                style="font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px;">
+                Card Market Targets (Ref Impacted)</div>
               <div class="yc-list">
                 <div class="yc-row">
                   <div class="yc-info">
                     <div class="yc-name">Josh Cullen <span class="yc-club">BUR</span></div>
-                    <div class="yc-reason">High defensive midfield volume vs Doku/Foden. Will reach high tackle counts.</div>
+                    <div class="yc-reason">High defensive midfield volume vs Doku/Foden. Will reach high tackle counts.
+                    </div>
                   </div>
                 </div>
                 <div class="yc-row">
                   <div class="yc-info">
                     <div class="yc-name">Maxime Esteve <span class="yc-club">BUR</span></div>
-                    <div class="yc-reason">Will be isolated and forced into desperate challenges. Oliver won't hesitate to card lunging tackles.</div>
+                    <div class="yc-reason">Will be isolated and forced into desperate challenges. Oliver won't hesitate
+                      to card lunging tackles.</div>
                   </div>
                 </div>
               </div>
             </div>
             <div>
-               <div class="section-lbl">Betting Patterns & Value</div>
-               <div class="bet-grid">
-                 <div class="bet-cell bval">
-                   <div class="bc-mkt">Asian Handicap</div>
-                   <div class="bc-line" style="color: var(--amber);">MCI -2.5</div>
-                   <div class="bc-rsn">Priced at 11/8. Heavy market action on goal diff.</div>
-                 </div>
-                 <div class="bet-cell">
-                   <div class="bc-mkt">Prop Builder Value</div>
-                   <div class="bc-line">BUR Over 8.5 Goal Kicks</div>
-                   <div class="bc-rsn">Priced at 1/1. Relies on City's sheer shot volume.</div>
-                 </div>
-               </div>
+              <div
+                style="font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px;">
+                Betting Patterns & Value</div>
+              <div class="bet-grid" style="grid-template-columns: 1fr;">
+                <div class="bet-cell bval">
+                  <div class="bc-mkt">Asian Handicap</div>
+                  <div class="bc-line" style="color: var(--amber);">MCI -2.5</div>
+                  <div class="bc-rsn">Priced at 11/8. Heavy market action on goal diff.</div>
+                </div>
+                <div class="bet-cell">
+                  <div class="bc-mkt">Prop Builder Value</div>
+                  <div class="bc-line">BUR Over 8.5 Goal Kicks</div>
+                  <div class="bc-rsn">Priced at 1/1. Relies on City's sheer shot volume.</div>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -634,30 +2710,89 @@
 
   </div>
 
-  <footer style="text-align:center;padding:24px 16px;font-size:10px;color:var(--muted);border-top:1px solid var(--border);position:relative;z-index:1">
-    <p><strong>Professional Strategy Analytics</strong><br/></p>
-    <p style="margin-top: 6px;">
-      Statistical predictions are weighted estimates based on historical data and form analysis.<br/>
-      <strong style="color: var(--red); text-decoration: underline; display: inline-block; margin-top: 4px;">ALWAYS GAMBLE RESPONSIBLY, THIS IS NOT FINANCIAL ADVICE</strong>
+  <footer
+    style="text-align:center;padding:20px 16px;font-size:10px;color:var(--muted);border-top:1px solid var(--border);position:relative;z-index:1">
+    <p><strong>Professional Strategy Analytics</strong><br /></p>
+    <p style="margin-top: 4px;">
+      Statistical predictions are weighted estimates based on historical data and form analysis.<br />
+      <strong style="color: var(--red); text-decoration: underline;">ALWAYS GAMBLE RESPONSIBLY, THIS IS NOT FINANCIAL
+        ADVICE</strong>
     </p>
   </footer>
 
   <script>
-    (function(){
+
+    (function () {
       'use strict';
       setTimeout(() => {
         const bou = document.getElementById('mot-bou1');
         const lee = document.getElementById('mot-lee1');
         const bur = document.getElementById('mot-bur2');
         const mci = document.getElementById('mot-mci2');
-        if(bou){ bou.style.transition='width 1.1s ease'; bou.style.width=bou.getAttribute('data-p')+'%'; }
-        if(lee){ setTimeout(()=> {lee.style.transition='width 1.1s ease'; lee.style.width=lee.getAttribute('data-p')+'%';}, 150); }
-        if(bur){ setTimeout(()=> {bur.style.transition='width 1.1s ease'; bur.style.width=bur.getAttribute('data-p')+'%';}, 300); }
-        if(mci){ setTimeout(()=> {mci.style.transition='width 1.1s ease'; mci.style.width=mci.getAttribute('data-p')+'%';}, 450); }
+        if (bou) { bou.style.transition = 'width 1.1s ease'; bou.style.width = bou.getAttribute('data-p') + '%'; }
+        if (lee) { setTimeout(() => { lee.style.transition = 'width 1.1s ease'; lee.style.width = lee.getAttribute('data-p') + '%'; }, 150); }
+        if (bur) { setTimeout(() => { bur.style.transition = 'width 1.1s ease'; bur.style.width = bur.getAttribute('data-p') + '%'; }, 300); }
+        if (mci) { setTimeout(() => { mci.style.transition = 'width 1.1s ease'; mci.style.width = mci.getAttribute('data-p') + '%'; }, 450); }
       }, 400);
 
       document.querySelectorAll('.badge-ring').forEach((b, i) => {
         b.style.animationDelay = (0.19 + i * 0.1) + 's';
       });
     })();
+
+    // Animate range bars on scroll into view
+    function animateBars() {
+      const fills = document.querySelectorAll('.range-fill');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const el = entry.target;
+            const left = el.style.left;
+            const width = el.style.width;
+            el.style.left = '50%';
+            el.style.width = '0%';
+            requestAnimationFrame(() => {
+              el.style.transition = 'all 0.9s cubic-bezier(0.4, 0, 0.2, 1)';
+              el.style.left = left;
+              el.style.width = width;
+            });
+            observer.unobserve(el);
+          }
+        });
+      }, { threshold: 0.3 });
+      fills.forEach(fill => observer.observe(fill));
+    }
+
+    // Count-up animation for avg cells
+    function animateCounters() {
+      const cells = document.querySelectorAll('.avg-cell .val');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const el = entry.target;
+            const text = el.textContent.trim();
+            const isPercent = text.includes('%');
+            const num = parseFloat(text.replace('%', ''));
+            if (!isNaN(num) && num > 0) {
+              let start = 0;
+              const duration = 800;
+              const step = num / (duration / 16);
+              const timer = setInterval(() => {
+                start += step;
+                if (start >= num) { start = num; clearInterval(timer); }
+                const display = text.includes('.') ? start.toFixed(1) : Math.round(start);
+                el.textContent = isPercent ? display + '%' : display;
+              }, 16);
+            }
+            observer.unobserve(el);
+          }
+        });
+      }, { threshold: 0.7 });
+      cells.forEach(cell => observer.observe(cell));
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      animateBars();
+      animateCounters();
+    });
   </script>
