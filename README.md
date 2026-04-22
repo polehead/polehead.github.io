@@ -86,12 +86,12 @@
 
     @keyframes popIn {
       from {
-        transform: scale(.5) rotate(-8deg);
+        transform: scale(5) rotate(-10deg);
         opacity: 0;
       }
 
       to {
-        transform: scale(1) rotate(0);
+        transform: scale(1) rotate(360);
         opacity: 1;
       }
     }
@@ -1222,7 +1222,10 @@
       }, 400);
 
       document.querySelectorAll('.badge-ring').forEach((b, i) => {
-        b.style.animationDelay = (0.19 + i * 0.4) + 's';
+        b.style.animationDelay = (0.19 + i * 0.1) + 's';
       });
     })();
   </script>
+</body>
+
+</html>
