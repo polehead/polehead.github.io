@@ -1620,22 +1620,4 @@
     </p>
   </footer>
 
-  <script>
-    (function () {
-      'use strict';
-      setTimeout(() => {
-        const bou = document.getElementById('mot-bou1');
-        const lee = document.getElementById('mot-lee1');
-        const bur = document.getElementById('mot-bur2');
-        const mci = document.getElementById('mot-mci2');
-        if (bou) { bou.style.transition = 'width 1.1s ease'; bou.style.width = bou.getAttribute('data-p') + '%'; }
-        if (lee) { setTimeout(() => { lee.style.transition = 'width 1.1s ease'; lee.style.width = lee.getAttribute('data-p') + '%'; }, 150); }
-        if (bur) { setTimeout(() => { bur.style.transition = 'width 1.1s ease'; bur.style.width = bur.getAttribute('data-p') + '%'; }, 300); }
-        if (mci) { setTimeout(() => { mci.style.transition = 'width 1.1s ease'; mci.style.width = mci.getAttribute('data-p') + '%'; }, 450); }
-      }, 400);
 
-      document.querySelectorAll('.badge-ring').forEach((b, i) => {
-        b.style.animationDelay = (0.19 + i * 0.1) + 's';
-      });
-    })();
-  </script>
