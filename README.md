@@ -70,17 +70,6 @@
             margin-top: 8px;
             letter-spacing: 0.5px;
         }
-.bg-layer {
-      position: fixed;
-      inset: 0;
-      z-index: 0;
-      pointer-events: none;
-      background:
-        radial-gradient(ellipse 70% 50% at 15% 10%, rgba(0, 87, 184, .07), transparent 60%),
-        radial-gradient(ellipse 60% 45% at 85% 80%, rgba(3, 70, 148, .06), transparent 60%),
-        repeating-linear-gradient(0deg, transparent, transparent 55px, rgba(255, 255, 255, .012) 55px, rgba(255, 255, 255, .012) 56px),
-        repeating-linear-gradient(90deg, transparent, transparent 55px, rgba(255, 255, 255, .012) 55px, rgba(255, 255, 255, .012) 56px);
-    }
 
     /* ─── PAGE HEADER ─── */
     .page-hd {
@@ -515,7 +504,6 @@
 </head>
 
 <body>
-
     <header class="page-hd">
     <div class="pl-badge">
       Team Bilbo Analytics
@@ -532,10 +520,7 @@
         ADVICE</strong>
     </p>
     </div>
-    <footer
-    
 
-  </footer>
     <script>
         const M = [
             {
@@ -1057,9 +1042,9 @@
             const id = `m${i}`
             return `<div class="match-card">
 <div class="match-header" style="background:linear-gradient(135deg,${hc}22,transparent,${ac}22)">
-<div class="team-info"><img src="${m.home.badge}" alt="${m.home.name}" onerror="this.style.display='none'"><span class="name" style="color:${hc}">${m.home.name}</span><span class="pos">${m.home.pos}</span><div class="form-dots">${formDots(m.home.form)}</div></div>
+<div class="team-info"><img src="${m.home.badge}" style="background: transparent" alt="${m.home.name}" onerror="this.style.display='none'"><span class="name" style="color:${hc}">${m.home.name}</span><span class="pos">${m.home.pos}</span><div class="form-dots">${formDots(m.home.form)}</div></div>
 <div style="text-align:center"><span class="vs">VS</span><div style="font-size:.6rem;color:var(--dim);margin-top:2px">${m.ko}</div></div>
-<div class="team-info"><img src="${m.away.badge}" alt="${m.away.name}" onerror="this.style.display='none'"><span class="name" style="color:${ac}">${m.away.name}</span><span class="pos">${m.away.pos}</span><div class="form-dots">${formDots(m.away.form)}</div></div>
+<div class="team-info"><img src="${m.away.badge}" style="background: transparent" alt="${m.away.name}" onerror="this.style.display='none'"><span class="name" style="color:${ac}">${m.away.name}</span><span class="pos">${m.away.pos}</span><div class="form-dots">${formDots(m.away.form)}</div></div>
 </div>
 <div class="match-meta"><span>📍 ${m.venue}</span><span>⏰ ${m.ko}</span><span>🏟️ Matchday 35</span></div>
 
