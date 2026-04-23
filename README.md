@@ -2,16 +2,25 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0" />
     <title>PL Matchday 35 Predictions – 25 Apr 2026</title>
     <meta name="description" content="Data-driven Premier League predictions for April 25 2026 fixtures" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
         rel="stylesheet" />
     <style>
-        * {
+        *,
+        *::before,
+        *::after {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+        }
+
+        html {
+            overflow-x: hidden;
+            max-width: 100vw;
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
         }
 
         :root {
@@ -35,7 +44,10 @@
             line-height: 1.6;
             min-height: 100vh;
             overflow-x: hidden;
+            max-width: 100vw;
+            width: 100%;
             -webkit-text-size-adjust: 100%;
+            word-break: break-word;
         }
 
         .hero {
@@ -133,6 +145,8 @@
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px 16px;
+            width: 100%;
+            overflow-x: hidden;
         }
 
         .match-card {
@@ -142,6 +156,7 @@
             overflow: hidden;
             border: 1px solid rgba(255, 255, 255, 0.06);
             box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+            max-width: 100%;
         }
 
         .match-header {
@@ -459,16 +474,13 @@
             margin-top: 20px;
         }
 
-        /* ─── Scrollable table wrapper (injected by JS on mobile) ─── */
+        /* ─── Scrollable table wrapper ─── */
         .table-scroll {
             overflow-x: auto;
             -webkit-overflow-scrolling: touch;
-            margin: 0 -4px;
-            padding: 0 4px;
-        }
-
-        .table-scroll table {
-            min-width: 420px;
+            margin: 0;
+            padding: 0;
+            max-width: 100%;
         }
 
         /* ─── TABLET ─── */
