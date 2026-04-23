@@ -22,10 +22,12 @@
             --dim: #94a3b8;
             --accent: #6366f1;
             --glow: rgba(99, 102, 241, 0.15);
+            --pl-green: #00ff85;
+            --muted: #64748b;
         }
 
         body {
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            font-family: 'Inter', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
             background: var(--bg);
             color: var(--text);
             margin: 0;
@@ -33,6 +35,7 @@
             line-height: 1.6;
             min-height: 100vh;
             overflow-x: hidden;
+            -webkit-text-size-adjust: 100%;
         }
 
         .hero {
@@ -456,48 +459,229 @@
             margin-top: 20px;
         }
 
-        @media (max-width: 600px) {
+        /* ─── Scrollable table wrapper (injected by JS on mobile) ─── */
+        .table-scroll {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            margin: 0 -4px;
+            padding: 0 4px;
+        }
+
+        .table-scroll table {
+            min-width: 420px;
+        }
+
+        /* ─── TABLET ─── */
+        @media (max-width: 768px) {
+            body {
+                padding: 12px;
+            }
+
+            .container {
+                padding: 12px 8px;
+            }
+
             .match-header {
-                flex-wrap: wrap;
-                gap: 8px;
-                padding: 14px;
+                gap: 10px;
+                padding: 16px;
+            }
+
+            .team-info {
+                max-width: 150px;
             }
 
             .team-info img {
-                width: 40px;
-                height: 40px;
-            }
-
-            .team-info .name {
-                font-size: 0.75rem;
-            }
-
-            .tab {
-                padding: 6px 10px;
-                font-size: 0.63rem;
+                width: 46px;
+                height: 46px;
             }
 
             .tab-content {
-                padding: 10px;
-                margin: 0 6px 8px;
+                padding: 12px;
+                margin: 0 8px 10px;
+            }
+        }
+
+        /* ─── MOBILE ─── */
+        @media (max-width: 480px) {
+            body {
+                padding: 6px;
+            }
+
+            .container {
+                padding: 8px 4px;
+            }
+
+            .page-hd {
+                padding: 16px 12px 12px;
+            }
+
+            .page-hd h1 {
+                font-size: clamp(18px, 5vw, 28px);
+            }
+
+            .match-card {
+                margin-bottom: 20px;
+                border-radius: 12px;
+            }
+
+            .match-header {
+                flex-wrap: wrap;
+                gap: 6px;
+                padding: 12px 8px;
+            }
+
+            .team-info {
+                max-width: 120px;
+            }
+
+            .team-info img {
+                width: 36px;
+                height: 36px;
+            }
+
+            .team-info .name {
+                font-size: 0.72rem;
+            }
+
+            .team-info .pos {
+                font-size: 0.58rem;
+            }
+
+            .vs {
+                font-size: 0.9rem;
+            }
+
+            .match-meta {
+                gap: 8px;
+                padding: 0 10px 10px;
+            }
+
+            .match-meta span {
+                font-size: 0.6rem;
+            }
+
+            .tabs {
+                gap: 2px;
+                padding: 0 6px;
+            }
+
+            .tab {
+                padding: 6px 8px;
+                font-size: 0.6rem;
+            }
+
+            .tab-content {
+                padding: 8px;
+                margin: 0 4px 6px;
             }
 
             table {
-                font-size: 0.65rem;
+                font-size: 0.62rem;
             }
 
             th,
             td {
-                padding: 4px 5px;
+                padding: 4px 4px;
+            }
+
+            th {
+                font-size: 0.58rem;
             }
 
             .odds-grid {
-                grid-template-columns: repeat(3, 1fr);
                 gap: 4px;
             }
 
+            .odds-box {
+                padding: 8px 4px;
+            }
+
+            .odds-box .label {
+                font-size: 0.55rem;
+            }
+
+            .odds-box .val {
+                font-size: 0.82rem;
+            }
+
+            .score-pred {
+                gap: 12px;
+                padding: 12px 8px;
+            }
+
             .score-pred .sc {
-                font-size: 1.4rem;
+                font-size: 1.3rem;
+            }
+
+            .player-chip {
+                padding: 3px 7px;
+                font-size: 0.62rem;
+            }
+
+            .motivation {
+                font-size: 0.65rem;
+                padding: 8px;
+            }
+
+            .form-dot {
+                width: 16px;
+                height: 16px;
+                font-size: 0.5rem;
+            }
+
+            .section-title {
+                font-size: 0.68rem;
+            }
+
+            .h2h-item {
+                font-size: 0.63rem;
+            }
+
+            .disclaimer {
+                padding: 20px 12px;
+                font-size: 0.6rem;
+            }
+
+            .hero {
+                padding: 28px 12px 14px;
+            }
+        }
+
+        /* ─── VERY SMALL DEVICES ─── */
+        @media (max-width: 360px) {
+            body {
+                padding: 4px;
+            }
+
+            .team-info img {
+                width: 30px;
+                height: 30px;
+            }
+
+            .team-info .name {
+                font-size: 0.65rem;
+            }
+
+            .tab {
+                padding: 5px 6px;
+                font-size: 0.55rem;
+            }
+
+            .tab-content {
+                padding: 6px;
+                margin: 0 2px 4px;
+            }
+
+            table {
+                font-size: 0.58rem;
+            }
+
+            th, td {
+                padding: 3px 3px;
+            }
+
+            .score-pred .sc {
+                font-size: 1.1rem;
             }
         }
     </style>
@@ -1058,7 +1242,7 @@
 <button class="tab" onclick="showTab('${id}',6)">🏥 Injuries</button>
 </div>
 
-<div class="tab-content active" id="${id}-0">${statsTable}</div>
+<div class="tab-content active" id="${id}-0"><div class="table-scroll">${statsTable}</div></div>
 <div class="tab-content" id="${id}-1">
 <div class="score-pred">
 <div style="text-align:center"><div class="lbl">Half-Time</div><div class="sc">${m.htScore}</div><div style="font-size:.6rem;color:var(--dim)">Confidence: ${m.htConf}</div></div>
@@ -1070,14 +1254,14 @@
 <div class="tab-content" id="${id}-2">${cardChips}</div>
 <div class="tab-content" id="${id}-3">${xgHTML}
 <div class="section-title">Season Averages Per Game</div>
-<table><tr><th>Metric</th><th>${m.home.short}</th><th>${m.away.short}</th></tr>
+<div class="table-scroll"><table><tr><th>Metric</th><th>${m.home.short}</th><th>${m.away.short}</th></tr>
 <tr><td>Corners</td><td>${m.home.cornPG}</td><td>${m.away.cornPG}</td></tr>
 <tr><td>Shots</td><td>${m.home.shotsPG}</td><td>${m.away.shotsPG}</td></tr>
 <tr><td>Shots on Target</td><td>${m.home.sotPG}</td><td>${m.away.sotPG}</td></tr>
 <tr><td>Fouls</td><td>${m.home.foulsPG}</td><td>${m.away.foulsPG}</td></tr>
 <tr><td>Throw-ins</td><td>${m.home.throwsPG}</td><td>${m.away.throwsPG}</td></tr>
 <tr><td>Tackles</td><td>${m.home.tacklePG}</td><td>${m.away.tacklePG}</td></tr>
-</table>
+</table></div>
 </div>
 <div class="tab-content" id="${id}-4">
 <div class="section-title">Last 5 Meetings</div>${h2hHTML}
